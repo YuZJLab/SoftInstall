@@ -1,6 +1,7 @@
 \documentclass[]{article}
 \usepackage[backref,bookmarks=true,bookmarksopen=true,pdftitle=SoftInstall,pdfauthor=YU Zhejian]{hyperref}
-\usepackage{times}
+\renewcommand{\sfdefault}{ptm}
+\renewcommand{\rmdefault}{ptm}
 \usepackage{indentfirst}
 \renewcommand\familydefault{\sfdefault}
 \usepackage[inner=0.5in,outer=0.5in]{geometry}
@@ -804,8 +805,6 @@ License: The MIT/Expat License
 C 73.3\% Perl 18.8\% M4 2.7\% Lua 1.8\% Shell 1.4\% Makefile 1.0\% Other 1.0\%
 
 
-
-
 \textbf{VCF Format:}
 
 Danecek, P., Auton, A., Abecasis, G., Albers, C. A., Banks, E., DePristo, M. A., … Durbin, R. (2011). The variant call format and VCFtools. Bioinformatics, 27(15), 2156–2158. \url{https://doi.org/10.1093/bioinformatics/btr330}
@@ -840,7 +839,6 @@ year = {2011}
 \end{verbatim}
 
 \textbf{SAM \& BAM Format:}
-
 
 Cock, P. J. A., Bonfield, J. K., Chevreux, B., \& Li, H. (2015). SAM/BAM format v1.5 extensions for de novo assemblies. BioRxiv, 020024. \url{https://doi.org/10.1101/020024}
 
@@ -1160,7 +1158,6 @@ url = {http://samtools.github.io/bcftools/rd-SegBias.pdf},
 year = {2014}
 }
 \end{verbatim}
-
 
 \part{Variant Caller}
 
@@ -2227,5 +2224,89 @@ year = {1991}
 
 
 
+\part{File Specifications}
 
+\section{SAM}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+\section{BAM}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+\section{CRAM}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+\section{BCF}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+\section{VCF}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+\section{CSI}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+\section{BAI}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+\section{FASTQ}
+
+Rhizobium, G. E. (2013) Complete Genome Sequence of the Sesbania Symbiont and Rice, Nucleic acids research. Oxford Academic, 1(1256879), pp. 13–14. doi: 10.1093/nar.
+
+\begin{verbatim}
+@article{Rhizobium2013,
+abstract = {Although multiple sequence alignments (MSAs) are essential for a
+wide range of applications from structure modeling to prediction of functional
+sites, construction of accurate MSAs for distantly related proteins remains a
+largely unsolved problem. The rapidly increasing database of spatial structures
+is a valuable source to improve alignment quality. We explore the use of 3D
+structural information to guide sequence alignments constructed by our MSA
+program PROMALS. The resulting tool, PROMALS3D, automatically identifies
+homologs with known 3D structures for the input sequences, derives structural
+constraints through structure-based alignments and combines them with
+sequence constraints to construct consistency-based multiple sequence
+alignments. The output is a consensus alignment that brings together sequence
+and structural information about input proteins and their homologs. PROMALS3D
+can also align sequences of multiple input structures, with the output
+representing a multiple structure-based alignment refined in combination with
+sequence constraints. The advantage of PROMALS3D is that it gives researchers an
+easy way to produce high-quality alignments consistent with both sequences and
+structures of proteins. PROMALS3D outperforms a number of existing methods for
+constructing multiple sequence or structural alignments using both reference-
+dependent and reference-independent evaluation methods.},
+author = {Rhizobium, Growth-promoting Endophyte},
+doi = {10.1093/nar},
+isbn = {1471210510},
+issn = {1362-4962; 0305-1048},
+journal = {Nucleic acids research},
+keywords = {Databases,Protein,Sequence Alignment/methods,Sequence Analysis,
+Software,Structural Homology},
+month = {apr},
+number = {1256879},
+pages = {13--14},
+publisher = {Oxford Academic},
+title = {{Complete Genome Sequence of the Sesbania Symbiont and Rice}},
+volume = {1},
+year = {2013}
+}
+\end{verbatim}
 \end{document}
