@@ -1,7 +1,7 @@
 \documentclass[]{article}
 \usepackage[backref,bookmarks=true,bookmarksopen=true,pdftitle=SoftInstall,pdfauthor=YU Zhejian]{hyperref}
-\renewcommand{\sfdefault}{ptm}
-\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{phv}
 \usepackage{indentfirst}
 \renewcommand\familydefault{\sfdefault}
 \usepackage[inner=0.5in,outer=0.5in]{geometry}
@@ -13,57 +13,143 @@
 \title{\fontsize{40}{40}\selectfont\scshape Fantastic Software\\{\Huge and}\\Where to Find Them}
 \author{YU Zhejian}
 \maketitle
-This book involves the software used in the previous sections, the commands they provided and the way to install them.
+\setcounter{section}{-1}
+\section{Introduction}
+
+This book involves the software used in the common bioinformatics pipelines and the way to install them.
+
+The term ``\textbf{deprecated}'' means that the entire software was deprecated by its developer, while ``\textbf{branch deprecated}'' means that although this branch was deprecated, the software is still being developed somewhere else. Unless there is \textbf{EXPLICIT} information, all branches \& software are considered not deprecated.
+
+The term ``pre-build binary'' means 1. Compiled binaries for C, C++ or D, etc. or 2. Compiled documentations for \LaTeX or asciidoc, etc. or 3. Scripts for scripting languages like Perl, Shell or Python, etc. Those which is not ``pre-build binary'' are compiled locally by ourselves. ``N/A'' means we have not, or failed to install it.
+
 \tableofcontents
-\newpage
 
 \part{Read Data Pre-Processing}
-\section{SRA-Toolkit}
 
-Conda: \url{https://anaconda.org/bioconda/sra-tools}
+\section{htsjdk}
 
-Official: \url{https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software}
+GitHub: \url{https://github.com/samtools/htsjdk}, v2.21.3 in 2020-03-10
 
-GitHub: \url{https://github.com/ncbi/sra-tools/}
+Official: \url{http://samtools.github.io/htsjdk/}
 
-License: PUBLIC DOMAIN NOTICE
+Current: N/A
 
-C 70.4\% C++ 19.7\% Makefile 4.0\% Shell 2.0\% Perl 1.8\ Python 1.0\% Other 1.1\%
+Java 99.8\% Other 0.2\% 
 
-
-
+Updated: 2020-06-10
 \section{htslib}
 
-GitHub: \url{https://github.com/samtools/htslib} with MIT/Expat license, Modified 3-Clause BSD license
+GitHub: \url{https://github.com/samtools/htslib} with MIT/Expat license, Modified 3-Clause BSD license, v1.10.2 in 2019-12-21 
 
-Conda: \url{https://anaconda.org/bioconda/htslib} with MIT License
+Conda: \url{https://anaconda.org/bioconda/htslib} with MIT License, v1.10.2 in 2019-12-23
 
 Official: \url{http://www.htslib.org/}
 
-C 89.2\% C++ 3.8\% Perl 2.7\% Makefile 1.4\% Roff 1.2\% M4 1.0\% Other 0.7\%
+Current: GitHub, self-build,  1.10.2-23-g6b72368
 
+C 89.3\% C++ 3.7\% Perl 2.7\% Makefile 1.4\% Roff 1.2\% M4 1.0\% Other 0.7\%
 
+Updated: 2020-06-10
 
-\section{Tabix}
+\section{SRA-Toolkit}
 
-Conda: \url{https://anaconda.org/bioconda/tabix}
+Conda: \url{https://anaconda.org/bioconda/sra-tools}, v2.10.7 in 2020-06-03
+
+Official: \url{https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software}
+
+GitHub: \url{https://github.com/ncbi/sra-tools/}, v2.10.7 in 2020-05-22
+
+Current: GitHub, pre-build binary, 2.10.4
+
+License: PUBLIC DOMAIN NOTICE
+
+C 70.2\% C++ 19.4\% Makefile 4.0\% Shell 2.3\% Perl 1.9\ Python 1.0\% Other 1.2\%
+
+Updated: 2020-06-10
+
+\section{Tabix (deprecated)}
+
+Conda: \url{https://anaconda.org/bioconda/tabix}, v0.2.6 in 2018-10
 
 GitHub: \url{https://github.com/samtools/tabix}
 
-SourceForge: \url{https://sourceforge.net/projects/samtools}
+SourceForge: \url{https://sourceforge.net/projects/samtools}, branch deprecated
+
+Current: N/A
 
 License: BSD
 
 C 83.8\% Java 6.8\% Python 4.6\% TeX 2.8\% Perl 2.0\%
 
+Updated: 2020-06-10
 
 \part{Read Quality Controller}
+
+\section{CutAdapt}
+
+Conda: \url{https://anaconda.org/bioconda/cutadapt}, v2.10 in 2020-04-23
+
+GitHub: \url{https://github.com/marcelm/cutadapt}, v2.10 in 2020-04-22
+
+Official: \url{https://cutadapt.readthedocs.io/en/stable/}
+
+CutAdapt: Conda, 2.10
+
+License: MIT
+
+Python 99.6\% Shell 0.4\%
+
+Martin, M. (2011). Cutadapt removes adapter sequences from high-throughput sequencing reads. EMBnet.Journal, 17(1), 10. \url{https://doi.org/10.14806/ej.17.1.200}
+
+\begin{verbatim}
+@article{CutAdapt,
+abstract = {When small RNA is sequenced on current sequencing machines, the
+resulting reads are usually longer than the RNA and therefore contain parts
+of the 3' adapter. That adapter must be found and removed error-tolerantly
+from each read before read mapping. Previous solutions are either hard to
+use or do not offer required features, in particular support for color space
+data. As an easy to use alternative, we developed the command-line tool
+cutadapt, which supports 454, Illumina and SOLiD (color space) data, offers
+two adapter trimming algorithms, and has other useful features.   Cutadapt,
+including its MIT-licensed source code, is available for download at
+http://code.google.com/p/cutadapt/},
+author = {Martin, Marcel},
+doi = {10.14806/ej.17.1.200},
+journal = {EMBnet.journal},
+month = {may},
+number = {1},
+pages = {10},
+publisher = {EMBnet Stichting},
+title = {{Cutadapt removes adapter sequences from high-throughput sequencing
+reads}},
+volume = {17},
+year = {2011}
+}
+\end{verbatim}
+
+Updated: 2020-06-10
+
+\section{FastQC}
+
+Conda: \url{https://anaconda.org/bioconda/fastqc} with GPL 3, v0.11.9 in 2020-02-23
+
+Official: \url{http://www.bioinformatics.babraham.ac.uk/projects/fastqc/} with GPL 3
+
+GitHub: \url{https://github.com/s-andrews/FastQC} with GPL 2, v0.11.9 in 2020-01-08
+
+Current: GitHub, pre-build binary, 0.11.9
+
+Java 95.5\% HTML 3.1\% Perl 1.2\% Other 0.2\%
+
+Updated: 2020-06-10
 
 \section{QualiMap}
 
 Official: \url{http://qualimap.bioinfo.cipf.es/}
 
-BitBucket: \url{https://bitbucket.org/kokonech/qualimap/}
+BitBucket: \url{https://bitbucket.org/kokonech/qualimap/}, build 11-11-19 in 2019-11-11
+
+Current: N/A
 
 License: GPL 2
 
@@ -140,59 +226,7 @@ year = {2015}
 }
 \end{verbatim}
 
-\section{FastQC}
-
-Conda: \url{https://anaconda.org/bioconda/fastqc} with GPL 3
-
-Official: \url{http://www.bioinformatics.babraham.ac.uk/projects/fastqc/} with GPL 3
-
-GitHub: \url{https://github.com/s-andrews/FastQC} with GPL 2
-
-Java 95.5\% HTML 3.1\% Perl 1.2\% Other 0.2\%
-
-Missing
-
-\section{CutAdapt}
-
-Conda: \url{https://anaconda.org/bioconda/cutadapt}
-
-GitHub: \url{https://github.com/marcelm/cutadapt}
-
-Official: \url{https://cutadapt.readthedocs.io/en/stable/}
-
-License: MIT
-
-Python 99.4\% Shell 0.6\%
-
-
-
-Martin, M. (2011). Cutadapt removes adapter sequences from high-throughput sequencing reads. EMBnet.Journal, 17(1), 10. \url{https://doi.org/10.14806/ej.17.1.200}
-
-\begin{verbatim}
-@article{CutAdapt,
-abstract = {When small RNA is sequenced on current sequencing machines, the
-resulting reads are usually longer than the RNA and therefore contain parts
-of the 3' adapter. That adapter must be found and removed error-tolerantly
-from each read before read mapping. Previous solutions are either hard to
-use or do not offer required features, in particular support for color space
-data. As an easy to use alternative, we developed the command-line tool
-cutadapt, which supports 454, Illumina and SOLiD (color space) data, offers
-two adapter trimming algorithms, and has other useful features.   Cutadapt,
-including its MIT-licensed source code, is available for download at
-http://code.google.com/p/cutadapt/},
-author = {Martin, Marcel},
-doi = {10.14806/ej.17.1.200},
-journal = {EMBnet.journal},
-month = {may},
-number = {1},
-pages = {10},
-publisher = {EMBnet Stichting},
-title = {{Cutadapt removes adapter sequences from high-throughput sequencing
-reads}},
-volume = {17},
-year = {2011}
-}
-\end{verbatim}
+Updated: 2020-06-10
 
 \section{Trimmomatic}
 
@@ -200,13 +234,13 @@ Official: \url{http://www.usadellab.org/cms/index.php?page=trimmomatic}
 
 GitHub: \url{https://github.com/timflutre/trimmomatic}
 
-Conda: \url{https://anaconda.org/bioconda/trimmomatic}
+Conda: \url{https://anaconda.org/bioconda/trimmomatic}, v0.39 in 2019-11-21
+
+Current: GitHub, pre-build binary, v0.39
 
 License: GPL 3
 
 Java 99.2\% Makefile 0.8\%
-
-
 
 Bolger, A. M., Lohse, M., \& Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120.\url{https://doi.org/10.1093/bioinformatics/btu170}
 
@@ -240,35 +274,94 @@ year = {2014}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \part{Aligner}
+\section{Bowtie}
 
-\section{HiSat2}
+Official: \url{http://bowtie-bio.sourceforge.net/index.shtml}, v1.2.3, 2019-07-05
 
-Conda: \url{https://anaconda.org/bioconda/hisat2}
+GitHub: \url{https://github.com/BenLangmead/bowtie}, v1.2.3 in 2019-07-06
 
-Official: \url{https://daehwankimlab.github.io/hisat2/}
+Conda: \url{https://anaconda.org/bioconda/bowtie}, v1.2.3 in 2020-05-09
 
-GitHub: \url{https://github.com/DaehwanKimLab/hisat2}
+Current: GitHub, pre-build binary
+
+\begin{verbatim}
+bowtie-align-s version 1.2.3
+64-bit
+Built on e73f6cee4b48
+Sat Jul  6 01:17:46 UTC 2019
+Compiler: gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC)
+Options: -O3 -m64 --std=c++98 -Wl,--hash-style=both
+-DWITH_TBB -DPOPCNT_CAPABILITY -g -O2 -fvisibility=hidden
+-I/hbb_exe_gc_hardened/include -ffunction-sections -fdata-sections
+-fstack-protector -D_FORTIFY_SOURCE=2 -fPIE  -g -O2 -fvisibility=hidden
+-I/hbb_exe_gc_hardened/include -ffunction-sections -fdata-sections
+-fstack-protector -D_FORTIFY_SOURCE=2 -fPIE
+Sizeof {int, long, long long, void*, size_t, off_t}: {4, 8, 8, 8, 8, 8}
+\end{verbatim}
+
+License: Artistic License 2.0
+
+C++ 91.1\% Perl 6.2\% Shell 0.9\% C 0.7\% Python 0.6\% Makefile 0.4\% Objective-C 0.1\%
+
+Langmead, B., Trapnell, C., Pop, M., \& Salzberg, S. L. (2009). Ultrafast and memory-efficient alignment of short DNA sequences to the human genome. Genome Biology, 10(3), R25. \url{https://doi.org/10.1186/gb-2009-10-3-r25}Langmead, B., \& Salzberg, S. L. (2012).
+
+\begin{verbatim}
+@article{Bowtie,
+author = {Langmead, Ben and Trapnell, Cole and Pop, Mihai and Salzberg, Steven L},
+doi = {10.1186/gb-2009-10-3-r25},
+issn = {1465-6906},
+journal = {Genome Biology},
+number = {3},
+pages = {R25},
+title = {{Ultrafast and memory-efficient alignment of short DNA sequences to the
+human genome}},
+url = {http://genomebiology.biomedcentral.com/articles/10.1186/gb-2009-10-3-r25},
+volume = {10},
+year = {2009}
+}
+\end{verbatim}
+
+\section{Bowtie2}
+
+Conda: \url{https://anaconda.org/bioconda/bowtie2}, v2.4.1 in 2020-06-07
+
+Official: \url{http://bowtie-bio.sourceforge.net/bowtie2/index.shtml}, v2.4.1 in 2020-02-28
+
+GitHub: \url{https://github.com/BenLangmead/bowtie2}, v2.4.1 in 2020-02-29
+
+Current: GitHub, pre-build binary
+
+\begin{verbatim}
+bowtie2-align-s version 2.3.5.1
+64-bit
+Built on
+Wed Apr 17 02:50:12 UTC 2019
+Compiler: gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC)
+Options: -O3 -m64 -msse2 -funroll-loops -g3 -g -O2 -fvisibility=hidden
+-I/hbb_exe_gc_hardened/include -ffunction-sections -fdata-sections
+-fstack-protector -D_FORTIFY_SOURCE=2 -fPIE -std=c++98 -DPOPCNT_CAPABILITY
+-DWITH_TBB -DNO_SPINLOCK -DWITH_QUEUELOCK=1
+Sizeof {int, long, long long, void*, size_t, off_t}: {4, 8, 8, 8, 8, 8}
+\end{verbatim}
 
 License: GPL 3
 
-C++ 57.8\% C 16.9\% Python 15.9\% Perl 6.2\% Shell 1.3\% HTML 1.3\% Other 0.6\%
+C++ 80.7\% Perl 14.5\% Python 1.5\% C 1.3\% Shell 1.1\% Makefile 0.6\% CMake 0.3\%
 
-
-
-Langmead, B., \& Salzberg, S. L. (2012). Fast gapped-read alignment with Bowtie 2. Nature Methods, 9(4), 357–359. \url{https://doi.org/10.1038/nmeth.1923}
-
+Fast gapped-read alignment with Bowtie 2. Nature Methods, 9(4), 357–359. \url{https://doi.org/10.1038/nmeth.1923}
 
 \begin{verbatim}
-@article{HiSat2,
-abstract = {As the rate of sequencing increases, greater throughput is
-demanded from read aligners. The full-text minute index is often used to
-make alignment very fast and memory-efficient, but the approach is
-ill-suited to finding longer, gapped alignments. Bowtie 2 combines the
-strengths of the full-text minute index with the flexibility and speed of
-hardware-accelerated dynamic programming algorithms to achieve a combination
-of high speed, sensitivity and accuracy. {\textcopyright} 2012 Nature
-America, Inc. All rights reserved.},
+@article{Bowtie2,
+abstract = {As the rate of sequencing increases, greater throughput is demanded
+from read aligners. The full-text minute index is often used to make alignment
+very fast and memory-efficient, but the approach is ill-suited to finding
+longer, gapped alignments. Bowtie 2 combines the strengths of the full-text
+minute index with the flexibility and speed of hardware-accelerated dynamic
+programming algorithms to achieve a combination of high speed, sensitivity and
+accuracy. {\textcopyright} 2012 Nature America, Inc. All rights reserved.},
 author = {Langmead, Ben and Salzberg, Steven L.},
 doi = {10.1038/nmeth.1923},
 issn = {15487091},
@@ -283,21 +376,24 @@ year = {2012}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
+
 \section{BWA}
 
-Conda: \url{https://anaconda.org/bioconda/bwa}
+Conda: \url{https://anaconda.org/bioconda/bwa}, v0.7.17 in 2019-12-26
 
-GitHub: \url{https://github.com/lh3/bwa}
+GitHub: \url{https://github.com/lh3/bwa}, v0.7.17-r1188 in 2017-10-24
 
 Official: \url{http://bio-bwa.sourceforge.net/}
 
-SourceForge: \url{https://sourceforge.net/projects/bio-bwa/files/?source=navbar}
+SourceForge: \url{https://sourceforge.net/projects/bio-bwa/}, v0.7.17 in 2017
+
+Current: GitHub, self-build, v0.7.17-r1188
 
 License: GPL 3
 
 C 85.7\% JavaScript 5.8\% Roff 4.3\% C++ 1.8\% Perl 1.3\% Shell 0.6\% Makefile 0.5\%
-
-
 
 \textbf{BWA-backtrack}
 
@@ -403,20 +499,63 @@ year = {2013}
 }
 \end{verbatim}
 
-\section{SubRead}
+Updated: 2020-06-10
+\section{HiSat2}
 
-Conda: \url{https://anaconda.org/bioconda/subread}
+Conda: \url{https://anaconda.org/bioconda/hisat2}, v2.2.0 in 2020-03-02
 
-SourceForge: \url{http://subread.sourceforge.net/}
+Official: \url{https://daehwankimlab.github.io/hisat2/}, v2.2.0 in 2020-02-07
 
-Official: \url{http://subread.sourceforge.net/}
+GitHub: \url{https://github.com/DaehwanKimLab/hisat2}
+
+Current: Official, pre-build binary, 2.2.0
 
 License: GPL 3
 
+C++ 57.8\% C 16.9\% Python 15.9\% Perl 6.2\% Shell 1.3\% HTML 1.3\% Other 0.6\%
 
+Langmead, B., \& Salzberg, S. L. (2012). Fast gapped-read alignment with Bowtie 2. Nature Methods, 9(4), 357–359. \url{https://doi.org/10.1038/nmeth.1923}
+
+\begin{verbatim}
+@article{HiSat2,
+abstract = {As the rate of sequencing increases, greater throughput is
+demanded from read aligners. The full-text minute index is often used to
+make alignment very fast and memory-efficient, but the approach is
+ill-suited to finding longer, gapped alignments. Bowtie 2 combines the
+strengths of the full-text minute index with the flexibility and speed of
+hardware-accelerated dynamic programming algorithms to achieve a combination
+of high speed, sensitivity and accuracy. {\textcopyright} 2012 Nature
+America, Inc. All rights reserved.},
+author = {Langmead, Ben and Salzberg, Steven L.},
+doi = {10.1038/nmeth.1923},
+issn = {15487091},
+journal = {Nature Methods},
+month = {apr},
+number = {4},
+pages = {357--359},
+pmid = {22388286},
+title = {{Fast gapped-read alignment with Bowtie 2}},
+volume = {9},
+year = {2012}
+}
+\end{verbatim}
+
+Updated: 2020-06-10
+
+
+\section{SubRead}
+
+Conda: \url{https://anaconda.org/bioconda/subread}, v2.0.1 in 2020-06-05
+
+SourceForge: \url{https://sourceforge.net/projects/subread}, v2.0.1 in 2020-05-13
+
+Official: \url{http://subread.sourceforge.net/}
+
+Current: Official, pre-build binary, v2.0.0
+
+License: GPL 3
 
 Liao, Y., Smyth, G. K., \& Shi, W. (2013). The Subread aligner: Fast, accurate and scalable read mapping by seed-and-vote. Nucleic Acids Research, 41(10). \url{https://doi.org/10.1093/nar/gkt214}
-
 
 \begin{verbatim}
 @article{SubRead,
@@ -449,7 +588,6 @@ volume = {41},
 year = {2013}
 }
 \end{verbatim}
-
 
 Liao, Y., Smyth, G. K. and Shi, W. (2019) The R package Rsubread is easier, faster, cheaper and better for alignment and quantification of RNA sequencing reads, Nucleic acids research. NLM (Medline), 47(8), p. e47. doi: 10.1093/nar/gkz114.
 
@@ -527,90 +665,21 @@ year = {2014}
 }
 \end{verbatim}
 
-\section{Bowtie}
+Updated: 2020-06-10
 
-Official: \url{http://bowtie-bio.sourceforge.net/index.shtml}
+\section{TopHat2 (deprecated)}
 
-GitHub: \url{https://github.com/BenLangmead/bowtie}
+Official: \url{http://ccb.jhu.edu/software/tophat/index.shtml}, v2.1.1 in 2020-02-23
 
-Conda: \url{https://anaconda.org/bioconda/bowtie}
+GitHub: \url{https://github.com/DaehwanKimLab/tophat}, v2.1.2 in 2018-05-24
 
-License: Artistic License 2.0
+Conda: \url{https://anaconda.org/bioconda/tophat}, v2.1.1 in 2019-05
 
-C++ 91.1\% Perl 6.2\% Shell 0.9\% C 0.7\% Python 0.6\% Makefile 0.4\% Objective-C 0.1\%
-
-
-
-Langmead, B., Trapnell, C., Pop, M., \& Salzberg, S. L. (2009). Ultrafast and memory-efficient alignment of short DNA sequences to the human genome. Genome Biology, 10(3), R25. \url{https://doi.org/10.1186/gb-2009-10-3-r25}Langmead, B., \& Salzberg, S. L. (2012).
-
-\begin{verbatim}
-@article{Bowtie,
-author = {Langmead, Ben and Trapnell, Cole and Pop, Mihai and Salzberg, Steven L},
-doi = {10.1186/gb-2009-10-3-r25},
-issn = {1465-6906},
-journal = {Genome Biology},
-number = {3},
-pages = {R25},
-title = {{Ultrafast and memory-efficient alignment of short DNA sequences to the
-human genome}},
-url = {http://genomebiology.biomedcentral.com/articles/10.1186/gb-2009-10-3-r25},
-volume = {10},
-year = {2009}
-}
-\end{verbatim}
-
-\section{Bowtie2}
-
-Conda: \url{https://anaconda.org/bioconda/bowtie2}
-
-Official: \url{http://bowtie-bio.sourceforge.net/bowtie2/index.shtml}
-
-GitHub: \url{https://github.com/BenLangmead/bowtie2}
-
-License: GPL 3
-
-C++ 80.7\% Perl 14.5\% Python 1.5\% C 1.3\% Shell 1.1\% Makefile 0.6\% CMake 0.3\%
-
-
-
-Fast gapped-read alignment with Bowtie 2. Nature Methods, 9(4), 357–359. \url{https://doi.org/10.1038/nmeth.1923}
-
-\begin{verbatim}
-@article{Bowtie2,
-abstract = {As the rate of sequencing increases, greater throughput is demanded
-from read aligners. The full-text minute index is often used to make alignment
-very fast and memory-efficient, but the approach is ill-suited to finding
-longer, gapped alignments. Bowtie 2 combines the strengths of the full-text
-minute index with the flexibility and speed of hardware-accelerated dynamic
-programming algorithms to achieve a combination of high speed, sensitivity and
-accuracy. {\textcopyright} 2012 Nature America, Inc. All rights reserved.},
-author = {Langmead, Ben and Salzberg, Steven L.},
-doi = {10.1038/nmeth.1923},
-issn = {15487091},
-journal = {Nature Methods},
-month = {apr},
-number = {4},
-pages = {357--359},
-pmid = {22388286},
-title = {{Fast gapped-read alignment with Bowtie 2}},
-volume = {9},
-year = {2012}
-}
-\end{verbatim}
-
-\section{TopHat}
-
-Official: \url{http://ccb.jhu.edu/software/tophat/index.shtml}
-
-GitHub: \url{https://github.com/infphilo/tophat}
-
-Conda: \url{https://anaconda.org/bioconda/tophat}
+Current: N/A
 
 License: BSL 1.0
 
 C++ 84.8\% C 10.0\% Python 3.8\% Perl 0.6\% Makefile 0.3\% M4 0.2\% Other 0.3\%
-
-
 
 Trapnell, C., Pachter, L. and Salzberg, S. L. (2009) TopHat: discovering splice junctions with RNA-Seq., Bioinformatics (Oxford, England), 25(9), pp. 1105–1111. doi: 10.1093/bioinformatics/btp120.
 
@@ -754,20 +823,58 @@ year = {2011}
 
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \part{SAM/BAM/CRAM File Processor}
+
+\section{Picard}
+
+Official: \url{http://broadinstitute.github.io/picard/}
+
+Conda: \url{https://anaconda.org/bioconda/picard}, v2.22.9 in 2020-06-03
+
+GitHub: \url{https://github.com/broadinstitute/picard}, v2.23.0 in 2020-06-10
+
+Current: GitHub, pre-build binary, v2.21.6-SNAPSHOT
+
+License: MIT
+
+Java 98.7\% R 0.4\% XSLT 0.4\% Shell 0.2\% HTML 0.2\% CSS 0.1\% 
+
+``Picard Toolkit.'' 2019. Broad Institute, GitHub Repository. http://broadinstitute.github.io/picard/; Broad Institute
+
+\begin{verbatim}
+@misc{Picard2019toolkit,
+title = {Picard toolkit},
+year = {2019},
+publisher = {Broad Institute},
+journal = {Broad Institute, GitHub repository},
+howpublished = {\url{http://broadinstitute.github.io/picard/}}
+}
+\end{verbatim}
+
+Updated: 2020-06-10
 
 \section{Sambamba}
 
-Conda: \url{https://anaconda.org/bioconda/sambamba}
+Conda: \url{https://anaconda.org/bioconda/sambamba}, v0.7.1 in 2020-03-15 
 
 Official: \url{http://www.sambamba.org/}
 
-GitHub: \url{https://github.com/biod/sambamba}
+Related: \url{https://thebird.nl/blog/D_Dragon.html}
+
+GitHub: \url{https://github.com/biod/sambamba}, v0.7.1 (20191128) in 2019-11-29
+
+Current: GitHub, pre-build binary, 0.7.1
+
+\begin{verbatim}
+LDC 1.17.0 / DMD v2.087.1 / LLVM8.0.1 / bootstrap LDC - the LLVM D compiler
+(1.17.0)
+\end{verbatim}
 
 License: GPL 2
 
 D 82.0\% Shell 7.7\% Roff 6.0\% Python 1.6\% Ruby 1.1\% Meson 0.8\% Makefile 0.8\%
-
 
 Tarasov, A., Vilella, A. J., Cuppen, E., Nijman, I. J., \& Prins, P. (2015). Sambamba: fast processing of NGS alignment formats. Bioinformatics, 31(12), 2032–2034. \url{https://doi.org/10.1093/bioinformatics/btv098}
 
@@ -789,21 +896,23 @@ year = {2015}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
 
 \section{Samtools}
 
 Official: \url{http://www.htslib.org/}
 
-SourceForge: \url{http://samtools.sourceforge.net/}
+SourceForge: \url{http://samtools.sourceforge.net/}, deprecated
 
-Conda: \url{https://anaconda.org/bioconda/samtools}
+Conda: \url{https://anaconda.org/bioconda/samtools}, v1.10 in 2020-04-16
 
-GitHub: \url{https://github.com/samtools/samtools}
+GitHub: \url{https://github.com/samtools/samtools}, v1.10 in 2019-12-07
+
+Current: GitHub, self-build, v1.10 with htslib v1.10
 
 License: The MIT/Expat License
 
 C 73.3\% Perl 18.8\% M4 2.7\% Lua 1.8\% Shell 1.4\% Makefile 1.0\% Other 1.0\%
-
 
 \textbf{VCF Format:}
 
@@ -1159,206 +1268,87 @@ year = {2014}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \part{Variant Caller}
+\section{FreeBayes}
 
-\section{VarScan1}
+GitHub: \url{https://github.com/ekg/freebayes}, v1.3.2 in 2019-12-17
 
-Official: \url{http://varscan.sourceforge.net/}
+Conda: \url{https://anaconda.org/bioconda/freebayes}, v1.3.2 in 2020-05-09
 
-Java
+Current: GitHub, pre-build binary, v1.3.1-dirty
 
-Koboldt, D. C., Chen, K., Wylie, T., Larson, D. E., McLellan, M. D., Mardis, E. R., Weinstock, G. M., Wilson, R. K. and Ding, L. (2009) VarScan: variant detection in massively parallel sequencing of individual and pooled samples., Bioinformatics (Oxford, England), 25(17), pp. 2283–5. doi: 10.1093/bioinformatics/btp373.
+License: MIT
 
-\begin{verbatim}
-@article{Koboldt2009,
-abstract = {SUMMARY Massively parallel sequencing technologies hold incredible
-promise for the study of DNA sequence variation, particularly the identification
-of variants affecting human disease. The unprecedented throughput and relatively
-short read lengths of Roche/454, Illumina/Solexa, and other platforms have
-spurred development of a new generation of sequence alignment algorithms. Yet
-detection of sequence variants based on short read alignments remains challenging,
-and most currently available tools are limited to a single platform or aligner
-type. We present VarScan, an open source tool for variant detection that is
-compatible with several short read aligners. We demonstrate VarScan's ability to
-detect SNPs and indels with high sensitivity and specificity, in both Roche/454
-sequencing of individuals and deep Illumina/Solexa sequencing of pooled samples.},
-author = {Koboldt, Daniel C and Chen, Ken and Wylie, Todd and Larson, David E and
-McLellan, Michael D and Mardis, Elaine R and Weinstock, George M and Wilson,
-Richard K and Ding, Li},
-doi = {10.1093/bioinformatics/btp373},
-issn = {1367-4811},
-journal = {Bioinformatics (Oxford, England)},
-month = {sep},
-number = {17},
-pages = {2283--5},
-pmid = {19542151},
-title = {{VarScan: variant detection in massively parallel sequencing of individual
-and pooled samples.}},
-url = {http://www.ncbi.nlm.nih.gov/pubmed/19542151
-http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC2734323},
-volume = {25},
-year = {2009}
-}
+C++ 95.7\% TeX 2.1\% Python 0.9\% Shell 0.5\% C 0.4\% Assembly 0.3\% Other 0.1\%
 
-\end{verbatim}
-
-
-\section{VarScan2}
-
-
-Official: \url{http://dkoboldt.github.io/varscan/}
-
-GitHub: \url{https://github.com/dkoboldt/varscan}
-
-Conda: \url{https://anaconda.org/bioconda/varscan}
-
-License: The Non-Profit Open Software License version 3.0 (NPOSL-3.0)
-
-Java
-
-Koboldt, D. C., Zhang, Q., Larson, D. E., Shen, D., McLellan, M. D., Lin, L., Miller, C. A., Mardis, E. R., Ding, L. and Wilson, R. K. (2012) VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing, Genome Research. Cold Spring Harbor Laboratory Press, 22(3), pp. 568–576. doi: 10.1101/gr.129684.111.
+Garrison, E., \& Marth, G. (2012). Haplotype-based variant detection from short-read sequencing. Retrieved from \url{http://arxiv.org/abs/1207.3907}
 
 \begin{verbatim}
-@article{Koboldt2012,
-abstract = {Cancer is a disease driven by genetic variation and mutation. Exome
-sequencing can be utilized for discovering these variants and mutations across
-hundreds of tumors. Here we present an analysis tool, VarScan 2, for the
-detection of somatic mutations and copy number alterations (CNAs) in exome data
-from tumor-normal pairs. Unlike most current approaches, our algorithm reads
-data from both samples simultaneously; a heuristic and statistical algorithm
-detects sequence variants and classifies them by somatic status (germline,
-somatic, or LOH); while a comparison of normalized read depth delineates relative
-copy number changes. We apply these methods to the analysis of exome sequence
-data from 151 high-grade ovarian tumors characterized as part of the Cancer
-Genome Atlas (TCGA). We validated some 7790 somatic coding mutations, achieving
-93{\%} sensitivity and 85{\%} precision for single nucleotide variant (SNV)
-detection. Exome-based CNA analysis identified 29 large-scale alterations and
-619 focal events per tumor on average. As in our previous analysis of these
-data, we observed frequent amplification of oncogenes (e.g., CCNE1, MYC) and
-deletion of tumor suppressors (NF1, PTEN, and CDKN2A). We searched for
-additional recurrent focal CNAs using the correlation matrix diagonal
-segmentation (CMDS) algorithm, which identified 424 significant events affecting
-582 genes. Taken together, our results demonstrate the robust performance of
-VarScan 2 for somatic mutation and CNA detection and shed new light on the
-landscape of genetic alterations in ovarian cancer. {\textcopyright} 2012 by
-Cold Spring Harbor Laboratory Press.},
-author = {Koboldt, Daniel C. and Zhang, Qunyuan and Larson, David E. and Shen,
-Dong and McLellan, Michael D. and Lin, Ling and Miller, Christopher A. and
-Mardis, Elaine R. and Ding, Li and Wilson, Richard K.},
-doi = {10.1101/gr.129684.111},
-issn = {10889051},
-journal = {Genome Research},
-month = {mar},
-number = {3},
-pages = {568--576},
-publisher = {Cold Spring Harbor Laboratory Press},
-title = {{VarScan 2: Somatic mutation and copy number alteration discovery
-in cancer by exome sequencing}},
-volume = {22},
-year = {2012}
-}
-
-\end{verbatim}
-\section{LoFreq}
-
-SourceForge: \url{https://sourceforge.net/projects/lofreq/}
-
-Conda: \url{https://anaconda.org/bioconda/lofreq}
-
-Official: \url{http://csb5.github.io/lofreq/}
-
-GitHub: \url{https://github.com/CSB5/lofreq}
-
-License: MIT License
-
-
-C 74.2\% Python 17.8\% Shell 5.3\% M4 2.3\% Other 0.4\%
-
-Wilm, A., Aw, P. P. K., Bertrand, D., Yeo, G. H. T., Ong, S. H., Wong, C. H., … Nagarajan, N. (2012). LoFreq: A sequence-quality aware, ultra-sensitive variant caller for uncovering cell-population heterogeneity from high-throughput sequencing datasets. Nucleic Acids Research, 40(22), 11189–11201. \url{https://doi.org/10.1093/nar/gks918}
-
-\begin{verbatim}
-@article{LoFreq,
-abstract = {The study of cell-population heterogeneity in a range of biological
-systems, from viruses to bacterial isolates to tumor samples, has been
-transformed by recent advances in sequencing throughput. While the high-coverage
-afforded can be used, in principle, to identify very rare variants in a
-population, existing ad hoc approaches frequently fail to distinguish true
-variants from sequencing errors. We report a method (LoFreq) that models
-sequencing run-specific error rates to accurately call variants occurring in
-{\textless}0.05{\%} of a population. Using simulated and real datasets
-(viral, bacterial and human), we show that LoFreq has near-perfect specificity,
-with significantly improved sensitivity compared with existing methods and can
-efficiently analyze deep Illumina sequencing datasets without resorting to
-approximations or heuristics. We also present experimental validation for
-LoFreq on two different platforms (Fluidigm and Sequenom) and its application
-to call rare somatic variants from exome sequencing datasets for gastric cancer.
-Source code and executables for LoFreq are freely available at
-http://sourceforge.net/projects/ lofreq/. {\textcopyright} 2012 The Author(s).},
-author = {Wilm, Andreas and Aw, Pauline Poh Kim and Bertrand, Denis and Yeo,
-Grace Hui Ting and Ong, Swee Hoe and Wong, Chang Hua and Khor, Chiea Chuen and
-Petric, Rosemary and Hibberd, Martin Lloyd and Nagarajan, Niranjan},
-doi = {10.1093/nar/gks918},
-issn = {03051048},
-journal = {Nucleic Acids Research},
-month = {dec},
-number = {22},
-pages = {11189--11201},
-title = {{LoFreq: A sequence-quality aware, ultra-sensitive variant caller for
-uncovering cell-population heterogeneity from high-throughput sequencing datasets}},
-volume = {40},
+@article{FreeBayes,
+abstract = {The direct detection of haplotypes from short-read DNA sequencing
+data requires changes to existing small-variant detection methods. Here, we
+develop a Bayesian statistical framework which is capable of modeling
+multiallelic loci in sets of individuals with non-uniform copy number. We then
+describe our implementation of this framework in a haplotype-based variant
+detector, FreeBayes.},
+archivePrefix = {arXiv},
+arxivId = {1207.3907},
+author = {Garrison, Erik and Marth, Gabor},
+eprint = {1207.3907},
+month = {jul},
+title = {{Haplotype-based variant detection from short-read sequencing}},
+url = {http://arxiv.org/abs/1207.3907},
 year = {2012}
 }
 \end{verbatim}
 
-\section{MuSE}
-
-Official: \url{https://bioinformatics.mdanderson.org/public-software/muse/}
-
-GitHub: \url{https://github.com/danielfan/MuSE}
-
-Conda: \url{https://anaconda.org/bioconda/muse}
-
-License: GPL 2
-
-C++ 63.0\% C 36.8\% Makefile 0.2\%
+Updated: 2020-06-10
 
 
-Fan, Y., Xi, L., Hughes, D. S. T., Zhang, J., Zhang, J., Futreal, P. A., … Wang, W. (2016). MuSE: accounting for tumor heterogeneity using a sample-specific error model improves sensitivity and specificity in mutation calling from sequencing data. Genome Biology, 17(1), 178. \url{https://doi.org/10.1186/s13059-016-1029-6}
+\section{GATK3 (deprecated)}
 
-\begin{verbatim}
-@article{MuSE,
-author = {Fan, Yu and Xi, Liu and Hughes, Daniel S. T. and Zhang, Jianjun and
-Zhang, Jianhua and Futreal, P. Andrew and Wheeler, David A. and Wang, Wenyi},
-doi = {10.1186/s13059-016-1029-6},
-issn = {1474-760X},
-journal = {Genome Biology},
-month = {dec},
-number = {1},
-pages = {178},
-title = {{MuSE: accounting for tumor heterogeneity using a sample-specific error
-model improves sensitivity and specificity in mutation calling from sequencing
-data}},
-url = {http://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1029-6},
-volume = {17},
-year = {2016}
-}
-\end{verbatim}
+Conda: \url{https://anaconda.org/bioconda/gatk}, v3.8 in 2019-10-17
+
+Docker: \url{https://hub.docker.com/r/broadinstitute/gatk3/}, v3.8.1 in 2014
+
+GoogleCloud: \url{https://console.cloud.google.com/storage/browser/gatk-software/package-archive/gatk/}, v3.8-1-0-gf15c1c3ef in 2019-12-09
+
+Current: GoogleCloud, pre-build binary, 3.8-1-0-gf15c1c3ef
+
+Updated: 2020-06-10
 
 \section{GATK4}
 
 Official: \url{https://software.broadinstitute.org/gatk/}
 
-GitHub: \url{https://github.com/broadinstitute/gatk}
+GitHub: \url{https://github.com/broadinstitute/gatk}, v4.1.7.0 in 2020-04-24
 
-Conda: \url{https://anaconda.org/bioconda/gatk4}
+Conda: \url{https://anaconda.org/bioconda/gatk4}, v4.1.7.0 in 2020-05-23
+
+Docker: \url{https://hub.docker.com/r/broadinstitute/gatk/}, v4.1.7.0 in 2020-04
+
+Current: GitHub, pre-build binary
+
+\begin{verbatim}
+Using GATK jar gatk-package-4.1.4.1-local.jar
+Running:
+java -Dsamjdk.use_async_io_read_samtools=false
+-Dsamjdk.use_async_io_write_samtools=true
+-Dsamjdk.use_async_io_write_tribble=false
+-Dsamjdk.compression_level=2 -jar 
+gatk-package-4.1.4.1-local.jar --version
+The Genome Analysis Toolkit (GATK) v4.1.4.1
+HTSJDK Version: 2.21.0
+Picard Version: 2.21.2
+\end{verbatim}
 
 License: BSD-3-Clause
 
-Java 93.9\% Python 2.8\% wdl 1.8\% Shell 1.1\% R 0.3\% HTML 0.1\%
-
+Java 93.8\% Python 2.8\% wdl 1.9\% Shell 1.1\% R 0.3\% HTML 0.1\%
 
 \textbf{The fourth paper, technically just a manuscript deposited in bioRxiv -- but it counts! This is a good citation to include in a Materials and Methods section or in a Discussion if you're talking about the joint calling process.}
-
 
 Poplin, R., Ruano-Rubio, V., DePristo, M. A., Fennell, T. J., Carneiro, M. O., Auwera, G. A. Van der, … Banks, E. (2017). Scaling accurate genetic variant discovery to tens of thousands of samples. BioRxiv, 201178. \url{https://doi.org/10.1101/201178}
 
@@ -1395,7 +1385,6 @@ year = {2017}
 \end{verbatim}
 
 \textbf{The first GATK paper covers the computational philosophy underlying the GATK and is a good citation for the GATK in general.}
-
 
 McKenna, A., Hanna, M., Banks, E., Sivachenko, A., Cibulskis, K., Kernytsky, A., … DePristo, M. A. (2010). The genome analysis toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research, 20(9), 1297–1303. \url{https://doi.org/10.1101/gr.107524.110}
 
@@ -1443,7 +1432,6 @@ year = {2010}
 \end{verbatim}
 
 \textbf{The second GATK paper describes in more detail some of the key tools commonly used in the GATK for high-throughput sequencing data processing and variant discovery. The paper covers base quality score recalibration, indel realignment, SNP calling with UnifiedGenotyper, variant quality score recalibration and their application to deep whole genome, whole exome, and low-pass multi-sample calling. This is a good citation if you use the GATK for variant discovery.}
-
 
 Depristo, M. A., Banks, E., Poplin, R., Garimella, K. V., Maguire, J. R., Hartl, C., … Daly, M. J. (2011). A framework for variation discovery and genotyping using next-generation DNA sequencing data. Nature Genetics, 43(5), 491–501. \url{https://doi.org/10.1038/ng.806}
 
@@ -1515,93 +1503,75 @@ year = {2013}
 }
 \end{verbatim}
 
-\section{GATK3}
+Updated: 2020-06-10
 
-Conda: \url{https://anaconda.org/bioconda/gatk}
 
-GoogleCloud: \url{https://console.cloud.google.com/storage/browser/gatk-software/package-archive/gatk/}
+\section{LoFreq}
 
-\section{MuTect1}
+SourceForge: \url{https://sourceforge.net/projects/lofreq/}, v2.1.2 in 2015-05-19
 
-Official: \url{https://software.broadinstitute.org/cancer/cga/mutect}
+Conda: \url{https://anaconda.org/bioconda/lofreq}, v2.1.4 in 2020-05-09
 
-GitHub: \url{https://github.com/broadinstitute/mutect}
+Official: \url{http://csb5.github.io/lofreq/}
 
-Java 96.3\% Perl 2.3\% Scala 1.4\%
+GitHub: \url{https://github.com/CSB5/lofreq}, v2.1.4 in 2020-01-05
 
-Need Java6/7. Cannot be run under Java 8.
-
-Cibulskis, K., Lawrence, M. S., Carter, S. L., Sivachenko, A., Jaffe, D., Sougnez, C., … Getz, G. (2013). Sensitive detection of somatic point mutations in impure and heterogeneous cancer samples. Nature Biotechnology, 31(3), 213–219. \url{https://doi.org/10.1038/nbt.2514}
+Current: GitHub, pre-build binary
 
 \begin{verbatim}
-@article{MuTect,
-abstract = {Detection of somatic point substitutions is a key step in
-characterizing the cancer genome. However, existing methods typically miss
-low-allelic-fraction mutations that occur in only a subset of the sequenced
-cells owing to either tumor heterogeneity or contamination by normal cells. Here
-we present MuTect, a method that applies a Bayesian classifier to detect somatic
-mutations with very low allele fractions, requiring only a few supporting reads,
-followed by carefully tuned filters that ensure high specificity. We also
-describe benchmarking approaches that use real, rather than simulated, sequencing
-data to evaluate the sensitivity and specificity as a function of sequencing
-depth, base quality and allelic fraction. Compared with other methods, MuTect
-has higher sensitivity with similar specificity, especially for mutations with
-allelic fractions as low as 0.1 and below, making MuTect particularly useful for
-studying cancer subclones and their evolution in standard exome and genome
-sequencing data. Copyright {\textcopyright} 2013 Nature America, Inc.},
-author = {Cibulskis, Kristian and Lawrence, Michael S. and Carter, Scott L. and
-Sivachenko, Andrey and Jaffe, David and Sougnez, Carrie and Gabriel, Stacey and
-Meyerson, Matthew and Lander, Eric S. and Getz, Gad},
-doi = {10.1038/nbt.2514},
-file = {::},
-issn = {10870156},
-journal = {Nature Biotechnology},
-month = {mar},
-number = {3},
-pages = {213--219},
-title = {{Sensitive detection of somatic point mutations in impure and
-heterogeneous cancer samples}},
-volume = {31},
-year = {2013}
-}
+version: 2.1.4
+commit: unknown
+build-date: Feb 19 2020
 \end{verbatim}
 
-\section{FreeBayes}
+License: MIT License
 
-GitHub: \url{https://github.com/ekg/freebayes}
+C 74.2\% Python 17.8\% Shell 5.3\% M4 2.3\% Other 0.4\%
 
-Conda: \url{https://anaconda.org/bioconda/freebayes}
-
-License: MIT
-
-C++ 95.7\% TeX 2.1\% Python 0.9\% Shell 0.5\% C 0.4\% Assembly 0.3\% Other 0.1\%
-
-Garrison, E., \& Marth, G. (2012). Haplotype-based variant detection from short-read sequencing. Retrieved from \url{http://arxiv.org/abs/1207.3907}
+Wilm, A., Aw, P. P. K., Bertrand, D., Yeo, G. H. T., Ong, S. H., Wong, C. H., … Nagarajan, N. (2012). LoFreq: A sequence-quality aware, ultra-sensitive variant caller for uncovering cell-population heterogeneity from high-throughput sequencing datasets. Nucleic Acids Research, 40(22), 11189–11201. \url{https://doi.org/10.1093/nar/gks918}
 
 \begin{verbatim}
-@article{FreeBayes,
-abstract = {The direct detection of haplotypes from short-read DNA sequencing
-data requires changes to existing small-variant detection methods. Here, we
-develop a Bayesian statistical framework which is capable of modeling
-multiallelic loci in sets of individuals with non-uniform copy number. We then
-describe our implementation of this framework in a haplotype-based variant
-detector, FreeBayes.},
-archivePrefix = {arXiv},
-arxivId = {1207.3907},
-author = {Garrison, Erik and Marth, Gabor},
-eprint = {1207.3907},
-month = {jul},
-title = {{Haplotype-based variant detection from short-read sequencing}},
-url = {http://arxiv.org/abs/1207.3907},
+@article{LoFreq,
+abstract = {The study of cell-population heterogeneity in a range of biological
+systems, from viruses to bacterial isolates to tumor samples, has been
+transformed by recent advances in sequencing throughput. While the high-coverage
+afforded can be used, in principle, to identify very rare variants in a
+population, existing ad hoc approaches frequently fail to distinguish true
+variants from sequencing errors. We report a method (LoFreq) that models
+sequencing run-specific error rates to accurately call variants occurring in
+{\textless}0.05{\%} of a population. Using simulated and real datasets
+(viral, bacterial and human), we show that LoFreq has near-perfect specificity,
+with significantly improved sensitivity compared with existing methods and can
+efficiently analyze deep Illumina sequencing datasets without resorting to
+approximations or heuristics. We also present experimental validation for
+LoFreq on two different platforms (Fluidigm and Sequenom) and its application
+to call rare somatic variants from exome sequencing datasets for gastric cancer.
+Source code and executables for LoFreq are freely available at
+http://sourceforge.net/projects/ lofreq/. {\textcopyright} 2012 The Author(s).},
+author = {Wilm, Andreas and Aw, Pauline Poh Kim and Bertrand, Denis and Yeo,
+Grace Hui Ting and Ong, Swee Hoe and Wong, Chang Hua and Khor, Chiea Chuen and
+Petric, Rosemary and Hibberd, Martin Lloyd and Nagarajan, Niranjan},
+doi = {10.1093/nar/gks918},
+issn = {03051048},
+journal = {Nucleic Acids Research},
+month = {dec},
+number = {22},
+pages = {11189--11201},
+title = {{LoFreq: A sequence-quality aware, ultra-sensitive variant caller for
+uncovering cell-population heterogeneity from high-throughput sequencing datasets}},
+volume = {40},
 year = {2012}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
 \section{Manta}
 
-Conda: \url{https://anaconda.org/bioconda/manta}
+Conda: \url{https://anaconda.org/bioconda/manta}, v1.6.0 in 2019-10-06
 
-GitHub: \url{https://github.com/Illumina/manta}
+GitHub: \url{https://github.com/Illumina/manta}, v1.6.0 in 2019-06-25
+
+Current: GitHub, pre-build binary, v1.6.0
 
 License: GPL 3
 
@@ -1645,9 +1615,102 @@ year = {2016}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
+
+\section{MuSE}
+
+Official: \url{https://bioinformatics.mdanderson.org/public-software/muse/}
+
+GitHub: \url{https://github.com/danielfan/MuSE}, v1.0-rc in 2016-07-09
+
+Conda: \url{https://anaconda.org/bioconda/muse}, v1.0.rc in 2-19-03
+
+Current: GitHub, pre-build binary, v1.0rc
+
+License: GPL 2
+
+C++ 63.0\% C 36.8\% Makefile 0.2\%
+
+Fan, Y., Xi, L., Hughes, D. S. T., Zhang, J., Zhang, J., Futreal, P. A., … Wang, W. (2016). MuSE: accounting for tumor heterogeneity using a sample-specific error model improves sensitivity and specificity in mutation calling from sequencing data. Genome Biology, 17(1), 178. \url{https://doi.org/10.1186/s13059-016-1029-6}
+
+\begin{verbatim}
+@article{MuSE,
+author = {Fan, Yu and Xi, Liu and Hughes, Daniel S. T. and Zhang, Jianjun and
+Zhang, Jianhua and Futreal, P. Andrew and Wheeler, David A. and Wang, Wenyi},
+doi = {10.1186/s13059-016-1029-6},
+issn = {1474-760X},
+journal = {Genome Biology},
+month = {dec},
+number = {1},
+pages = {178},
+title = {{MuSE: accounting for tumor heterogeneity using a sample-specific error
+model improves sensitivity and specificity in mutation calling from sequencing
+data}},
+url = {http://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1029-6},
+volume = {17},
+year = {2016}
+}
+\end{verbatim}
+
+Updated: 2020-06-10
+
+\section{MuTect1 (deprecated)}
+
+Official: \url{https://software.broadinstitute.org/cancer/cga/mutect}
+
+GitHub: \url{https://github.com/broadinstitute/mutect}, v1.1.6 in 2013-08-30
+
+QBRC: \url{https://github.com/tianshilu/QBRC-Somatic-Pipeline/blob/master/somatic_script/mutect-1.1.7.jar}, v3.1-0-g72492bb (v1.1.7 in filename, v3.1-0-g72492bb in \verb|--version| command) in unknown
+
+Current: QBRC, pre-build binary, v3.1-0-g72492bb
+
+Java 96.3\% Perl 2.3\% Scala 1.4\%
+
+Comment: Java 1.7.
+
+Cibulskis, K., Lawrence, M. S., Carter, S. L., Sivachenko, A., Jaffe, D., Sougnez, C., … Getz, G. (2013). Sensitive detection of somatic point mutations in impure and heterogeneous cancer samples. Nature Biotechnology, 31(3), 213–219. \url{https://doi.org/10.1038/nbt.2514}
+
+\begin{verbatim}
+@article{MuTect,
+abstract = {Detection of somatic point substitutions is a key step in
+characterizing the cancer genome. However, existing methods typically miss
+low-allelic-fraction mutations that occur in only a subset of the sequenced
+cells owing to either tumor heterogeneity or contamination by normal cells. Here
+we present MuTect, a method that applies a Bayesian classifier to detect somatic
+mutations with very low allele fractions, requiring only a few supporting reads,
+followed by carefully tuned filters that ensure high specificity. We also
+describe benchmarking approaches that use real, rather than simulated, sequencing
+data to evaluate the sensitivity and specificity as a function of sequencing
+depth, base quality and allelic fraction. Compared with other methods, MuTect
+has higher sensitivity with similar specificity, especially for mutations with
+allelic fractions as low as 0.1 and below, making MuTect particularly useful for
+studying cancer subclones and their evolution in standard exome and genome
+sequencing data. Copyright {\textcopyright} 2013 Nature America, Inc.},
+author = {Cibulskis, Kristian and Lawrence, Michael S. and Carter, Scott L. and
+Sivachenko, Andrey and Jaffe, David and Sougnez, Carrie and Gabriel, Stacey and
+Meyerson, Matthew and Lander, Eric S. and Getz, Gad},
+doi = {10.1038/nbt.2514},
+file = {::},
+issn = {10870156},
+journal = {Nature Biotechnology},
+month = {mar},
+number = {3},
+pages = {213--219},
+title = {{Sensitive detection of somatic point mutations in impure and
+heterogeneous cancer samples}},
+volume = {31},
+year = {2013}
+}
+\end{verbatim}
+
+Updated: 2020-06-10
+
 \section{Shimmer}
 
-GitHub: \url{https://github.com/nhansen/Shimmer}
+GitHub: \url{https://github.com/nhansen/Shimmer}, v0.2 in 2018-03-07
+
+Current: GitHub, pre-build binary, unknown
 
 License: Public Domain -- United States Government Work
 
@@ -1684,11 +1747,15 @@ year = {2013}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \section{Strelka2}
 
-Conda: \url{https://anaconda.org/bioconda/strelka}
+Conda: \url{https://anaconda.org/bioconda/strelka}, v2.9.10 in 2018-12
 
-GitHub: \url{https://github.com/Illumina/strelka}
+GitHub: \url{https://github.com/Illumina/strelka}, v2.9.10 in 2018-11-07
+
+Current: GitHub, self-build, 2.9.10
 
 License: GPL 3
 
@@ -1721,9 +1788,112 @@ title = {{Strelka2: fast and accurate calling of germline and somatic variants}}
 volume = {15},
 year = {2018}
 }
+\end{verbatim}
+
+Updated: 2020-06-10
+\section{VarScan1 (deprecated)}
+
+Official: \url{http://varscan.sourceforge.net/}, v2.3.9 in 2015-06-03, deprecated
+
+Current: N/A
+
+Java
+
+Koboldt, D. C., Chen, K., Wylie, T., Larson, D. E., McLellan, M. D., Mardis, E. R., Weinstock, G. M., Wilson, R. K. and Ding, L. (2009) VarScan: variant detection in massively parallel sequencing of individual and pooled samples., Bioinformatics (Oxford, England), 25(17), pp. 2283–5. doi: 10.1093/bioinformatics/btp373.
+
+\begin{verbatim}
+@article{Koboldt2009,
+abstract = {SUMMARY Massively parallel sequencing technologies hold incredible
+promise for the study of DNA sequence variation, particularly the identification
+of variants affecting human disease. The unprecedented throughput and relatively
+short read lengths of Roche/454, Illumina/Solexa, and other platforms have
+spurred development of a new generation of sequence alignment algorithms. Yet
+detection of sequence variants based on short read alignments remains challenging,
+and most currently available tools are limited to a single platform or aligner
+type. We present VarScan, an open source tool for variant detection that is
+compatible with several short read aligners. We demonstrate VarScan's ability to
+detect SNPs and indels with high sensitivity and specificity, in both Roche/454
+sequencing of individuals and deep Illumina/Solexa sequencing of pooled samples.},
+author = {Koboldt, Daniel C and Chen, Ken and Wylie, Todd and Larson, David E and
+McLellan, Michael D and Mardis, Elaine R and Weinstock, George M and Wilson,
+Richard K and Ding, Li},
+doi = {10.1093/bioinformatics/btp373},
+issn = {1367-4811},
+journal = {Bioinformatics (Oxford, England)},
+month = {sep},
+number = {17},
+pages = {2283--5},
+pmid = {19542151},
+title = {{VarScan: variant detection in massively parallel sequencing of individual
+and pooled samples.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/19542151
+http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC2734323},
+volume = {25},
+year = {2009}
+}
 
 \end{verbatim}
 
+Updated: 2020-06-10
+
+\section{VarScan2}
+
+Official: \url{http://dkoboldt.github.io/varscan/}
+
+GitHub: \url{https://github.com/dkoboldt/varscan}, v2.4.2 (release) in 2016-05-27, v2.4.4 (file) in 2019-07
+
+Conda: \url{https://anaconda.org/bioconda/varscan}, v2.4.4 in 2019-10-26
+
+Current: GitHub, pre-build binary, v2.4.2
+
+License: The Non-Profit Open Software License version 3.0 (NPOSL-3.0)
+
+Java
+
+Koboldt, D. C., Zhang, Q., Larson, D. E., Shen, D., McLellan, M. D., Lin, L., Miller, C. A., Mardis, E. R., Ding, L. and Wilson, R. K. (2012) VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing, Genome Research. Cold Spring Harbor Laboratory Press, 22(3), pp. 568–576. doi: 10.1101/gr.129684.111.
+
+\begin{verbatim}
+@article{Koboldt2012,
+abstract = {Cancer is a disease driven by genetic variation and mutation. Exome
+sequencing can be utilized for discovering these variants and mutations across
+hundreds of tumors. Here we present an analysis tool, VarScan 2, for the
+detection of somatic mutations and copy number alterations (CNAs) in exome data
+from tumor-normal pairs. Unlike most current approaches, our algorithm reads
+data from both samples simultaneously; a heuristic and statistical algorithm
+detects sequence variants and classifies them by somatic status (germline,
+somatic, or LOH); while a comparison of normalized read depth delineates relative
+copy number changes. We apply these methods to the analysis of exome sequence
+data from 151 high-grade ovarian tumors characterized as part of the Cancer
+Genome Atlas (TCGA). We validated some 7790 somatic coding mutations, achieving
+93{\%} sensitivity and 85{\%} precision for single nucleotide variant (SNV)
+detection. Exome-based CNA analysis identified 29 large-scale alterations and
+619 focal events per tumor on average. As in our previous analysis of these
+data, we observed frequent amplification of oncogenes (e.g., CCNE1, MYC) and
+deletion of tumor suppressors (NF1, PTEN, and CDKN2A). We searched for
+additional recurrent focal CNAs using the correlation matrix diagonal
+segmentation (CMDS) algorithm, which identified 424 significant events affecting
+582 genes. Taken together, our results demonstrate the robust performance of
+VarScan 2 for somatic mutation and CNA detection and shed new light on the
+landscape of genetic alterations in ovarian cancer. {\textcopyright} 2012 by
+Cold Spring Harbor Laboratory Press.},
+author = {Koboldt, Daniel C. and Zhang, Qunyuan and Larson, David E. and Shen,
+Dong and McLellan, Michael D. and Lin, Ling and Miller, Christopher A. and
+Mardis, Elaine R. and Ding, Li and Wilson, Richard K.},
+doi = {10.1101/gr.129684.111},
+issn = {10889051},
+journal = {Genome Research},
+month = {mar},
+number = {3},
+pages = {568--576},
+publisher = {Cold Spring Harbor Laboratory Press},
+title = {{VarScan 2: Somatic mutation and copy number alteration discovery
+in cancer by exome sequencing}},
+volume = {22},
+year = {2012}
+}
+\end{verbatim}
+
+Updated: 2020-06-10
 
 
 \part{VCF/BCF Processor}
@@ -1734,31 +1904,37 @@ Official: \url{http://www.htslib.org/}
 
 Official: \url{http://samtools.github.io/bcftools/}
 
-GitHub: \url{https://github.com/samtools/bcftools}
+GitHub: \url{https://github.com/samtools/bcftools}, v1.10.2 in 2019-12-21
 
-Conda: \url{https://anaconda.org/bioconda/bcftools}
+Conda: \url{https://anaconda.org/bioconda/bcftools}, v1.10.2 in 2019-12-22
+
+Current: GitHub, self-build, 1.10.2 with htslib 1.10.2
 
 License: MIT/Expat license or GPL 3
 
 C 87.6\% Perl 9.5\% M4 0.9\% Python 0.7\% Makefile 0.6\% Shell 0.6\% Other 0.1\%
 
-Same as Samtools.
+Citation same as Samtools.
+
+Updated: 2020-06-10
 
 \section{VCFTools}
 
-SourceForge: \url{http://vcftools.sourceforge.net/}
+SourceForge: \url{http://vcftools.sourceforge.net/}, v0.1.13 in 2015-08-03, branch deprecated
+
+SVN: \url{http://svn.code.sf.net/p/vcftools/code/trunk/}
 
 Official: \url{http://vcftools.github.io/}
 
-GitHub: \url{https://github.com/vcftools/vcftools}
+GitHub: \url{https://github.com/vcftools/vcftools}, v0.1.16 in 2018-08-03
 
-Conda: \url{https://anaconda.org/bioconda/vcftools}
+Current: GitHub, self-build, v0.1.17
+
+Conda: \url{https://anaconda.org/bioconda/vcftools}, v0.1.16 in 2019-05
 
 License: LGPL 3
 
 C++ 44.8\% Perl 44.5\% C 6.6\% Roff 3.0\% Shell 0.8\% M4 0.2\% Makefile 0.1\%
-
-
 
 Danecek, P., Auton, A., Abecasis, G., Albers, C. A., Banks, E., DePristo, M. A., … Durbin, R. (2011). The variant call format and VCFtools. Bioinformatics, 27(15), 2156–2158. \url{https://doi.org/10.1093/bioinformatics/btr330}
 
@@ -1791,50 +1967,16 @@ year = {2011}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \part{VCF Annotation \& Visualization}
-
-\section{VarSifter}
-
-GitHub: \url{https://github.com/teerjk/VarSifter}
-
-Old Official: \url{research.nhgri.nih.gov/software/VarSifter/}
-
-License: THE JUNG LICENSE (Another kind of BSD)
-
-Java 91.1\% HTML 8.4\% Makefile 0.5\%
-
-
-
-Teer, J. K., Green, E. D., Mullikin, J. C., \& Biesecker, L. G. (2012). VarSifter: Visualizing and analyzing exome-scale sequence variation data on a desktop computer. Bioinformatics, 28(4), 599–600. \url{https://doi.org/10.1093/bioinformatics/btr711}
-
-\begin{verbatim}
-@article{VarSifter,
-abstract = {VarSifter is a graphical software tool for desktop computers that
-allows investigators of varying computational skills to easily and quickly sort,
-filter, and sift through sequence variation data. A variety of filters and a
-custom query framework allow filtering based on any combination of sample and
-annotation information. By simplifying visualization and analyses of exome-scale
-sequence variation data, this program will help bring the power and promise of
-massively-parallel DNA sequencing to a broader group of researchers. Published
-by Oxford University Press 2012.},
-author = {Teer, Jamie K. and Green, Eric D. and Mullikin, James C. and
-Biesecker, Leslie G.},
-doi = {10.1093/bioinformatics/btr711},
-issn = {13674803},
-journal = {Bioinformatics},
-month = {feb},
-number = {4},
-pages = {599--600},
-title = {{VarSifter: Visualizing and analyzing exome-scale sequence variation
-data on a desktop computer}},
-volume = {28},
-year = {2012}
-}
-\end{verbatim}
-
 \section{ANNOVar}
 
-Official: \url{http://www.openbioinformatics.org/annovar/annovar_download.html}
+Official: \url{http://www.openbioinformatics.org/annovar/annovar_download.html}, v2014Dec12
+
+Official: \url{https://doc-openbio.readthedocs.io/projects/annovar/en/latest/user-guide/download/}, v2019Oct24
+
+Current: Official, pre-build binary, \$Date: 2019-10-24 00:05:27 -0400 (Thu, 24 Oct 2019) \$
 
 Wang, K., Li, M., \& Hakonarson, H. (2010). ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data. Nucleic Acids Research, 38(16), e164–e164. \url{https://doi.org/10.1093/nar/gkq603}
 
@@ -1853,67 +1995,80 @@ url = {https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkq603},
 volume = {38},
 year = {2010}
 }
-
 \end{verbatim}
 
-\section{Variant Effect Predicator}
+Updated: 2020-06-10
 
-GitHub \url{https://github.com/Ensembl/ensembl-vep}
+\section{myVCF}
 
-Official: \url{https://asia.ensembl.org/info/docs/tools/vep/index.html}
+Official: \url{https://apietrelli.github.io/myVCF/}
 
-Conda: \url{https://anaconda.org/bioconda/ensembl-vep}
+ReadTheDocs: \url{https://myvcf.readthedocs.io/en/latest/}
 
-License: Apache 2.0
+GitHub: \url{https://github.com/apietrelli/myVCF}, v1.0 in 2017-10-09
 
-Perl 98.4\% Other 1.6\%
+Current: N/A
 
+License: CC-BY-NC 4.0 International
 
+Python 93.7\% HTML 6.2\% Other 0.1\%
 
-McLaren, W., Gil, L., Hunt, S. E., Riat, H. S., Ritchie, G. R. S., Thormann, A., Flicek, P. and Cunningham, F. (2016) The Ensembl Variant Effect Predictor, Genome Biology. BioMed Central Ltd., 17(1), p. 122. doi: 10.1186/s13059-016-0974-4.
+Pietrelli, A. and Valenti, L. (2017) myVCF: a desktop application for high-throughput mutations data management, Bioinformatics, 33(22), pp. 3676–3678. doi: 10.1093/bioinformatics/btx475.
 
 \begin{verbatim}
-@article{VEP,
-abstract = {The Ensembl Variant Effect Predictor is a powerful toolset for the
-analysis, annotation, and prioritization of genomic variants in coding and
-non-coding regions. It provides access to an extensive collection of genomic
-annotation, with a variety of interfaces to suit different requirements, and
-simple options for configuring and extending analysis. It is open source, free
-to use, and supports full reproducibility of results. The Ensembl Variant Effect
-Predictor can simplify and accelerate variant interpretation in a wide range of
-study designs.},
-author = {McLaren, William and Gil, Laurent and Hunt, Sarah E. and Riat, Harpreet
-Singh and Ritchie, Graham R.S. and Thormann, Anja and Flicek, Paul and
-Cunningham, Fiona},
-doi = {10.1186/s13059-016-0974-4},
-issn = {1474760X},
-journal = {Genome Biology},
-keywords = {Genome,NGS,SNP,Variant annotation},
-month = {jun},
-number = {1},
-pages = {122},
-pmid = {27268795},
-publisher = {BioMed Central Ltd.},
-title = {{The Ensembl Variant Effect Predictor}},
-url = {http://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0974-4},
-volume = {17},
-year = {2016}
+@article{myVCF,
+abstract = {Next-generation sequencing technologies have become the most
+powerful tool to discover genetic variants associated with human diseases.
+Although the dramatic reductions in the costs facilitate the use in the wet-lab
+and clinics, the huge amount of data generated renders their management by
+non-expert researchers and physicians extremely difficult. Therefore, there is
+an urgent need of novel approaches and tools aimed at getting the ‘end-users'
+closer to the sequencing data, facilitating the access by non-bioinformaticians,
+and to speed-up the functional interpretation of genetic variants. We developed
+myVCF, a standalone, easy-to-use desktop application, which is based on a browser
+interface and is suitable for Windows, Mac and UNIX systems. myVCF is an
+efficient platform that is able to manage multiple sequencing projects created
+from VCF files within the system; stores genetic variants and samples genotypes
+from an annotated VCF files into a SQLite database; implements a flexible search
+engine for data exploration, allowing to query for chromosomal region, gene,
+single variant or dbSNP ID. Besides, myVCF generates a summary statistics report
+about mutations distribution across samples and across the genome/exome by
+aggregating the information within the VCF file. In summary, the myVCF platform
+allows end-users without strong programming and bioinformatics skills to
+explore, query, visualize and export mutations data in a simple and
+straightforward way.https://apietrelli.github.io/myVCF/Supplementary data
+are available at Bioinformatics online.},
+author = {Pietrelli, Alessandro and Valenti, Luca},
+doi = {10.1093/bioinformatics/btx475},
+issn = {1367-4803},
+journal = {Bioinformatics},
+month = {jul},
+number = {22},
+pages = {3676--3678},
+title = {{myVCF: a desktop application for high-throughput mutations data
+management}},
+url = {https://doi.org/10.1093/bioinformatics/btx475},
+volume = {33},
+year = {2017}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
 \section{snpEff}
 
-Official: \url{http://snpeff.sourceforge.net/}
+Official: \url{http://snpeff.sourceforge.net/}, v4.3t in 2017-11-24
 
-GitHub: \url{https://github.com/pcingola/SnpEff}
+GitHub: \url{https://github.com/pcingola/SnpEff}, v4.3t in 2017-11-24
 
-Conda: \url{https://anaconda.org/bioconda/snpeff}
+Conda: \url{https://anaconda.org/bioconda/snpeff}, v4.5covid19 in 2020-05-07
+
+Current: Official, pre-build binary, 4.3t (build 2017-11-24 10:18)
+
+Comment: Requires Java 1.8 (Java8)
 
 License: LGPL 3
 
 Java 62.0\% HTML 31.5\% Perl 2.2\% Shell 1.7\% CSS 0.8\% Python 0.6\% Other 1.2\%
-
-
 
 Cingolani, P., Platts, A., Wang, L. L., Coon, M., Nguyen, T., Wang, L., Land, S. J., Lu, X. and Ruden, D. M. (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3, Fly. Taylor and Francis Inc., 6(2), pp. 80–92. doi: 10.4161/fly.19695.
 
@@ -1964,24 +2119,27 @@ year = {2012}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \section{snpSift}
 
-Official: \url{http://snpeff.sourceforge.net/}
+Official: \url{http://snpeff.sourceforge.net/}, v4.3t in 2017-11-24
 
-GitHub: \url{https://github.com/pcingola/SnpSift}
+GitHub: \url{https://github.com/pcingola/SnpSift}, v4.3t in 2017-11-24
 
-Conda: \url{https://anaconda.org/bioconda/snpsift}
+Conda: \url{https://anaconda.org/bioconda/snpsift}, v4.3.1t in 2020-04-21
+
+Current: Official, pre-build binary, v4.3t (build 2017-11-24 10:18)
 
 License: LGPL 3
 
+Comment: Requires Java 1.8 (Java8)
+
 Java 97.3\% G-code 2.3\% Shell 0.4\%
-
-
 
 Cingolani, P., Patel, V. M., Coon, M., Nguyen, T., Land, S. J., Ruden, D. M. and Lu, X. (2012) Using Drosophila melanogaster as a model for genotoxic chemical mutational studies with a new program, SnpSift, Frontiers in Genetics, 3(MAR). doi: 10.3389/fgene.2012.00035.
 
 \begin{verbatim}
-
 @article{snpSift,
 abstract = {This paper describes a new program SnpSift for filtering
 differential DNA sequence variants between two or more experimental genomes
@@ -2025,72 +2183,111 @@ year = {2012}
 }
 \end{verbatim}
 
-\section{myVCF}
+Updated: 2020-06-10
 
-Official: \url{https://apietrelli.github.io/myVCF/}
 
-ReadTheDocs: \url{https://myvcf.readthedocs.io/en/latest/}
+\section{Variant Effect Predicator}
 
-GitHub: \url{https://github.com/apietrelli/myVCF}
+GitHub \url{https://github.com/Ensembl/ensembl-vep}
 
-License: CC-BY-NC 4.0 International
+Official: \url{https://asia.ensembl.org/info/docs/tools/vep/index.html}, v100.2 in 2020-05-25
 
-Python 93.7\% HTML 6.2\% Other 0.1\%
+Conda: \url{https://anaconda.org/bioconda/ensembl-vep}, v100.2 in 2020-06-01
 
-Pietrelli, A. and Valenti, L. (2017) myVCF: a desktop application for high-throughput mutations data management, Bioinformatics, 33(22), pp. 3676–3678. doi: 10.1093/bioinformatics/btx475.
+Current: N/A
+
+License: Apache 2.0
+
+Perl 97.6\% Other 2.4\%
+
+McLaren, W., Gil, L., Hunt, S. E., Riat, H. S., Ritchie, G. R. S., Thormann, A., Flicek, P. and Cunningham, F. (2016) The Ensembl Variant Effect Predictor, Genome Biology. BioMed Central Ltd., 17(1), p. 122. doi: 10.1186/s13059-016-0974-4.
 
 \begin{verbatim}
-@article{myVCF,
-abstract = {Next-generation sequencing technologies have become the most
-powerful tool to discover genetic variants associated with human diseases.
-Although the dramatic reductions in the costs facilitate the use in the wet-lab
-and clinics, the huge amount of data generated renders their management by
-non-expert researchers and physicians extremely difficult. Therefore, there is
-an urgent need of novel approaches and tools aimed at getting the ‘end-users'
-closer to the sequencing data, facilitating the access by non-bioinformaticians,
-and to speed-up the functional interpretation of genetic variants. We developed
-myVCF, a standalone, easy-to-use desktop application, which is based on a browser
-interface and is suitable for Windows, Mac and UNIX systems. myVCF is an
-efficient platform that is able to manage multiple sequencing projects created
-from VCF files within the system; stores genetic variants and samples genotypes
-from an annotated VCF files into a SQLite database; implements a flexible search
-engine for data exploration, allowing to query for chromosomal region, gene,
-single variant or dbSNP ID. Besides, myVCF generates a summary statistics report
-about mutations distribution across samples and across the genome/exome by
-aggregating the information within the VCF file. In summary, the myVCF platform
-allows end-users without strong programming and bioinformatics skills to
-explore, query, visualize and export mutations data in a simple and
-straightforward way.https://apietrelli.github.io/myVCF/Supplementary data
-are available at Bioinformatics online.},
-author = {Pietrelli, Alessandro and Valenti, Luca},
-doi = {10.1093/bioinformatics/btx475},
-issn = {1367-4803},
-journal = {Bioinformatics},
-month = {jul},
-number = {22},
-pages = {3676--3678},
-title = {{myVCF: a desktop application for high-throughput mutations data
-management}},
-url = {https://doi.org/10.1093/bioinformatics/btx475},
-volume = {33},
-year = {2017}
+@article{VEP,
+abstract = {The Ensembl Variant Effect Predictor is a powerful toolset for the
+analysis, annotation, and prioritization of genomic variants in coding and
+non-coding regions. It provides access to an extensive collection of genomic
+annotation, with a variety of interfaces to suit different requirements, and
+simple options for configuring and extending analysis. It is open source, free
+to use, and supports full reproducibility of results. The Ensembl Variant Effect
+Predictor can simplify and accelerate variant interpretation in a wide range of
+study designs.},
+author = {McLaren, William and Gil, Laurent and Hunt, Sarah E. and Riat, Harpreet
+Singh and Ritchie, Graham R.S. and Thormann, Anja and Flicek, Paul and
+Cunningham, Fiona},
+doi = {10.1186/s13059-016-0974-4},
+issn = {1474760X},
+journal = {Genome Biology},
+keywords = {Genome,NGS,SNP,Variant annotation},
+month = {jun},
+number = {1},
+pages = {122},
+pmid = {27268795},
+publisher = {BioMed Central Ltd.},
+title = {{The Ensembl Variant Effect Predictor}},
+url = {http://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0974-4},
+volume = {17},
+year = {2016}
 }
-
-
 \end{verbatim}
+
+Updated: 2020-06-10
+
+\section{VarSifter}
+
+GitHub: \url{https://github.com/teerjk/VarSifter}, v1.9 in 2018-08-01
+
+Official: \url{https://research.nhgri.nih.gov/software/VarSifter/}, branch deprecated
+
+FTP: \url{ftp://ftp.nhgri.nih.gov/pub/software/VarSifter/}, v1.7 in 2015-01-08
+
+Current: N/A
+
+License: THE JUNG LICENSE (Another kind of BSD)
+
+Java 91.1\% HTML 8.4\% Makefile 0.5\%
+
+Teer, J. K., Green, E. D., Mullikin, J. C., \& Biesecker, L. G. (2012). VarSifter: Visualizing and analyzing exome-scale sequence variation data on a desktop computer. Bioinformatics, 28(4), 599–600. \url{https://doi.org/10.1093/bioinformatics/btr711}
+
+\begin{verbatim}
+@article{VarSifter,
+abstract = {VarSifter is a graphical software tool for desktop computers that
+allows investigators of varying computational skills to easily and quickly sort,
+filter, and sift through sequence variation data. A variety of filters and a
+custom query framework allow filtering based on any combination of sample and
+annotation information. By simplifying visualization and analyses of exome-scale
+sequence variation data, this program will help bring the power and promise of
+massively-parallel DNA sequencing to a broader group of researchers. Published
+by Oxford University Press 2012.},
+author = {Teer, Jamie K. and Green, Eric D. and Mullikin, James C. and
+Biesecker, Leslie G.},
+doi = {10.1093/bioinformatics/btr711},
+issn = {13674803},
+journal = {Bioinformatics},
+month = {feb},
+number = {4},
+pages = {599--600},
+title = {{VarSifter: Visualizing and analyzing exome-scale sequence variation
+data on a desktop computer}},
+volume = {28},
+year = {2012}
+}
+\end{verbatim}
+
+Updated: 2020-06-10
 
 
 
 \part{Pipelines}
 \section{SpeedSeq}
 
-GitHub: \url{https://github.com/hall-lab/speedseq}
+GitHub: \url{https://github.com/hall-lab/speedseq}, v0.1.2 in 2017-01-10
+
+Current: N/A
 
 License: The MIT License (MIT)
 
 C 75.5\% Roff 8.4\% Perl 8.0\% Shell 3.1\% Makefile 1.5\% C++ 1.0\% Other 2.5\%
-
-
 
 Chiang, C., Layer, R. M., Faust, G. G., Lindberg, M. R., Rose, D. B., Garrison, E. P., Marth, G. T., Quinlan, A. R. and Hall, I. M. (2015) SpeedSeq: Ultra-fast personal genome analysis and interpretation, Nature Methods. Nature Publishing Group, 12(10), pp. 966–968. doi: 10.1038/nmeth.3505.
 
@@ -2120,15 +2317,19 @@ year = {2015}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \part{R, IDE and R Packages}
 
 \section{R}
 
-Conda: \url{https://anaconda.org/r/r-base}
+Conda: \url{https://anaconda.org/r/r-base}, v3.6.1 in 2020-05-20
 
-Official: \url{https://www.r-project.org/}
+Official: \url{https://www.r-project.org/}, v4.0.2 in 2020-06-22
 
 SVN: \url{https://svn.r-project.org/R-dev-web/trunk/index.html}
+
+Current: Conda, v4.0.0
 
 License: GPL 2
 
@@ -2146,17 +2347,21 @@ url          = {https://www.R-project.org}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \section{RStudio}
 
-Official: \url{https://rstudio.com/}
+Official: \url{https://rstudio.com/}, v1.3 in 2020-05-27
 
-Conda: \url{https://anaconda.org/r/rstudio}
+Conda: \url{https://anaconda.org/r/rstudio}, v1.1.456 in 2020-03-10
 
-GitHub: \url{https://github.com/rstudio/rstudio}
+GitHub: \url{https://github.com/rstudio/rstudio}, v1.3.959 in 2020-05-27
+
+Current: N/A
 
 License: Commercial or AGPL 3
 
-Java 36.4\% C++ 32.2\% JavaScript 19.5\% R 3.4\% C 3.3\% TypeScript 1.9\% Other 3.3\% 
+Java 36.1\% C++ 31/3\% JavaScript 20.4\% R 3.3\% C 3.2\% TypeScript 2.6\% Other 3.1\% 
 
 RStudio Team (2015). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL http://www.rstudio.com/.
 
@@ -2171,22 +2376,23 @@ url = {http://www.rstudio.com/},
 }
 \end{verbatim}
 
-
-
+Updated: 2020-06-10
 
 \part{Python and Python Packages}
 
 \section{Python3}
 
-Conda: \url{https://anaconda.org/conda-forge/python}
+Conda: \url{https://anaconda.org/conda-forge/python}, v3.8.3 in 2020-06-02
 
-Official: \url{https://www.python.org/}
+Official: \url{https://www.python.org/}, v3.8.3 in 2020-05-13
 
-GitHub: \url{https://github.com/python/cpython}
+GitHub: \url{https://github.com/python/cpython}, v3.9.0b3 in 2020-06-10
+
+Current: Conda, v3.7.6
 
 License: PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
 
-Python 64.3\% C 28.7\% Objective-C 4.3\% C++ 1.2\% HTML 0.4\% M4 0.4\% Other 0.7\% 
+Python 63.0\% C 30.1\% Objective-C 4.2\% C++ 1.3\% HTML 0.4\% M4 0.4\% Other 0.6\% 
 
 \textbf{From General Python 3 FAQ: \url{https://docs.python.org/3/faq/general.html}}
 
@@ -2220,54 +2426,11 @@ year = {1991}
 }
 \end{verbatim}
 
+Updated: 2020-06-10
+
 \part{Docker and Docker Packages}
 
-
-
 \part{File Specifications}
-
-\section{SAM}
-
-GitHub: \url{https://github.com/samtools/hts-specs}
-
-Official: \url{http://samtools.github.io/hts-specs/}
-
-\section{BAM}
-
-GitHub: \url{https://github.com/samtools/hts-specs}
-
-Official: \url{http://samtools.github.io/hts-specs/}
-
-\section{CRAM}
-
-GitHub: \url{https://github.com/samtools/hts-specs}
-
-Official: \url{http://samtools.github.io/hts-specs/}
-
-\section{BCF}
-
-GitHub: \url{https://github.com/samtools/hts-specs}
-
-Official: \url{http://samtools.github.io/hts-specs/}
-
-\section{VCF}
-
-GitHub: \url{https://github.com/samtools/hts-specs}
-
-Official: \url{http://samtools.github.io/hts-specs/}
-
-\section{CSI}
-
-GitHub: \url{https://github.com/samtools/hts-specs}
-
-Official: \url{http://samtools.github.io/hts-specs/}
-
-\section{BAI}
-
-GitHub: \url{https://github.com/samtools/hts-specs}
-
-Official: \url{http://samtools.github.io/hts-specs/}
-
 \section{FASTQ}
 
 Rhizobium, G. E. (2013) Complete Genome Sequence of the Sesbania Symbiont and Rice, Nucleic acids research. Oxford Academic, 1(1256879), pp. 13–14. doi: 10.1093/nar.
@@ -2309,4 +2472,44 @@ volume = {1},
 year = {2013}
 }
 \end{verbatim}
+
+Updated: 2020-06-10
+
+
+\section{SAM, BAM, CRAM, BCF, VCF, CSI, BAI}
+
+GitHub: \url{https://github.com/samtools/hts-specs}
+
+Official: \url{http://samtools.github.io/hts-specs/}
+
+TeX 97.8\% HTML 1.3\% Makefile 0.3\% Shell 0.2\% CSS 0.2\% JavaScript 0.1\% Dockerfile 0.1\% 
+
+Sequence Alignment/Map Format (SAM) v1 in 2020-04-30
+
+CRAM format v2.1 in 2019-01-22, Apache license 2.0
+
+CRAM format v3 in 2020-01-20, Apache license 2.0
+
+BCF v1 in 2019-11-20, deprecated
+
+BCF v2.1 in 2019-07-24
+
+CSI v1 in 2019-11-20
+
+Tabix index file format in 2018-07-06
+
+Variant Call Format (VCF) v4.1 in 2020-03-03
+
+Variant Call Format (VCF) v4.2 in 2020-03-03
+
+Variant Call Format (VCF) v4.3 in 3030-05-27
+
+GA4GH File Encryption Standard (crypt4gh) in 2019-10-21
+
+Htsget retrieval API spec v1.2.0 in 2020-02-20
+
+Refget API Specification v1.0.0 in 2020-05-09
+
+Updated: 2020-06-10
+
 \end{document}
