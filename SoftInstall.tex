@@ -1969,6 +1969,439 @@ volume = {30},
 year = {2014}
 }
 \end{verbatim}
+
+\section{PLINK}
+
+Official: \url{http://www.cog-genomics.org/plink/2.0/}, v2.00a3LM in 2020-01-15
+
+GitHub: \url{https://github.com/chrchang/plink-ng}
+
+Current: GitHub, pre-built binaries, v2.00a3LM in 2020-01-15
+
+License: GPL v3
+
+C 50.6\% C++ 47.5\% Python 1.1\% TeX 0.3\% Makefile 0.2\% Shell 0.1\% Other 0.2\% 
+
+Chang, C. C., Chow, C. C., Tellier, L. C. A. M., Vattikuti, S., Purcell, S. M., \& Lee, J. J. (2015). Second-generation PLINK: rising to the challenge of larger and richer datasets. GigaScience, 4(1). \url{https://doi.org/10.1186/s13742-015-0047-8}
+
+\begin{verbatim}
+@article{Chang2015,
+abstract = {PLINK 1 is a widely used open-source C/C++ toolset for genome-wide
+association studies (GWAS) and research in population genetics. However, the
+steady accumulation of data from imputation and whole-genome sequencing
+studies has exposed a strong need for faster and scalable implementations of
+key functions, such as logistic regression, linkage disequilibrium
+estimation, and genomic distance evaluation. In addition, GWAS and
+population-genetic data now frequently contain genotype likelihoods, phase
+information, and/or multiallelic variants, none of which can be represented by
+PLINK 1's primary data format.To address these issues, we are developing a
+second-generation codebase for PLINK. The first major release from this
+codebase, PLINK 1.9, introduces extensive use of bit-level parallelism,
+(n)-time/constant-space Hardy-Weinberg equilibrium and Fisher's exact tests,
+and many other algorithmic improvements. In combination, these changes
+accelerate most operations by 1-4 orders of magnitude, and allow the program to
+handle datasets too large to fit in RAM. We have also developed an extension to
+the data format which adds low-overhead support for genotype likelihoods,
+phase, multiallelic variants, and reference vs. alternate alleles, which is the
+basis of our planned second release (PLINK 2.0).The second-generation versions
+of PLINK will offer dramatic improvements in performance and compatibility. For
+the first time, users without access to high-end computing resources can
+perform several essential analyses of the feature-rich and very large genetic
+datasets coming into use.},
+author = {Chang, Christopher C and Chow, Carson C and Tellier, Laurent C A M and
+Vattikuti, Shashaank and Purcell, Shaun M and Lee, James J},
+doi = {10.1186/s13742-015-0047-8},
+issn = {2047-217X},
+journal = {GigaScience},
+month = {feb},
+number = {1},
+title = {{Second-generation PLINK: rising to the challenge of larger and richer
+datasets}},
+url = {https://doi.org/10.1186/s13742-015-0047-8},
+volume = {4},
+year = {2015}
+}
+\end{verbatim}
+
+Hill, A., Loh, P.-R., Bharadwaj, R. B., Pons, P., Shang, J., Guinan, E., Lakhani, K., Kilty, I., \& Jelinsky, S. A. (2017). Stepwise Distributed Open Innovation Contests for Software Development: Acceleration of Genome-Wide Association Analysis. GigaScience, 6(5). \url{https://doi.org/10.1093/gigascience/gix009}
+
+\begin{verbatim}
+@article{Hill2017,
+abstract = {Background: The association of differing genotypes with
+disease-related phenotypic traits offers great potential to both help identify
+new therapeutic targets and support stratification of patients who would gain
+the greatest benefit from specific drug classes. Development of low-cost
+genotyping and sequencing has made collecting large-scale genotyping data
+routine in population and therapeutic intervention studies. In addition, a range
+of new technologies is being used to capture numerous new and complex phenotypic
+descriptors. As a result, genotype and phenotype datasets have grown
+exponentially. Genome-wide association studies associate genotypes and
+phenotypes using methods such as logistic regression. As existing tools for
+association analysis limit the efficiency by which value can be extracted from
+increasing volumes of data, there is a pressing need for new software tools that
+can accelerate association analyses on large genotype-phenotype datasets.
+Results: Using open innovation (OI) and contest-based crowdsourcing, the
+logistic regression analysis in a leading, community-standard genetics software
+package (PLINK 1.07) was substantially accelerated. OI allowed us to do this in
+{\textless}6 months by providing rapid access to highly skilled programmers
+with specialized, difficult-to-find skill sets. Through a crowd-based contest a
+combination of computational, numeric, and algorithmic approaches was
+identified that accelerated the logistic regression in PLINK 1.07 by 18- to
+45-fold. Combining contest-derived logistic regression code with coarse-grained
+parallelization, multithreading, and associated changes to data initialization
+code further developed through distributed innovation, we achieved an
+end-to-end speedup of 591-fold for a data set size of 6678 subjects by 645 863
+variants, compared to PLINK 1.07's logistic regression. This represents a
+reduction in run time from 4.8 hours to 29 seconds. Accelerated logistic
+regression code developed in this project has been incorporated into the PLINK2
+project. Conclusions: Using iterative competition-based OI, we have developed a
+new, faster implementation of logistic regression for genome-wide association
+studies analysis. We present lessons learned and recommendations on running a
+successful OI process for bioinformatics.},
+author = {Hill, Andrew and Loh, Po-Ru and Bharadwaj, Ragu B and Pons, Pascal
+and Shang, Jingbo and Guinan, Eva and Lakhani, Karim and Kilty, Iain and
+Jelinsky, Scott A},
+doi = {10.1093/gigascience/gix009},
+issn = {2047-217X},
+journal = {GigaScience},
+month = {feb},
+number = {5},
+title = {{Stepwise Distributed Open Innovation Contests for Software
+Development: Acceleration of Genome-Wide Association Analysis}},
+url = {https://doi.org/10.1093/gigascience/gix009},
+volume = {6},
+year = {2017}
+}
+\end{verbatim}
+
+Manichaikul, A., Mychaleckyj, J. C., Rich, S. S., Daly, K., Sale, M., \& Chen, W.-M. (2010). Robust relationship inference in genome-wide association studies. Bioinformatics, 26(22), 2867–2873. \url{https://doi.org/10.1093/bioinformatics/btq559}
+
+\begin{verbatim}
+@article{Manichaikul2010,
+abstract = {Motivation: Genome-wide association studies (GWASs) have been
+widely used to map loci contributing to variation in complex traits and risk of
+diseases in humans. Accurate specification of familial relationships is crucial
+for family-based GWAS, as well as in population-based GWAS with unknown (or
+unrecognized) family structure. The family structure in a GWAS should be
+routinely investigated using the SNP data prior to the analysis of population
+structure or phenotype. Existing algorithms for relationship inference have a
+major weakness of estimating allele frequencies at each SNP from the entire
+sample, under a strong assumption of homogeneous population structure. This
+assumption is often untenable.Results: Here, we present a rapid algorithm for
+relationship inference using high-throughput genotype data typical of GWAS that
+allows the presence of unknown population substructure. The relationship of any
+pair of individuals can be precisely inferred by robust estimation of their
+kinship coefficient, independent of sample composition or population structure
+(sample invariance). We present simulation experiments to demonstrate that the
+algorithm has sufficient power to provide reliable inference on millions of
+unrelated pairs and thousands of relative pairs (up to 3rd-degree
+relationships). Application of our robust algorithm to HapMap and GWAS
+datasets demonstrates that it performs properly even under extreme population
+stratification, while algorithms assuming a homogeneous population give
+systematically biased results. Our extremely efficient implementation
+performs relationship inference on millions of pairs of individuals in a
+matter of minutes, dozens of times faster than the most efficient existing
+algorithm known to us.Availability: Our robust relationship inference
+algorithm is implemented in a freely available software package, KING,
+available for download at
+http://people.virginia.edu/~wc9c/KING.Contact:wmchen@virginia.eduSupplementary
+information:Supplementary data are available at Bioinformatics online.},
+author = {Manichaikul, Ani and Mychaleckyj, Josyf C and Rich, Stephen S and
+Daly, Kathy and Sale, Mich{\`{e}}le and Chen, Wei-Min},
+doi = {10.1093/bioinformatics/btq559},
+issn = {1367-4803},
+journal = {Bioinformatics},
+month = {oct},
+number = {22},
+pages = {2867--2873},
+title = {{Robust relationship inference in genome-wide association studies}},
+url = {https://doi.org/10.1093/bioinformatics/btq559},
+volume = {26},
+year = {2010}
+}
+\end{verbatim}
+
+Galinsky, K. J., Bhatia, G., Loh, P. R., Georgiev, S., Mukherjee, S., Patterson, N. J., \& Price, A. L. (2016). Fast Principal-Component Analysis Reveals Convergent Evolution of ADH1B in Europe and East Asia. American Journal of Human Genetics, 98(3), 456–472. \url{https://doi.org/10.1016/j.ajhg.2015.12.022}
+
+\begin{verbatim}
+@article{Galinsky2016,
+abstract = {Searching for genetic variants with unusual differentiation between
+subpopulations is an established approach for identifying signals of natural
+selection. However, existing methods generally require discrete subpopulations.
+We introduce a method that infers selection using principal components (PCs) by
+identifying variants whose differentiation along top PCs is significantly
+greater than the null distribution of genetic drift. To enable the application
+of this method to large datasets, we developed the FastPCA software, which
+employs recent advances in random matrix theory to accurately approximate top
+PCs while reducing time and memory cost from quadratic to linear in the number
+of individuals, a computational improvement of many orders of magnitude. We
+apply FastPCA to a cohort of 54,734 European Americans, identifying 5 distinct
+subpopulations spanning the top 4 PCs. Using the PC-based test for natural
+selection, we replicate previously known selected loci and identify three new
+genome-wide significant signals of selection, including selection in Europeans
+at ADH1B. The coding variant rs1229984aT has previously been associated to a
+decreased risk of alcoholism and shown to be under selection in East Asians; we
+show that it is a rare example of independent evolution on two continents. We
+also detect selection signals at IGFBP3 and IGH, which have also previously
+been associated to human disease.},
+author = {Galinsky, Kevin J. and Bhatia, Gaurav and Loh, Po Ru and Georgiev,
+Stoyan and Mukherjee, Sayan and Patterson, Nick J. and Price, Alkes L.},
+doi = {10.1016/j.ajhg.2015.12.022},
+issn = {15376605},
+journal = {American Journal of Human Genetics},
+month = {mar},
+number = {3},
+pages = {456--472},
+publisher = {Cell Press},
+title = {{Fast Principal-Component Analysis Reveals Convergent Evolution of
+ADH1B in Europe and East Asia}},
+volume = {98},
+year = {2016}
+}
+\end{verbatim}
+
+Yang, J., Lee, S. H., Goddard, M. E., \& Visscher, P. M. (2011). GCTA: A tool for genome-wide complex trait analysis. American Journal of Human Genetics, 88(1), 76–82. {https://doi.org/10.1016/j.ajhg.2010.11.011}
+
+\begin{verbatim}
+@article{Yang2011,
+abstract = {For most human complex diseases and traits, SNPs identified by
+genome-wide association studies (GWAS) explain only a small fraction of the
+heritability. Here we report a user-friendly software tool called genome-wide
+complex trait analysis (GCTA), which was developed based on a method we
+recently developed to address the "missing heritability" problem. GCTA
+estimates the variance explained by all the SNPs on a chromosome or on the
+whole genome for a complex trait rather than testing the association of any
+particular SNP to the trait. We introduce GCTA's five main functions: data
+management, estimation of the genetic relationships from SNPs, mixed linear
+model analysis of variance explained by the SNPs, estimation of the linkage
+disequilibrium structure, and GWAS simulation. We focus on the function of
+estimating the variance explained by all the SNPs on the X chromosome and
+testing the hypotheses of dosage compensation. The GCTA software is a
+versatile tool to estimate and partition complex trait variation with large
+GWAS data sets. {\textcopyright} 2011 The American Society of Human Genetics.},
+author = {Yang, Jian and Lee, S. Hong and Goddard, Michael E. and Visscher,
+Peter M.},
+doi = {10.1016/j.ajhg.2010.11.011},
+issn = {00029297},
+journal = {American Journal of Human Genetics},
+month = {jan},
+number = {1},
+pages = {76--82},
+pmid = {21167468},
+publisher = {Elsevier},
+title = {{GCTA: A tool for genome-wide complex trait analysis}},
+volume = {88},
+year = {2011}
+}
+\end{verbatim}
+
+Gaunt, T. R., Rodríguez, S., \& Day, I. N. M. (2007). Cubic exact solutions for the estimation of pairwise haplotype frequencies: Implications for linkage disequilibrium analyses and a web tool “CubeX.” BMC Bioinformatics, 8(1), 428. \url{https://doi.org/10.1186/1471-2105-8-428}
+
+\begin{verbatim}
+@article{Gaunt2007,
+abstract = {Background: The frequency of a haplotype comprising one allele at
+each of two loci can be expressed as a cubic equation (the 'Hill equation'),
+the solution of which gives that frequency. Most haplotype and linkage
+disequilibrium analysis programs use iteration-based algorithms which
+substitute an estimate of haplotype frequency into the equation, producing a
+new estimate which is repeatedly fed back into the equation until the values
+converge to a maximum likelihood estimate (expectation-maximisation). Results:
+We present a program, "CubeX", which calculates the biologically possible exact
+solution(s) and provides estimated haplotype frequencies, D', r2 and $\chi$2
+values for each. CubeX provides a "complete" analysis of haplotype frequencies
+and linkage disequilibrium for a pair of biallelic markers under situations
+where sampling variation and genotyping errors distort sample Hardy-Weinberg
+equilibrium, potentially causing more than one biologically possible solution.
+We also present an analysis of simulations and real data using the
+algebraically exact solution, which indicates that under perfect sample
+Hardy-Weinberg equilibrium there is only one biologically possible solution,
+but that under other conditions there may be more. Conclusion: Our analyses
+demonstrate that lower allele frequencies, lower sample numbers, population
+stratification and a possible D' value of 1 are particularly susceptible to
+distortion of sample Hardy-Weinberg equilibrium, which has significant
+implications for calculation of linkage disequilibrium in small sample sizes
+(eg HapMap) and rarer alleles (eg paucimorphisms, q {\textless} 0.05) that may
+have particular disease relevance and require improved approaches for
+meaningful evaluation. {\textcopyright} 2007 Gaunt et al; licensee BioMed
+Central Ltd.},
+author = {Gaunt, Tom R. and Rodr{\'{i}}guez, Santiago and Day, Ian N.M.},
+doi = {10.1186/1471-2105-8-428},
+issn = {14712105},
+journal = {BMC Bioinformatics},
+keywords = {Algorithms,Bioinformatics,Computational Biology/Bioinformatics,
+Computer Appl. in Life Sciences,Microarrays},
+month = {nov},
+number = {1},
+pages = {428},
+pmid = {17980034},
+publisher = {BioMed Central},
+title = {{Cubic exact solutions for the estimation of pairwise haplotype
+frequencies: Implications for linkage disequilibrium analyses and a web
+tool 'CubeX'}},
+url =
+{https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-428},
+volume = {8},
+year = {2007}
+}
+\end{verbatim}
+
+Graffelman, J., \& Moreno, V. (2013). The mid p-value in exact tests for Hardy-Weinberg equilibrium. Statistical Applications in Genetics and Molecular Biology, 12(4), 433–448. \url{https://doi.org/10.1515/sagmb-2012-0039}
+
+\begin{verbatim}
+@article{Graffelman2013,
+abstract = {Objective: Exact tests for Hardy-Weinberg equilibrium are widely
+used in genetic association studies. We evaluate the mid p-value, unknown in
+the genetics literature, as an alternative for the standard p-value in the
+exact test. Method: The type 1 error rate and the power of the exact test are
+calculated for different sample sizes, sigificance levels, minor allele
+counts and degrees of deviation from equilibrium. Three different p-value are
+considered: the standard two-sided p-value, the doubled one-sided p-value and
+the mid p-value. Practical implications of using the mid p-value are discussed
+with HapMap datasets and a data set on colon cancer. Results: The mid p-value
+is shown to have a type 1 error rate that is always closer to the nominal
+level, and to have better power. Differences between the standard p-value and
+the mid p-value can be large for insignificant results, and are smaller for
+significant results. The analysis of empirical databases shows that the mid
+p-value uncovers more significant markers, and that the equilibrium null
+distribution is not tenable for both databases. Conclusion: The standard exact
+p-value is overly conservative, in particular for small minor allele
+frequencies. The mid p-value ameliorates this problem by bringing the
+rejection rate closer to the nominal level, at the price of ocasionally
+exceeding the nominal level. {\textcopyright} 2013 Walter de Gruyter GmbH,
+Berlin/Boston.},
+author = {Graffelman, Jan and Moreno, Victor},
+doi = {10.1515/sagmb-2012-0039},
+issn = {15446115},
+journal = {Statistical Applications in Genetics and Molecular Biology},
+keywords = {Levene-Haldane distribution,Power,Single nucleotide polymorphism,
+Type I error rate},
+month = {aug},
+number = {4},
+pages = {433--448},
+publisher = {Stat Appl Genet Mol Biol},
+title = {{The mid p-value in exact tests for Hardy-Weinberg equilibrium}},
+volume = {12},
+year = {2013}
+}
+\end{verbatim}
+
+Graffelman, J., \& Weir, B. S. (2016). Testing for Hardy-Weinberg equilibrium at biallelic genetic markers on the X chromosome. Heredity, 116(6), 558–568. \url{https://doi.org/10.1038/hdy.2016.20}
+
+\begin{verbatim}
+@article{Graffelman2016,
+abstract = {Testing genetic markers for Hardy-Weinberg equilibrium (HWE) is an
+important tool for detecting genotyping errors in large-scale genotyping
+studies. For markers at the X chromosome, typically the $\chi$ 2 or exact test
+is applied to the females only, and the hemizygous males are considered to be
+uninformative. In this paper we show that the males are relevant, because a
+difference in allele frequency between males and females may indicate HWE not
+to hold. The testing of markers on the X chromosome has received little
+attention, and in this paper we lay down the foundation for testing biallelic
+X-chromosomal markers for HWE. We develop four frequentist statistical test
+procedures for X-linked markers that take both males and females into account:
+the $\chi$ 2 test, likelihood ratio test, exact test and permutation test.
+Exact tests that include males are shown to have a better Type I error rate.
+Empirical data from the GENEVA project on venous thromboembolism is used to
+illustrate the proposed tests. Results obtained with the new tests differ
+substantially from tests that are based on female genotype counts only. The
+new tests detect differences in allele frequencies and seem able to uncover
+additional genotyping error that would have gone unnoticed in HWE tests
+based on females only.},
+author = {Graffelman, J. and Weir, B. S.},
+doi = {10.1038/hdy.2016.20},
+issn = {13652540},
+journal = {Heredity},
+month = {jun},
+number = {6},
+pages = {558--568},
+pmid = {27071844},
+publisher = {Nature Publishing Group},
+title = {{Testing for Hardy-Weinberg equilibrium at biallelic genetic markers
+on the X chromosome}},
+volume = {116},
+year = {2016}
+}
+\end{verbatim}
+
+Wigginton, J. E., Cutler, D. J., \& Abecasis, G. R. (2005). A note on exact tests of Hardy-Weinberg equilibrium. American Journal of Human Genetics, 76(5), 887–893. \url{https://doi.org/10.1086/429864}
+
+\begin{verbatim}
+@article{Wigginton2005,
+abstract = {Deviations from Hardy-Weinberg equilibrium (HWE) can indicate
+inbreeding, population stratification, and even problems in genotyping. In
+samples of affected individuals, these deviations can also provide evidence
+for association. Tests of HWE are commonly performed using a simple $\chi$2
+goodness-of-fit test. We show that this $\chi$2 test can have inflated type I
+error rates, even in relatively large samples (e.g., samples of 1,000
+individuals that include ~100 copies of the minor allele). On the basis of
+previous work, we describe exact tests of HWE together with efficient
+computational methods for their implementation. Our methods adequately control
+type I error in large and small samples and are computationally efficient. They
+have been implemented in freely available code that will be useful for quality
+assessment of genotype data and for the detection of genetic association or
+population stratification in very large data sets. {\textcopyright} 2005 by
+The American Society of Human Genetics. All rights reserved.},
+author = {Wigginton, Janis E. and Cutler, David J. and Abecasis,
+Gon{\c{c}}alo R.},
+doi = {10.1086/429864},
+issn = {00029297},
+journal = {American Journal of Human Genetics},
+number = {5},
+pages = {887--893},
+pmid = {15789306},
+publisher = {University of Chicago Press},
+title = {{A note on exact tests of Hardy-Weinberg equilibrium}},
+volume = {76},
+year = {2005}
+}
+\end{verbatim}
+
+Purcell, S., Neale, B., Todd-Brown, K., Thomas, L., Ferreira, M. A. R., Bender, D., Maller, J., Sklar, P., De Bakker, P. I. W., Daly, M. J., \& Sham, P. C. (2007). PLINK: A tool set for whole-genome association and population-based linkage analyses. American Journal of Human Genetics, 81(3), 559–575. \url{https://doi.org/10.1086/519795}
+
+\begin{verbatim}
+@article{Purcell2007,
+abstract = {Whole-genome association studies (WGAS) bring new computational, as
+well as analytic, challenges to researchers. Many existing genetic-analysis
+tools are not designed to handle such large data sets in a convenient manner
+and do not necessarily exploit the new opportunities that whole-genome data
+bring. To address these issues, we developed PLINK, an open-source C/C++ WGAS
+tool set. With PLINK, large data sets comprising hundreds of thousands of
+markers genotyped for thousands of individuals can be rapidly manipulated and
+analyzed in their entirety. As well as providing tools to make the basic
+analytic steps computationally efficient, PLINK also supports some novel
+approaches to whole-genome data that take advantage of whole-genome coverage.
+We introduce PLINK and describe the five main domains of function: data
+management, summary statistics, population stratification, association
+analysis, and identity-by-descent estimation. In particular, we focus on
+the estimation and use of identity-by-state and identity-by-descent
+information in the context of population-based whole-genome studies. This
+information can be used to detect and correct for population
+stratification and to identify extended chromosomal segments that are
+shared identical by descent between very distantly related individuals.
+Analysis of the patterns of segmental sharing has the potential to map
+disease loci that contain multiple rare variants in a population-based
+linkage analysis. {\textcopyright} 2007 by The American Society of Human
+Genetics. All rights reserved.},
+author = {Purcell, Shaun and Neale, Benjamin and Todd-Brown, Kathe and Thomas,
+Lori and Ferreira, Manuel A.R. and Bender, David and Maller, Julian and Sklar,
+Pamela and {De Bakker}, Paul I.W. and Daly, Mark J. and Sham, Pak C.},
+doi = {10.1086/519795},
+file = {::},
+issn = {00029297},
+journal = {American Journal of Human Genetics},
+number = {3},
+pages = {559--575},
+pmid = {17701901},
+publisher = {Cell Press},
+title = {{PLINK: A tool set for whole-genome association and population-based
+linkage analyses}},
+volume = {81},
+year = {2007}
+}
+\end{verbatim}
+
+Updated:2020-06-16
+
 \section{VCFTools}
 
 SourceForge: \url{http://vcftools.sourceforge.net/}, v0.1.13 in 2015-08-03, branch deprecated
