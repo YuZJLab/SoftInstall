@@ -898,6 +898,60 @@ year = {2015}
 
 Updated: 2020-06-10
 
+\section{SAMBLASTER}
+
+GitHub: \url{https://github.com/GregoryFaust/samblaster}, v0.1.26 in 2020-06-16
+
+Conda: \url{https://anaconda.org/bioconda/samblaster}, v0.1.26 in 2020-06-16
+
+Current: Github, self-build binary, v0.1.26
+
+License: MIT
+
+C++ 99.4\% Makefile 0.6\%
+
+Faust, G. G., \& Hall, I. M. (2014). SAMBLASTER: fast duplicate marking and structural variant read extraction. Bioinformatics, 30(17), 2503–2505. \url{https://doi.org/10.1093/bioinformatics/btu314}
+
+\begin{verbatim}
+@article{Chen2009,
+abstract = {Detection and characterization of genomic structural variation are
+important for understanding the landscape of genetic variation in human
+populations and in complex diseases such as cancer. Recent studies demonstrate
+the feasibility of detecting structural variation using next-generation,
+short-insert, paired-end sequencing reads. However, the utility of these reads
+is not entirely clear, nor are the analysis methods with which accurate
+detection can be achieved. The algorithm BreakDancer predicts a wide variety of
+structural variants including insertion-deletions (indels), inversions and
+translocations. We examined BreakDancer's performance in simulation, in
+comparison with other methods and in analyses of a sample from an individual with
+acute myeloid leukemia and of samples from the 1,000 Genomes trio individuals.
+BreakDancer sensitively and accurately detected indels ranging from 10 base
+pairs to 1 megabase pair that are difficult to detect via a single conventional
+approach.},
+author = {Chen, Ken and Wallis, John W. and McLellan, Michael D. and Larson,
+David E. and Kalicki, Joelle M. and Pohl, Craig S. and McGrath, Sean D. and
+Wendl, Michael C. and Zhang, Qunyuan and Locke, Devin P. and Shi, Xiaoqi and
+Fulton, Robert S. and Ley, Timothy J. and Wilson, Richard K. and Ding, Li and
+Mardis, Elaine R.},
+doi = {10.1038/nmeth.1363},
+issn = {15487091},
+journal = {Nature Methods},
+keywords = {Bioinformatics,Biological Microscopy,Biological Techniques,
+Biomedical Engineering/Biotechnology,Life Sciences,Proteomics,general},
+month = {aug},
+number = {9},
+pages = {677--681},
+publisher = {Nature Publishing Group},
+title = {{BreakDancer: An algorithm for high-resolution mapping of genomic
+structural variation}},
+url = {https://www.nature.com/articles/nmeth.1363},
+volume = {6},
+year = {2009}
+}
+\end{verbatim}
+
+Updated: 2020-06-25
+
 \section{Samtools}
 
 Official: \url{http://www.htslib.org/}
@@ -1270,7 +1324,7 @@ year = {2014}
 
 Updated: 2020-06-10
 
-\part{Variant Caller}
+\part{Variant Caller: SNP and Indel}
 \section{FreeBayes}
 
 GitHub: \url{https://github.com/ekg/freebayes}, v1.3.2 in 2019-12-17
@@ -1894,7 +1948,311 @@ year = {2012}
 \end{verbatim}
 
 Updated: 2020-06-10
+\part{Variant Caller: CNV, Translocation and other types of SV}
+\section{BreakDancer}
 
+Official: \url{http://breakdancer.sourceforge.net/}
+
+Conda: \url{https://anaconda.org/bioconda/breakdancer}, v1.4.5 in 2018-04
+
+SorceForge: \url{https://sourceforge.net/projects/breakdancer}, v1.1.2\_2013\_03\_08 in 2013-03-06
+
+License: Unknown
+
+Current: Conda, v1.4.5
+
+Perl, C++
+
+Chen, K., Wallis, J. W., McLellan, M. D., Larson, D. E., Kalicki, J. M., Pohl, C. S., McGrath, S. D., Wendl, M. C., Zhang, Q., Locke, D. P., Shi, X., Fulton, R. S., Ley, T. J., Wilson, R. K., Ding, L., \& Mardis, E. R. (2009). BreakDancer: An algorithm for high-resolution mapping of genomic structural variation. Nature Methods, 6(9), 677–681. \url{https://doi.org/10.1038/nmeth.1363}
+
+\begin{verbatim}
+@article{Chen2009,
+abstract = {Detection and characterization of genomic structural variation are
+important for understanding the landscape of genetic variation in human
+populations and in complex diseases such as cancer. Recent studies demonstrate
+the feasibility of detecting structural variation using next-generation,
+short-insert, paired-end sequencing reads. However, the utility of these reads
+is not entirely clear, nor are the analysis methods with which accurate
+detection can be achieved. The algorithm BreakDancer predicts a wide variety of
+structural variants including insertion-deletions (indels), inversions and
+translocations. We examined BreakDancer's performance in simulation, in
+comparison with other methods and in analyses of a sample from an individual
+with acute myeloid leukemia and of samples from the 1,000 Genomes trio
+individuals. BreakDancer sensitively and accurately detected indels ranging
+from 10 base pairs to 1 megabase pair that are difficult to detect via a
+single conventional approach.},
+author = {Chen, Ken and Wallis, John W. and McLellan, Michael D. and Larson,
+David E. and Kalicki, Joelle M. and Pohl, Craig S. and McGrath, Sean D. and
+Wendl, Michael C. and Zhang, Qunyuan and Locke, Devin P. and Shi, Xiaoqi and
+Fulton, Robert S. and Ley, Timothy J. and Wilson, Richard K. and Ding, Li and
+Mardis, Elaine R.},
+doi = {10.1038/nmeth.1363},
+issn = {15487091},
+journal = {Nature Methods},
+keywords = {Bioinformatics,Biological Microscopy,Biological Techniques,
+Biomedical Engineering/Biotechnology,Life Sciences,Proteomics,general},
+month = {aug},
+number = {9},
+pages = {677--681},
+publisher = {Nature Publishing Group},
+title = {{BreakDancer: An algorithm for high-resolution mapping of genomic
+structural variation}},
+url = {https://www.nature.com/articles/nmeth.1363},
+volume = {6},
+year = {2009}
+}
+\end{verbatim}
+
+Updated: 2020-06-25
+
+\section{digit}
+
+GitHub: \url{https://github.com/richard-meier/digit-trl/}, unknown version in 2016-12-06
+
+Current: Github, pr-ebuild biniarirs, 2016-12-06
+
+License: GPL v3
+
+Java 100\%
+
+Meier, R., Graw, S., Beyerlein, P., Koestler, D., Molina, J. R., \& Chien, J. (2017). digit-a tool for detection and identification of genomic interchromosomal  translocations. Nucleic Acids Research, 45(9), e72. \url{https://doi.org/10.1093/nar/gkx010}
+
+\begin{verbatim}
+@article{Meier2017,
+abstract = {Structural variations (SVs) in genomic DNA can have profound
+effects on the  evolution of living organisms, on phenotypic variations and on
+disease processes. A critical step in discovering the full extent of structural
+variations is the development of tools to characterize these variations
+accurately in next generation sequencing data. Toward this goal, we developed a
+software pipeline named digit that implements a novel measure of mapping
+ambiguity to discover interchromosomal SVs from mate-pair and pair-end sequencing
+data. The workflow robustly handles the high numbers of artifacts present in
+mate-pair sequencing and reduces the false positive rate while maintaining
+sensitivity. In the simulated data set, our workflow recovered 96% of simulated
+SVs. It generates a self-updating library of common translocations and allows for
+the investigation of patient- or group-specific events, making it suitable for
+discovering and cataloging chromosomal translocations associated with specific
+groups, traits, diseases or population structures.},
+author = {Meier, Richard and Graw, Stefan and Beyerlein, Peter and Koestler,
+Devin and Molina, Julian R and Chien, Jeremy},
+doi = {10.1093/nar/gkx010},
+issn = {1362-4962 (Electronic)},
+journal = {Nucleic acids research},
+keywords = {Chromosome Mapping,Computer Simulation,Gene Library,Humans,
+Sensitivity and Specificity,Software,Translocation, Genetic,methods},
+language = {eng},
+month = {may},
+number = {9},
+pages = {e72},
+pmid = {28132028},
+title = {digit-a tool for detection and identification of genomic interchromosomal
+translocations.},
+volume = {45},
+year = {2017}
+}
+\end{verbatim}
+
+Updated: 2020-06-25
+
+\section{LUMPY}
+
+GitHub: \url{https://github.com/arq5x/lumpy-sv}, v3.0 in 2019-02-21
+
+Conda: \url{https://anaconda.org/bioconda/lumpy-sv}, v3.0 in 2019-11-28
+
+Current: N/A
+
+License: MIT
+
+Comment: Use Python 2.7
+
+C 76.8\% C++ 20.9\% Python 1.1\% Shell 0.7\% Makefile 0.3\% CMake 0.2\%
+
+Layer, R. M., Chiang, C., Quinlan, A. R., \& Hall, I. M. (2014). LUMPY: A probabilistic framework for structural variant discovery. Genome Biology, 15(6), R84. \url{https://doi.org/10.1186/gb-2014-15-6-r84}
+
+\begin{verbatim}
+@article{Layer2014,
+abstract = {Comprehensive discovery of structural variation (SV) from whole
+genome sequencing data requires multiple detection signals including
+read-pair, split-read, read-depth and prior knowledge. Owing to technical
+challenges, extant SV discovery algorithms either use one signal in isolation,
+or at best use two sequentially. We present LUMPY, a novel SV discovery
+framework that naturally integrates multiple SV signals jointly across multiple
+samples. We show that LUMPY yields improved sensitivity, especially when SV
+signal is reduced owing to either low coverage data or low intra-sample variant
+allele frequency. We also report a set of 4,564 validated breakpoints from the
+NA12878 human genome. https://github.com/arq5x/lumpy-sv.},
+author = {Layer, Ryan M. and Chiang, Colby and Quinlan, Aaron R. and Hall,
+Ira M.},
+doi = {10.1186/gb-2014-15-6-r84},
+issn = {1474760X},
+journal = {Genome Biology},
+keywords = {Animal Genetics and Genomics,Bioinformatics,Evolutionary Biology,
+Human Genetics,Microbial Genetics and Genomics,Plant Genetics and Genomics},
+month = {jun},
+number = {6},
+pages = {R84},
+pmid = {24970577},
+publisher = {BioMed Central Ltd.},
+title = {{LUMPY: A probabilistic framework for structural variant discovery}},
+url = {http://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-6-r84},
+volume = {15},
+year = {2014}
+}
+\end{verbatim}
+
+Updated: 2020-06-25
+
+\section{Meerkat}
+
+Official: \url{http://compbio.med.harvard.edu/Meerkat/}, v0.189
+
+Current: N/A
+
+Yang, L., Luquette, L. J., Gehlenborg, N., Xi, R., Haseley, P. S., Hsieh, C. H., Zhang, C., Ren, X., Protopopov, A., Chin, L., Kucherlapati, R., Lee, C., \& Park, P. J. (2013). Diverse mechanisms of somatic structural variations in human cancer genomes. Cell, 153(4), 919–929. \url{https://doi.org/10.1016/j.cell.2013.04.010}
+
+\begin{verbatim}
+@article{Yang2013,
+abstract = {Identification of somatic rearrangements in cancer genomes has
+accelerated through analysis of high-throughput sequencing data. However,
+characterization of complex structural alterations and their underlying
+mechanisms remains inadequate. Here, applying an algorithm to predict
+structural variations from short reads, we report a comprehensive catalog of
+somatic structural variations and the mechanisms generating them, using
+high-coverage whole-genome sequencing data from 140 patients across ten tumor
+types. We characterize the relative contributions of different types of
+rearrangements and their mutational mechanisms, find that ~20% of the somatic
+deletions are complex deletions formed by replication errors, and describe the
+differences between the mutational mechanisms in somatic and germline
+alterations. Importantly, we provide detailed reconstructions of the events
+responsible for loss of CDKN2A/B and gain of EGFR in glioblastoma, revealing
+that these alterations can result from multiple mechanisms even in a single
+genome and that both DNA double-strand breaks and replication errors drive
+somatic rearrangements. {\textcopyright} 2013 Elsevier Inc.},
+author = {Yang, Lixing and Luquette, Lovelace J. and Gehlenborg, Nils and Xi,
+Ruibin and Haseley, Psalm S. and Hsieh, Chih Heng and Zhang, Chengsheng and
+Ren, Xiaojia and Protopopov, Alexei and Chin, Lynda and Kucherlapati, Raju
+and Lee, Charles and Park, Peter J.},
+doi = {10.1016/j.cell.2013.04.010},
+issn = {00928674},
+journal = {Cell},
+month = {may},
+number = {4},
+pages = {919--929},
+pmid = {23663786},
+publisher = {NIH Public Access},
+title = {{Diverse mechanisms of somatic structural variations in human
+cancer genomes}},
+url = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3704973/},
+volume = {153},
+year = {2013}
+}
+\end{verbatim}
+
+Updated: 2020-05-26
+
+\section{MetaSV}
+
+GitHub: \url{https://github.com/bioinform/metasv}, v0.5.4 in 2017-01-18
+
+Official: \url{bioinform.github.io/metasv/}
+
+Conda: \url{https://anaconda.org/bioconda/metasv}, v0.5.4 in 2018-06
+
+Current: N/A
+
+Comment: Require Python 2.7-2.8
+
+License: BSD-2-Clause License
+
+Python 94.8\% HTML 5.1\% Shell 0.1\%
+
+Mohiyuddin, M., Mu, J. C., Li, J., Bani Asadi, N., Gerstein, M. B., Abyzov, A., Wong, W. H., \& Lam, H. Y. K. (2015). MetaSV: an accurate and integrative structural-variant caller for next generation sequencing. Bioinformatics, 31(16), 2741–2744. \url{https://doi.org/10.1093/bioinformatics/btv204}
+
+\begin{verbatim}
+@article{Mohiyuddin2015,
+abstract = {Summary: Structural variations (SVs) are large genomic rearrangements
+that vary significantly in size, making them challenging to detect with the
+relatively short reads from next-generation sequencing (NGS). Different SV
+detection methods have been developed; however, each is limited to specific kinds
+of SVs with varying accuracy and resolution. Previous works have attempted to
+combine different methods, but they still suffer from poor accuracy particularly
+for insertions. We propose MetaSV, an integrated SV caller which leverages
+multiple orthogonal SV signals for high accuracy and resolution. MetaSV proceeds
+by merging SVs from multiple tools for all types of SVs. It also analyzes
+soft-clipped reads from alignment to detect insertions accurately since existing
+tools underestimate insertion SVs. Local assembly in combination with dynamic
+programming is used to improve breakpoint resolution. Paired-end and coverage
+information is used to predict SV genotypes. Using simulation and experimental
+data, we demonstrate the effectiveness of MetaSV across various SV types and
+sizes.Availability and implementation: Code in Python is at
+http://bioinform.github.io/metasv/.Contact:rd@bina.comSupplementary
+information:Supplementary data are available at Bioinformatics online.},
+author = {Mohiyuddin, Marghoob and Mu, John C and Li, Jian and {Bani Asadi},
+Narges and Gerstein, Mark B and Abyzov, Alexej and Wong, Wing H and Lam,
+Hugo Y K},
+doi = {10.1093/bioinformatics/btv204},
+issn = {1367-4803},
+journal = {Bioinformatics},
+month = {apr},
+number = {16},
+pages = {2741--2744},
+title = {{MetaSV: an accurate and integrative structural-variant caller for
+next generation sequencing}},
+url = {https://doi.org/10.1093/bioinformatics/btv204},
+volume = {31},
+year = {2015}
+}
+\end{verbatim}
+
+Updated: 2020-06-25
+
+\section{SVMerge}
+
+Official: \url{http://svmerge.sourceforge.net/}
+
+Sourceforge: \url{https://sourceforge.net/projects/svmerge}, v1,2r37 in 2012-08-09
+
+Conda: \url{https://anaconda.org/hcc/svmerge}, v1,2r37 in 2017-05
+
+Current: Sourceforge, pre-built biniaries, v1,2r37 in 2012-08-09
+
+License: GPL v3
+
+Perl
+
+Wong, K., Keane, T. M., Stalker, J., \& Adams, D. J. (2010). Enhanced structural variant and breakpoint detection using SVMerge by integration of multiple detection methods and local assembly. Genome Biology, 11(12), R128. \url{https://doi.org/10.1186/gb-2010-11-12-r128}
+
+\begin{verbatim}
+@article{Wong2010,
+abstract = {We present a pipeline, SVMerge, to detect structural variants by
+integrating calls from several existing structural variant callers, which are
+then validated and the breakpoints refined using local de novo assembly.
+SVMerge is modular and extensible, allowing new callers to be incorporated as
+they become available. We applied SVMerge to the analysis of a HapMap trio,
+demonstrating enhanced structural variant detection, breakpoint refinement, and
+a lower false discovery rate. SVMerge can be downloaded from
+http://svmerge.sourceforge.net {\textcopyright} 2010 Wong et al.; licensee BioMed
+Central Ltd.},
+author = {Wong, Kim and Keane, Thomas M. and Stalker, James and Adams, David J.},
+doi = {10.1186/gb-2010-11-12-r128},
+issn = {1474760X},
+journal = {Genome Biology},
+keywords = {Animal Genetics and Genomics,Bioinformatics,Evolutionary Biology,Human
+Genetics,Microbial Genetics and Genomics,Plant Genetics and Genomics},
+month = {dec},
+number = {12},
+pages = {R128},
+publisher = {BioMed Central Ltd.},
+title = {{Enhanced structural variant and breakpoint detection using SVMerge by
+integration of multiple detection methods and local assembly}},
+url = {http://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-12-r128},
+volume = {11},
+year = {2010}
+}
+\end{verbatim}
+
+Updated: 2020-05-26
 
 \part{VCF/BCF Processor}
 
