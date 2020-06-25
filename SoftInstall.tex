@@ -26,6 +26,51 @@ The term ``pre-build binary'' means 1. Compiled binaries for C, C++ or D, etc. o
 
 \part{Read Data Pre-Processing}
 
+\section{BamTools}
+
+Sourceforge: \url{https://sourceforge.net/projects/bamtools/}, deprecated
+
+GitHub: \url{https://github.com/pezmaster31/bamtools}, v2.5.1, 2019-12-24
+
+Current: GitHub, self-built biniary, v2.5.1
+
+License: MIT
+
+C++ 96.4\% Python 1.8\% CMake 1.3\% Other 0.5\%
+
+Barnett, D. W., Garrison, E. K., Quinlan, A. R., Strömberg, M. P., \& Marth, G. T. (2011). BamTools: a C++ API and toolkit for analyzing and managing BAM files. Bioinformatics, 27(12), 1691–1692. \url{https://doi.org/10.1093/bioinformatics/btr174}
+
+\begin{verbatim}
+@article{Barnett2011,
+abstract = {Motivation: Analysis of genomic sequencing data requires efficient,
+easy-to-use access to alignment results and flexible data management tools (e.g.
+filtering, merging, sorting, etc.). However, the enormous amount of data
+produced by current sequencing technologies is typically stored in compressed,
+binary formats that are not easily handled by the text-based parsers commonly
+used in bioinformatics research.Results: We introduce a software suite for
+programmers and end users that facilitates research analysis and data management
+using BAM files. BamTools provides both the first C++ API publicly available for
+BAM file support as well as a command-line toolkit.Availability: BamTools was
+written in C++, and is supported on Linux, Mac OSX and MS Windows. Source code
+and documentation are freely available at
+http://github.org/pezmaster31/bamtools.Contact:barnetde@bc.edu},
+author = {Barnett, Derek W and Garrison, Erik K and Quinlan, Aaron R and
+Str{\"{o}}mberg, Michael P and Marth, Gabor T},
+doi = {10.1093/bioinformatics/btr174},
+issn = {1367-4803},
+journal = {Bioinformatics},
+month = {apr},
+number = {12},
+pages = {1691--1692},
+title = {{BamTools: a C++ API and toolkit for analyzing and managing BAM files}},
+url = {https://doi.org/10.1093/bioinformatics/btr174},
+volume = {27},
+year = {2011}
+}
+\end{verbatim}
+
+Updated: 2020-06-25
+
 \section{htsjdk}
 
 GitHub: \url{https://github.com/samtools/htsjdk}, v2.21.3 in 2020-03-10
@@ -50,6 +95,80 @@ Current: GitHub, self-build,  1.10.2-23-g6b72368
 C 89.3\% C++ 3.7\% Perl 2.7\% Makefile 1.4\% Roff 1.2\% M4 1.0\% Other 0.7\%
 
 Updated: 2020-06-10
+
+\section{SeqAn2}
+
+Official: \url{https://www.seqan.de/}
+
+GitHub: \url{https://github.com/seqan/seqan}, v2.4.0 in 2018-02-03
+
+Current: GitHub, master
+
+License: The 3-Clause BSD License
+
+C++ 63.9\% PHP 22.6\% Python 3.4\% HTML 2.7\% JavaScript 2.3\% C 1.7\% Other 3.4\%
+
+Döring, A., Weese, D., Rausch, T., \& Reinert, K. (2008). SeqAn an efficient, generic C++ library for sequence analysis. BMC Bioinformatics, 9. \url{https://doi.org/10.1186/1471-2105-9-11}
+
+\begin{verbatim}
+@article{Doring2008,
+abstract = {Background: The use of novel algorithmic techniques is pivotal to
+many important problems in life science. For example the sequencing of the
+human genome 1 would not have been possible without advanced assembly
+algorithms. However, owing to the high speed of technological progress and the
+urgent need for bioinformatics tools, there is a widening gap between
+state-of-the-art algorithmic techniques and the actual algorithmic components of
+tools that are in widespread use. Results: To remedy this trend we propose the
+use of SeqAn, a library of efficient data types and algorithms for sequence
+analysis in computational biology. SeqAn comprises implementations of existing,
+practical state-of-the-art algorithmic components to provide a sound basis for
+algorithm testing and development. In this paper we describe the design and
+content of SeqAn and demonstrate its use by giving two examples. In the first
+example we show an application of SeqAn as an experimental platform by comparing
+different exact string matching algorithms. The second example is a simple
+version of the well-known MUMmer tool rewritten in SeqAn. Results indicate that
+our implementation is very efficient and versatile to use. Conclusion: We
+anticipate that SeqAn greatly simplifies the rapid development of new
+bioinformatics tools by providing a collection of readily usable, well-designed
+algorithmic components which are fundamental for the field of sequence analysis.
+This leverages not only the implementation of new algorithms, but also enables
+a sound analysis and comparison of existing algorithms.
+{\textcopyright} 2008 D{\"{o}}ring et al; licensee BioMed Central Ltd.},
+author = {D{\"{o}}ring, Andreas and Weese, David and Rausch, Tobias and
+Reinert, Knut},
+doi = {10.1186/1471-2105-9-11},
+issn = {14712105},
+journal = {BMC Bioinformatics},
+keywords = {Algorithms*,Andreas D{\"{o}}ring,Database Management Systems,
+Databases,David Weese,Genetic*,Knut Reinert,MEDLINE,NCBI,NIH,NLM,National
+Center for Biotechnology Information,National Institutes of Health,National
+Library of Medicine,PMC2246154,Programming Languages*,PubMed Abstract,
+Sequence Alignment / methods*,Sequence Analysis / methods*,Software*,
+User-Computer Interface*,doi:10.1186/1471-2105-9-11,pmid:18184432},
+month = {jan},
+publisher = {BMC Bioinformatics},
+title = {{SeqAn an efficient, generic C++ library for sequence analysis}},
+url = {https://pubmed.ncbi.nlm.nih.gov/18184432/},
+volume = {9},
+year = {2008}
+}
+\end{verbatim}
+
+Updated: 2020-06-25
+
+\section{SeqAn3}
+
+Official: \url{https://www.seqan.de/}
+
+GitHub: \url{https://github.com/seqan/seqan3}, v3.0.1 in 2020-01-22
+
+Current: GitHub, master
+
+License: The 3-Clause BSD License
+
+C++ 98.9\% CMake 1.1\%
+
+Updated: 2020-06-25
 
 \section{SRA-Toolkit}
 
@@ -1957,7 +2076,7 @@ Conda: \url{https://anaconda.org/bioconda/breakdancer}, v1.4.5 in 2018-04
 
 SorceForge: \url{https://sourceforge.net/projects/breakdancer}, v1.1.2\_2013\_03\_08 in 2013-03-06
 
-License: Unknown
+License: GPL v3
 
 Current: Conda, v1.4.5
 
@@ -2206,6 +2325,18 @@ year = {2015}
 \end{verbatim}
 
 Updated: 2020-06-25
+
+\section{SoftSV}
+
+SourceForge: \url{https://sourceforge.net/projects/softsv/}, v1.4.2 in 2015-09-09
+
+Current: N/A
+
+License: GPL V3
+
+C++
+
+C. Bartenhagen, M. Dugas, Robust and exact structural variation detection with paired-end and soft-clipped alignments: SoftSV compared with eight algorithms, Brief Bioinform. (2015), \url{http://dx.doi.org/10.1093/bib/bbv028}
 
 \section{SVMerge}
 
