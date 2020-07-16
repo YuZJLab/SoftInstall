@@ -6,6 +6,7 @@
 \renewcommand\familydefault{\sfdefault}
 \usepackage[inner=0.5in,outer=0.5in]{geometry}
 \usepackage{titletoc}
+\usepackage{xcolor}
 \titlecontents{part}[2em]{\addvspace{4pt}\large}{\contentslabel[\thecontentslabel]{4em}}{}{\ \titlerule*[.5pc]{.}\ \thecontentspage}[]
 \titlecontents{section}[1em]{\addvspace{2pt}}{\bfseries\contentslabel[\thecontentslabel]{4em}}{}{\ \titlerule*[.5pc]{.}\ \thecontentspage}[]
 
@@ -413,7 +414,7 @@ GitHUb: \url{https://github.com/PacificBiosciences/pbmm2}, v1.2.1 in 2020-02-18
 
 Conda: \url{https://anaconda.org/bioconda/pbmm2}, v1.3.0 in 2020-05-21
 
-Current: conda, v1.3.0
+Current: N/A
 
 License: BSD-3-Clause-Clear License
 
@@ -422,6 +423,93 @@ C++ 39.9\% Perl 29.8\% Raku 23.2\% Python 4.0\% Meson 1.7\% Shell 1.4\%
 Updated: 2020-06-26
 
 \part{2nd Gen. SAM/BAM/CRAM File Processor}
+
+\section{AlignStats}
+
+GitHub: \url{https://github.com/jfarek/alignstats}, v0.9.1 in 2020-02-08
+
+Conda: \url{https://anaconda.org/bioconda/alignstats}, v0.9.1 in 2020-02-08
+
+Current: GitHub, self-built binary, v0.9.1
+
+License: BSD-3-Clause License
+
+C 97.4\% M4 2.0\% Makefile 0.6\%
+
+Updated: 2020-07-07
+
+\section{BamDSt}
+
+GitHub: \url{https://github.com/shiquan/bamdst}
+
+Current: GitHub, self-built binary, v1.0.9
+
+License: MIT
+
+C 95.5\% C++ 3.9\% Makefile 0.6\%
+
+Updated: 2020-07-06
+
+\section{BamStats (by biopet)}
+
+GitHub: \url{https://github.com/biopet/bamstats}, v1.0.1 in 2018-10-25
+
+Conda: \url{https://anaconda.org/bioconda/biopet-bamstats}, v1.0.1 in 2018-11
+
+Current: N/A
+
+License: MIT License
+
+Scala 100.0\%
+
+Updated: 2020-07-08
+
+\section{BAMStats (by nestornotabilis)}
+
+Official: \url{http://bamstats.sourceforge.net/}, v1.25 in 2011-08-18
+
+Current: Official, Pre-built binary, v1.25
+
+Updated: 2020-07-06
+
+
+\section{BamUtil}
+
+Official: \url{https://genome.sph.umich.edu/wiki/BamUtil}
+
+GitHub: \url{https://github.com/statgen/bamUtil}, v1.0.14 in 2017-07-01
+
+Conda: \url{https://anaconda.org/bioconda/bamutil}, v1.0.14 in 2018-05-03
+
+Current: GitHub, self-built binary, v1.0.14
+
+License: GPL v3
+
+C++ 79.8\% Shell 19.5\% Other 0.7\%
+
+\section{BedTools}
+
+GitHub: \url{https://github.com/arq5x/bedtools2/}, v2.29.2 in 2019-12-28
+
+ReadtheDocs: \url{http://bedtools.readthedocs.org}
+
+Conda: \url{https://anaconda.org/bioconda/bedtools}, v2.29.2 in 2020-07-03
+
+Current: GitHub, pre-built binary, v2.29.2
+
+License: MIT
+
+C 49.6\% C++ 35.5\% Shell 10.0\% Makefile 1.7\% HTML 1.5\% Roff 0.8\% Other 0.9\%
+
+\textbf{Please cite the following article if you use BEDTools in your research:}
+
+Quinlan AR and Hall IM, 2010. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics. 26, 6, pp. 841–842.
+
+\textbf{Also, if you use pybedtools, please cite the following.}
+
+Dale RK, Pedersen BS, and Quinlan AR. Pybedtools: a flexible Python library for manipulating genomic datasets and annotations. Bioinformatics (2011). doi:10.1093/bioinformatics/btr539
+
+Updated: 2020-07-06
 
 \section{Picard}
 
@@ -763,7 +851,7 @@ Updated: 2020-06-10
 \part{2nd Gen. Variant Caller: CNV, Translocation and other types of SV}
 \section{BreakDancer}
 
-Official: \url{http://breakdancer.sourceforge.net/}
+Official: \url{http://breakdancer.sourceforge.net/}, v1.1.2\_2013\_03\_08 in 2013-03-06
 
 Official: \url{http://gmt.genome.wustl.edu/packages/breakdancer/}
 
@@ -775,13 +863,43 @@ GitHub: \url{https://github.com/genome/breakdancer}, archived, v1.4.5 in 2014-08
 
 License: GPL v3
 
-Current: Conda, v1.4.5
+Current: N/A
 
 Perl, C++
 
 Chen, K., Wallis, J. W., McLellan, M. D., Larson, D. E., Kalicki, J. M., Pohl, C. S., McGrath, S. D., Wendl, M. C., Zhang, Q., Locke, D. P., Shi, X., Fulton, R. S., Ley, T. J., Wilson, R. K., Ding, L., \& Mardis, E. R. (2009). BreakDancer: An algorithm for high-resolution mapping of genomic structural variation. Nature Methods, 6(9), 677–681. \url{https://doi.org/10.1038/nmeth.1363}
 
 Updated: 2020-06-25
+
+\section{BreaKmer}
+
+GitHub: \url{https://github.com/ccgd-profile/BreaKmer}, v0.0.6 in 2020-07-09
+
+Current: N/A
+
+Python 100.0\%
+
+Updated: 2020-07-12
+
+\section{Breakway}
+
+SourceForge: \url{https://sourceforge.net/projects/breakway/}, deprecated, v0.7.1 in 2011-04-01
+
+Perl
+
+Updated: 2020-07-12
+
+\section{ClipCrop}
+
+GitHub: \url{https://github.com/shinout/clipcrop}, ? in 2012-01-27
+
+Current: N/A
+
+JavaScript 100.0\%
+
+Suzuki, S., Yasuda, T., Shiraishi, Y., Miyano, S., \& Nagasaki, M. (2011). ClipCrop: a tool for detecting structural variations with single-base resolution using soft-clipping information. BMC bioinformatics, 12 Suppl 14(Suppl 14), S7. \url{https://doi.org/10.1186/1471-2105-12-S14-S7}
+
+Updated: 2020-07-12
 
 \section{CREST}
 
@@ -825,13 +943,65 @@ Meier, R., Graw, S., Beyerlein, P., Koestler, D., Molina, J. R., \& Chien, J. (2
 
 Updated: 2020-06-25
 
+\section{GASV}
+
+Official: \url{http://compbio.cs.brown.edu/projects/gasv/}
+
+Google: \url{http://code.google.com/p/gasv/downloads/list}
+
+Current: N/A
+
+Sindi, S.S., Önal, S., Peng, L.C. et al. An integrative probabilistic model for identification of structural variation in sequencing data. Genome Biol 13, R22 (2012). \url{https://doi.org/10.1186/gb-2012-13-3-r22}
+
+Suzanne Sindi, Elena Helman, Ali Bashir, Benjamin J. Raphael, A geometric approach for classification and comparison of structural variants, Bioinformatics, Volume 25, Issue 12, 15 June 2009, Pages i222–i230, \url{https://doi.org/10.1093/bioinformatics/btp208}
+
+Updated: 2020-07-12
+
+\section{Gustaf}
+
+Official: \url{http://www.seqan.de/apps/gustaf/}
+
+GitHub: \url{https://github.com/seqan/seqan/tree/master/apps/gustaf}
+
+Current: GitHub, self-built binary, v1.0.0 with SeqAn version: 2.4.0
+
+Kathrin Trappe, Anne-Katrin Emde, Hans-Christian Ehrlich, Knut Reinert, Gustaf: Detecting and correctly classifying SVs in the NGS twilight zone, Bioinformatics, Volume 30, Issue 24, 15 December 2014, Pages 3484–3490, \url{https://doi.org/10.1093/bioinformatics/btu431}
+
+Trappe, K. (2012). Multi-Split Mapping of NGS Reads for Variant Detection. Master’s thesis, Freie Universitaet Berlin.
+
+Updated: 2020-07-12
+
+\section{Hydra-Multi}
+
+GitHub: \url{https://github.com/arq5x/Hydra}, ? in 2014-10-06
+
+C++ 50.3\% Python 45.8\% Shell 3.1\% Perl 0.8\%
+
+Current: N/A
+
+Updated: 2020-07-12
+
+\section{inGAP-SV}
+
+Official: \url{http://ingap.sourceforge.net/}
+
+SourceForge: \url{https://sourceforge.net/projects/ingap/}, v3.1.1 in 2014-04-18
+
+Comment: GUI with no CLI support.
+
+Current: N/A
+
+Java
+
+Qi, J., \& Zhao, F. (2011). inGAP-sv: a novel scheme to identify and visualize structural variation from paired end mapping data. Nucleic acids research, 39(Web Server issue), W567–W575. \url{https://doi.org/10.1093/nar/gkr506}
+
 \section{LUMPY}
 
 GitHub: \url{https://github.com/arq5x/lumpy-sv}, v3.0 in 2019-02-21
 
 Conda: \url{https://anaconda.org/bioconda/lumpy-sv}, v3.0 in 2019-11-28
 
-Current: N/A
+Current: GitHub, self-built binary, v3.0
 
 License: MIT
 
@@ -873,6 +1043,18 @@ Mohiyuddin, M., Mu, J. C., Li, J., Bani Asadi, N., Gerstein, M. B., Abyzov, A., 
 
 Updated: 2020-06-25
 
+\section{PEMer}
+
+Official: \url{http://sv.gersteinlab.org/pemer/}
+
+Current: N/A
+
+Comment: Require Python 2
+
+Korbel, J. O., Abyzov, A., Mu, X. J., Carriero, N., Cayting, P., Zhang, Z., Snyder, M., \& Gerstein, M. B. (2009). PEMer: a computational framework with simulation-based error models for inferring genomic structural variants from massive paired-end sequencing data. Genome biology, 10(2), R23. \url{https://doi.org/10.1186/gb-2009-10-2-r23}
+
+Updated: 2020-07-12
+
 \section{PriSM}
 
 Official: \url{https://www.broadinstitute.org/viral-genomics/prism}
@@ -887,6 +1069,22 @@ Yu, Q., Ryan, E. M., Allen, T. M., Birren, B. W., Henn, M. R., \& Lennon, N. J. 
 
 Updated: 2020-06-26
 
+\section{Socrates}
+
+Official: \url{http://bioinf.wehi.edu.au/socrates/}
+
+GitHub: \url{https://github.com/PapenfussLab/socrates}, v1.13.1 in 2016-12-15
+
+Current: GitHub, pre-built binary, v1.13.1
+
+License: GPL v3
+
+Java 100.0\%
+
+Schroder, J., Hsu, A., Boyle, S. E., Macintyre, G., Cmero, M., Tothill, R. W., Johnstone, R. W., Shackleton, M., \& Papenfuss, A. T. (2014). Socrates: identification of genomic rearrangements in tumour genomes by re-aligning soft clipped reads. Bioinformatics (Oxford, England), 30(8), 1064–1072. \url{https://doi.org/10.1093/bioinformatics/btt767}
+
+Updated: 2020-06-26
+
 \section{SoftSV}
 
 SourceForge: \url{https://sourceforge.net/projects/softsv/}, v1.4.2 in 2015-09-09
@@ -898,6 +1096,22 @@ License: GPL V3
 C++
 
 C. Bartenhagen, M. Dugas, Robust and exact structural variation detection with paired-end and soft-clipped alignments: SoftSV compared with eight algorithms, Brief Bioinform. (2015), \url{http://dx.doi.org/10.1093/bib/bbv028}
+
+Updated: 2020-06-26
+
+\section{SVDetect}
+
+Official: \url{http://svdetect.sourceforge.net/Site/Home.html}
+
+SourceForge: \url{ttps://sourceforge.net/projects/svdetect/files/SVDetect}, r0.7m in 2011-07-12
+
+Current: SourceForge, pre-built binary, r0.7m
+
+License: GPL v3
+
+Zeitouni, B., Boeva, V., Janoueix-Lerosey, I., Loeillet, S., Legoix-né, P., Nicolas, A., Delattre, O., \& Barillot, E. (2010). SVDetect: a tool to identify genomic structural variations from paired-end and mate-pair sequencing data. Bioinformatics (Oxford, England), 26(15), 1895–1896. \url{https://doi.org/10.1093/bioinformatics/btq293}
+
+Updated: 2020-07-12
 
 \section{SVMerge}
 
@@ -916,6 +1130,56 @@ Perl
 Wong, K., Keane, T. M., Stalker, J., \& Adams, D. J. (2010). Enhanced structural variant and breakpoint detection using SVMerge by integration of multiple detection methods and local assembly. Genome Biology, 11(12), R128. \url{https://doi.org/10.1186/gb-2010-11-12-r128}
 
 Updated: 2020-05-26
+
+\section{SVTools}
+
+GitHub: \url{https://github.com/hall-lab/svtools}, v0.5.1 in 2019-09-13
+
+Conda: \url{https://anaconda.org/bioconda/svtools}, v0.5.1 in 2019-11-18
+
+Conda: \url{https://anaconda.org/bioconda/hall-lab-svtools}, v0.1.1 in 2016-01
+
+Current: Conda, v0.5.1
+
+License: MIT
+
+Python 98.5\% Other 1.5\%
+
+Dave Larson, abelhj, Colby Chiang, Allison Penner Regier, AbhijitBadve, Jim Eldred, … Danny Antaki. (2019, September 12). hall-lab/svtools: svtools v0.5.1 (Version v0.5.1). Zenodo. \url{http://doi.org/10.5281/zenodo.3406745}
+
+Updated: 2020-07-09
+
+\section{SVTyper}
+
+GitHub: \url{https://github.com/hall-lab/svtyper}, v0.7.1.in 2019-09-05
+
+Conda: \url{https://anaconda.org/bioconda/svtyper}, v0.7.1 in 2019-10-04
+
+Current: Conda, v0.1.4
+
+License: MIT
+
+Python 98.8\% Other 1.2\%
+
+Updated: 2020-07-09
+
+\section{ULYSSES}
+
+Official: \url{http://www.lcqb.upmc.fr/ulysses/}
+
+GitHub: \url{https://github.com/gillet/ulysses}, v1.0 in 2017-07-04
+
+Comment: Use Python 2
+
+Current: N/A
+
+License: GPL v3
+
+Python 84.0\% R 15.1\% C 0.9\%
+
+Alexandre Gillet-Markowska, Hugues Richard, Gilles Fischer, Ingrid Lafontaine, Ulysses: accurate detection of low-frequency structural variations in large insert-size sequencing libraries, Bioinformatics, Volume 31, Issue 6, 15 March 2015, Pages 801–808, \url{https://doi.org/10.1093/bioinformatics/btu730}
+
+Updated: 2020-07-12
 
 \part{3rd Gen. Variant Caller: CNV, Translocation and other types of SV}
 
@@ -1109,6 +1373,8 @@ Official: \url{https://asia.ensembl.org/info/docs/tools/vep/index.html}, v100.2 
 
 Conda: \url{https://anaconda.org/bioconda/ensembl-vep}, v100.2 in 2020-06-01
 
+DockerHub: \url{https://hub.docker.com/r/ensemblorg/ensembl-vep/}, v100.2 in 2020-06
+
 Current: N/A
 
 License: Apache 2.0
@@ -1117,7 +1383,7 @@ Perl 97.6\% Other 2.4\%
 
 McLaren, W., Gil, L., Hunt, S. E., Riat, H. S., Ritchie, G. R. S., Thormann, A., Flicek, P. and Cunningham, F. (2016) The Ensembl Variant Effect Predictor, Genome Biology. BioMed Central Ltd., 17(1), p. 122. doi: 10.1186/s13059-016-0974-4.
 
-Updated: 2020-06-10
+Updated: 2020-07-06
 
 \section{VarSifter}
 
@@ -1158,7 +1424,7 @@ Updated: 2020-06-25
 
 GitHub: \url{https://github.com/hall-lab/speedseq}, v0.1.2 in 2017-01-10
 
-Current: N/A
+Current: GitHub, self-built binary, v0.1.2
 
 License: The MIT License (MIT)
 
@@ -1166,9 +1432,25 @@ C 75.5\% Roff 8.4\% Perl 8.0\% Shell 3.1\% Makefile 1.5\% C++ 1.0\% Other 2.5\%
 
 Chiang, C., Layer, R. M., Faust, G. G., Lindberg, M. R., Rose, D. B., Garrison, E. P., Marth, G. T., Quinlan, A. R. and Hall, I. M. (2015) SpeedSeq: Ultra-fast personal genome analysis and interpretation, Nature Methods. Nature Publishing Group, 12(10), pp. 966–968. doi: 10.1038/nmeth.3505.
 
-Updated: 2020-06-10
+Updated: 2020-07-07
 
 \part{R, IDE and R Packages}
+
+\section{Microsoft Open-R}
+
+Official: \url{https://mran.microsoft.com/}, v3.5.3 in 2019-05-17
+
+GitHub: \url{https://github.com/microsoft/microsoft-r-open}
+
+Conda: \url{https://anaconda.org/r/mro-base}, v3.5.1 in 2020-02-12
+
+Current: N/A
+
+License: GPL V2, V3
+
+R 36.6\% C 30.6\% Fortran 23.3\% HTML 2.9\% Shell 1.2\% M4 1.1\% Other 4.3\%
+
+Updated: 2020-07-06
 
 \section{R}
 
@@ -1178,13 +1460,13 @@ Official: \url{https://www.r-project.org/}, v4.0.2 in 2020-06-22
 
 SVN: \url{https://svn.r-project.org/R-dev-web/trunk/index.html}
 
-Current: Conda, v4.0.0
+Current: Conda, v4.0.2
 
 License: GPL 2
 
 R Core Team (2020) R: A Language and Environment for Statistical Computing. Vienna, Austria. Available at: \url{https://www.r-project.org}.
 
-Updated: 2020-06-10
+Updated: 2020-07-06
 
 \section{RStudio}
 
@@ -1203,6 +1485,10 @@ Java 36.1\% C++ 31/3\% JavaScript 20.4\% R 3.3\% C 3.2\% TypeScript 2.6\% Other 
 RStudio Team (2015). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL http://www.rstudio.com/.
 
 Updated: 2020-06-10
+
+
+
+
 
 \part{Python and Python Packages}
 
@@ -1231,6 +1517,22 @@ The very first article about Python was written in 1991 and is now quite outdate
 Rossum, G. van and Boer, J. de (1991) Interactively Testing Remote Servers Using the Python Programming Language, CWI Quarterly, pp. 283–303.
 
 Updated: 2020-06-10
+
+\section{pyBedTools}
+
+Conda: \url{https://anaconda.org/bioconda/pybedtools}, v0.8.1 in 2020-05-10
+
+GitHub: \url{https://github.com/daler/pybedtools}, v0.8.0 in 2018-11-25
+
+Official: \url{http://daler.github.io/pybedtools/}
+
+Current: N/A
+
+License: GPL v2
+
+Python 90.5\% C++ 7.5\% Shell 1.5\% Other 0.5\%
+
+Updated: 2020-07-08
 
 \part{Docker and Docker Packages}
 
@@ -1277,5 +1579,508 @@ Htsget retrieval API spec v1.2.0 in 2020-02-20
 Refget API Specification v1.0.0 in 2020-05-09
 
 Updated: 2020-06-10
+
+\part{How We Install Software}
+\section{Preface}
+Imagine this: You're building your DNA-Seq analysis pipeline due to some published pipelines, which asked you to install several software. However, you feel it hard because you're on an obsolete CentOS with obsolete GCC, GLibC and BinUtils. You do not have access to root and Docker privilege, either. What will you do? In this part, I'll share yu with some of my experience in installing fantastic software mentioned in this book. Wish you a pleasant journey!
+
+\section{Assumptions}
+We assume that you're under an obsolete CentOS with obsolete GCC, GLibC and BinUtils, and do not have access to root and Docker privilege.
+
+Please set up the installation directories before we continue. The reason of performing this step is that almost all C \& CPP programs using GNU Make or CMake assumes that you have root privilege by default, which is not true under current circumstance. So, we need to direct the GNU Make program to install to an non-standard installation path, like \verb|$HOME/usr/local|.
+
+This step only needed to be performed once per machine. Once executing following two lines of codes, there's no need to worry about other directories. They'll be created automatically during installation.
+
+\verb|mkdir -p $HOME/bin $HOME/bin/bio.d $HOME/bin/bio.d/JAR|
+
+\verb|mkdir -p $HOME/usr $HOME/usr/bup $HOME/usr/src $HOME/usr/src/TXZ|
+
+The organizing structure we'll finally see is as follows (\verb|->| means soft link and can be created by \verb|ln -s $SOURCE $DEST|):
+
+\begin{verbatim}
+$HOME
+|-bin Binaries pre-compiled.
+| |-bio.d Bioinformatics biniaries.
+| | |-JAR Bioinformatics Java executbles.
+|-usr
+| |-bin -> local/bin Directories used to hold some programs with instandard PATH.
+| |-bup The backup directory.
+| |-include -> local/include
+| |-local Our installation prefix.
+| | |-bin Binaries compiled.
+| | |-doc Documents that will never be used.
+| | |-etc Configuration files.
+| | |-include C&CPP INCLUDE path.
+| | |-info Documentations written in GNU Info.
+| | |-jar JAVA executables.
+| | |-lib Shared libraries.
+| | | |-pkgconfig Diectory for storing pc files.
+| | |-lib64 Another directory for shared libraries.
+| | | |-pkgconfig Another diectory for storing pc files.
+| | |-libexec Executables that will not appear in $PATH, but used by other programs.
+| | |-man Documentations written in Roff MAN.
+| | |-sbin Where we install software that requires root previledge originally,
+| | | like lighttpd. 
+| | |-share Shared files for various purpose, like common translations.
+| | |-x86_64-pc-linux-gnu/ Files for GNU BinUtils.
+| |-sbin -> local/sbin Same as $HOME/usr/bin
+| |-share -> local/share Same as $HOME/usr/bin
+| |-src Directory for storing source codes cloned from Git hosting providers like GitHub.
+| | |-TXZ Directory for storing source codes in tar.xz format.
+\end{verbatim}
+
+\section{DO NOT Rely Everything on Conda}
+If you learned how to use Python, You might be familiar with Anaconda, a package manager for Python. As you may see, you can install lots of software in Conda by adding a channel named ``Bioconda''. 
+
+The reason I do not suggest you rely everything on Conda is that Conda will pollute the environment variables by default. For example, Conda will pollute \verb|$PERL5LIBS|, making your Perl programs fail; Conda will pollute \verb|C_INCLUDE_PATH|, making you unable to compile programs written in C; Conda will pollute \verb|LD_LIBRARY_PATH|, making self-compiled C programs fail.
+
+\section[First Things First]{First Things First: Some Conventions; How We Compile C \& CPP Programs using GNU Make; and How To Update GCC}
+In the following lines, we'll teach you how to install a C \& CPP program based on GNU Make.
+
+You need to make sure that you have an active C \& CPP compiler on your machine, such as \verb|gcc|, \verb|g++| or \verb|clang| and \verb|clang++|. You may check this by \verb|which $PROGRAM_NAME|, where \verb|$PROGRAM_NAME| is the program name you wish to test. e.g. for \verb|gcc|:
+\begin{verbatim}
+$ which gcc
+~/usr/local/bin/gcc
+\end{verbatim}
+OK, you got your GCC at \verb|~/usr/local/bin/gcc|.
+
+Or, for program \verb|foo|:
+\begin{verbatim}
+$ which foo
+/usr/bin/which: no foo in (/usr/bin:/bin:/sbin:/usr/sbin:/mnt/sysimage/bin:/mnt/sysimage/usr/bin:/mnt/sysimage/usr/sbin:/mnt/sysimage/sbin:/sbin:/usr/sbin:)
+\end{verbatim}
+
+The system failed to find program \verb|foo|.
+
+If you do not have any active C \& CPP compiler on your machine, contact your system administrator (If they do not want to install them, change your computer). This is {\color{red}FATAL}.
+
+Turn off Conda by commenting all Conda scripts at your \verb|.bashrc| and restart your \verb|bash|. This will stop Conda from polluting your environment variables--One of the major reasons of GCC compilation failure.
+
+\subsection{A Sample C Program using GNU Make}
+
+In this section, we'll use GNU MPFR Library as our example. You do not need to download and install this program, just see how we deal with errors emerged.
+
+\begin{enumerate}
+\item Downloading the files: Use \verb|curl| or \verb|wget| (You should have at least one of them) or \verb|axel| (You can install it to accelerate downloading speed) to retrieve the newest version of \verb|mpfr|:
+
+e.g. \verb|wget https://www.mpfr.org/mpfr-current/mpfr-4.1.0.tar.xz|
+
+or, \verb|axel https://www.mpfr.org/mpfr-current/mpfr-4.1.0.tar.xz|
+
+or, \verb|curl https://www.mpfr.org/mpfr-current/mpfr-4.1.0.tar.xz -o mpfr-4.1.0.tar.xz|
+
+\item Extract the archive by GNU Tar or YuZJLab AutoUnzip \footnote{I'm very glad to advertise my own products.}.
+
+e.g. \verb|tar -xJvf mpfr-4.1.0.tar.xz| or \verb|autounzp mpfr-4.1.0.tar.xz| will extract \verb|mpfr-4.1.0.tar.xz| to directory \verb|mpfr-4.1.0.tar.xz|. \verb|cd mpfr-4.1.0|
+
+\item Execute \verb|./configure| with option \verb|--prefix=$HOME/user/local|.
+
+\verb|./configure --prefix=$HOME/user/local|
+
+Useful \& Common options:
+\begin{enumerate}
+\item \verb|--prefix=$INSTALLATION_PREFIX| Install this program in \verb|$INSTALLATION_PREFIX|. e.g put executables in \verb|$INSTALLATION_PREFIX/bin|, shared libraries in \verb|$INSTALLATION_PREFIX/lib|, Roff MAN pages in \verb|$INSTALLATION_PREFIX/man|, etc.
+\item \verb|--help| Give out this help.
+\item \verb|--enable-FEATURE| or \verb|--enable-FEATURE=yes| Enable some \verb|FEATURE|.
+\item \verb|--disable-FEATURE| or \verb|--enable-FEATURE=no| Disable some \verb|FEATURE|.
+\item \verb|--with-PACKAGE| or \verb|--with-PACKAGE=$PAKAGE_PATH| Build with \verb|PACKAGE| (in \verb|$PAKAGE_PATH|).
+\item \verb|--without-PACKAGE| or \verb|--with-no-PACKAGE| or \verb|--with-PACKAGE=no| Build without \verb|PACKAGE|.
+\end{enumerate}
+Useful \& Common arguments:
+\begin{enumerate}
+\item \verb|CC=$C_CMPILER_PATH| Use \verb|$C_CMPILER_PATH| as C Compiler, can be executable name or executable path.
+
+e.g, configure a program with C compiler \verb|clang|:
+
+\verb|./configure CC=clang| or \verb|./configure CC=$(which clang)|
+
+or,\verb|./configure CC=$HOME/usr/local/bin/clang|.
+
+\item \verb|CFLAGS=$C_COMPILER_FLAGS| defines C compiler flags.
+
+e.g. compile with \verb|libiconv|:
+
+\verb|./configure CFLAGS='-liconv'|
+
+or, \verb|./configure CC='gcc -liconv'|
+
+\item \verb|CXX=$CPP_CMPILER_PATH| and \verb|CXXFLAGS=$CPP_COMPILER_FLAGS| are similar with those in \verb|CC| and \verb|CCFLAGS|.
+
+\item \verb|AR=$AR_PATH| and \verb|LD=$LD_PATH| can be executable name or executable path for \verb|ar| and \verb|ld|. \verb|LDFLAGS=$LD_FLAGS| are those arguments passed to linker \verb|ld|.
+\end{enumerate}
+
+Please be aware that for arguments, you can also set them as environment variables \footnote{This is how a Conda pollute your environment!} e.g. You can add \verb|export CC=clang| to \verb|$HOME/.bashrc| to use \verb|clang| as C compiler by default. You can also use them before \verb|.configure|.
+
+e.g. \verb|./configure CC=clang|
+
+equals to \verb|CC=clang ./configure|
+
+or
+
+\begin{verbatim}
+CC=clang
+./configure
+\end{verbatim}
+
+e.g, configure a program with compiler \verb|clang|, customized linker and library \verb|libiconv|:
+
+\verb|./configure --prefix=$HOME/user/local CC=clang CXX=clang++ LD=/usr/bin/ld LDFLAGS='-liconv'|
+
+\item \verb|make && make install|. \verb|make| will compile the program while \verb|make install| will install them. Use option \verb|-j| to use multiple steps. E.g. \verb|make -j20|
+
+It is easy to understand the \verb|make install| step: Copy the files, create links and modify some system configurations. This makes \verb|make install| one of the easiest step. However, \verb|make| is more complicated and lots of problems emerges here. 
+\end{enumerate}
+\subsection{How C Compiler Compiles Executables}
+For C code named \verb|hello.c| like this:
+\begin{verbatim}
+#include <stdio.h>
+int main()
+{
+    printf("Hello, World!");
+    return 0;
+}
+\end{verbatim}
+
+Can be compiled like this: \verb|gcc -o hw hello.c|. This includes:
+
+\subsubsection{Pre-processing of the source code}
+
+This step includes finding and attaching header files (\verb|.h| \& \verb|.hpp|).
+
+CMD: \verb|gcc -E hello.c > hello_pp.c|
+
+The compiler (\verb|gcc| here) will find the line \verb|#include <stdio.h>| which asked for a header file named \verb|stdio.h| in an environment variable named \verb|C_INCLUDE_PATH| (\verb|CPLUS_INCLUDE_PATH| for CPP) which is now setted to \verb|$HOME/usr/local/include|. The compiler will search system INCLUDE path and \verb|C_INCLUDE_PATH| for \verb|stdio.h|, which appears to be in \verb|/usr/include|. All path searched can be viewed by adding option \verb|-v| (which means ``verbose''), e.g.
+\begin{verbatim}
+ignoring duplicate directory "$HONE/usr/local/include"
+#include "..." search starts here:
+#include <...> search starts here:
+$HONE/usr/local/include
+.
+$HONE/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include
+/usr/local/include
+$HONE/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed
+/usr/include
+End of search list.
+\end{verbatim}
+
+An error will be reported if a header file was not found. e.g. If I change \verb|stdio.h| to \verb|aastdio.h| in \verb|hello.c|, there will be:
+
+\begin{verbatim}
+hello.c:1:10: fatal error: aastdio.h: No such file or directory
+1 | #include <aastdio.h>
+  |          ^~~~~~~~~~~
+compilation terminated.
+\end{verbatim}
+
+In this situation, you should check:
+
+\begin{enumerate}
+\item Whether this header file exists in your \verb|C_INCLUDE_PATH|.
+\item Whether this header file exists in a directory (\verb|$DIR|) not included in your \verb|C_INCLUDE_PATH|. If so, add it to \verb|C_INCLUDE_PATH| or use \verb|-I$DIR|.
+
+e.g. I created \verb|aastdio.h| in \verb|./inc/| by \verb|mkdir inc;ln /usr/include/stdio.h inc/aastdio.h -s|. I can compile this code by \verb|gcc -o hw hellow.c -I./inc|.
+\item Whether this header file can be aliased. If so, use soft links. e.g. Sometimes some program will rely on \verb|curses.h|, which is currently \verb|ncurses/ncurses.h|:
+
+\verb|ln -s $HOME/usr/local/include/ncurses/ncurses.h $HOME/usr/local/include/curses.h|
+\end{enumerate}
+If no above situation suits, you should search where this header come from. Maybe it's time for installing a new library.
+
+Another potential problem is that the C compiler will search for the first header file in \verb|C_INCLUDE_PATH|. So, if you're using Conda, Conda will add its own \verb|include| folder to te top of \verb|C_INCLUDE_PATH|. Lots of problem will emerge if Conda do not have a correct version of the file you want.
+
+If you want to see the results produced by pre-processing step, you can add option \verb|-E|. e.g.
+\begin{verbatim}
+$ gcc -E hellow.c -I./inc|grep -v '^#'|grep -v ^$
+typedef long unsigned int size_t;
+typedef unsigned char __u_char;
+typedef unsigned short int __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long int __u_long;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+[...]
+extern void funlockfile (FILE *__stream)
+__attribute__ ((__nothrow__ , __leaf__))
+;
+int main()
+{
+    printf("Hello, World!");
+    return 0;
+}
+\end{verbatim}
+\subsubsection{Compile the pre-processed file into assembly code}
+
+CMD: \verb|gcc -S hello_pp.c|
+
+or, \verb|gcc -S hello.c|.
+
+The assembly code file is like:
+
+\begin{verbatim}
+        .file   "hello_pp.c"
+        .text
+        .section        .rodata
+.LC0:
+        .string "Hello, World!"
+        .text
+        .globl  main
+        .type   main, @function
+main:
+.LFB0:
+        .cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+        movl    $.LC0, %edi
+        movl    $0, %eax
+        call    printf
+        movl    $0, %eax
+        popq    %rbp
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc
+.LFE0:
+        .size   main, .-main
+        .ident  "GCC: (GNU) 10.1.0"
+        .section        .note.GNU-stack,"",@progbits
+\end{verbatim}
+\subsubsection{Compile the assembly code into object code}
+
+CMD: \verb|as hello_pp.s -o hello.o|
+
+or, \verb|gcc -c hello_pp.c -o hello.o|
+
+or, \verb|gcc -c hello.c -o hello.o|.
+
+In this step, assembly code into object code, which is binary. This binary have data segment, text (code) segment and a symbol table which stores all symbols defined and used.
+
+We can use command \verb|nm| to see symbols inside a object file.
+
+\subsubsection{Linking object code into machine code (Executables)}
+
+This step links several object file to an executable.
+
+CMD: \verb|gcc hello.o -o hello|
+
+Let's use a more complicated example:
+
+\verb|add.c| includes:
+\begin{verbatim}
+int add(int a,int b)
+{
+    return a+b;
+}
+\end{verbatim}
+
+\verb|math.c| includes:
+\begin{verbatim}
+#include <stdio.h>
+int b=1;
+int c=2;
+int main()
+{
+    int a;
+    a=add(b,c);
+    printf("%d",a);
+    return 0;
+}
+\end{verbatim}
+
+Command \verb|gcc math.c add.c -o math| will generate executable \verb|math|\footnote{When we have lots of files, we use:\\{\tt gcc -c math.c add.c\\\# Previous line generates math.o add.o\\gcc math.o add.o -o math}\par Thus, if there's any error emerged in any {\tt .c} files, we just need to edit and re-compile this file only.}. Command \verb|gcc -c math.c -o math.o| will generate \verb|math.o| without error. However, if we use \verb|gcc math.c|, we will find an error:
+
+\begin{verbatim}
+ld: /tmp/cc7gkfN8.o: in function `main':
+math.c:(.text+0x18): undefined reference to `add'
+collect2: error: ld returned 1 exit status
+\end{verbatim}
+
+This means that the linker failed to work. Why? Let's have a look at those object files (Words after \verb|#| are added by me):
+
+\begin{verbatim}
+$ nm math.o
+                 U add      # Undefined.
+0000000000000000 D b        # Defined data.
+0000000000000004 D c        # Defined data.
+0000000000000000 T main     # Defined code.
+                 U printf   # Unefined.
+$ nm add.o
+0000000000000000 T add      # Defined code.
+\end{verbatim}
+
+After encountering fiction \verb|add|, \verb|ld| the linker will start finding where this function is from, which cannot be found because we do not provide \verb|add.o| or any other object file defining function \verb|add| in its symbol table.
+
+Linking to static library (\verb|.a|) includes:
+
+\begin{enumerate}
+\item Search environment variables \verb|LIBRARY_PATH|.
+\item Extract the library into object files;
+\item Get the object files we need;
+\item Merge them together. For executables, symbol table will be deprecated.
+\end{enumerate}
+
+Note: when linking libraries, \verb|ld| by itself does not look for libraries in either \verb|LIBRARY_PATH| or \verb|LD_LIBRARY_PATH|. It's only when \verb|gcc| invokes \verb|ld| that \verb|LIBRARY_PATH| becomes used. When using stand-alone \verb|ld|, you should use option \verb|-L|. e.g. \verb|ld -L$HOME/usr/local/lib|
+
+They're all done at compilation time. So, there should be no error when executing executables.
+
+Linking to dynamic library (\verb|.so|) includes:
+
+\begin{enumerate}
+\item Search environment variables \verb|LIBRARY_PATH| and write library information to executables, done at compilation time.
+\item Search environment variables \verb|LD_LIBRARY_PATH| and load them at load time \& run time.
+\end{enumerate}
+
+So, if you're encountering a error like this \footnote{Another error caused by Conda. This error emerges because I compiled R when Conda is activated (which modified {\tt LIBRARY\_PATH} and {\tt LD\_LIBRARY\_PATH}) and want to use R when Conda is deactivated.}:
+
+R: error while loading shared libraries: libicuuc.so.64: cannot open shared object file: No such file or directory
+
+You may re-compile R. You'd better deactivate Conda when compiling software.
+
+\subsection{Non-Standard GNU Make Programs Without configure}
+\begin{enumerate}
+\item Please check whether there's \verb|bootstrap.sh| or \verb|autogen.sh|. If so, you may execute them and a \verb|configure| file will be generated.
+\item If there's \verb|configure.ac| or \verb|configure.in|, please execute \verb|autopoint -ifv &&  autoreconf -ifv| and a \verb|configure| file will be generated.
+\item If there's \verb|Makefile| only and \verb|install| is defined, please use \verb|PREFIX=$HOME/usr/local| or \verb|DESTDIR=$HOME| as arguments for \verb|make install|. If not, skip \verb|make install|. Copy the binary produced directly to \verb|$HOME/bin| or \verb|$HOME/bin/bio.d|.
+\end{enumerate}
+
+\subsection{Skip Makeinfo Error}
+Execute \verb|make| with \verb|MAKEINFO='bash -c exit 0'|
+
+\subsection{Installing GCC}
+\begin{enumerate}
+\item \verb|unset LIBRARY_PATH CPATH C_INCLUDE_PATH PKG_CONFIG_PATH CPLUS_INCLUDE_PATH INCLUDE| to avoid errors during \verb|make|.
+
+\item Download and extract GCC source code.
+
+\item Note that you need to add option \verb|--with-gmp=$HOME/user/local| when executing \verb|./configure|.
+
+\item \verb|make| (which will take several hours if you only use one thread) and \verb|make install|.
+\end{enumerate}
+
+Other programs like GNU BinUtils \footnote{Utilities used in compiling C \& CPP codes, like {\tt ld} or {\tt ar}. Available from \url{https://www.gnu.org/software/binutils/}.}, GNU TeXInfo \footnote{Lots of GNU programs write their documentations in GNU TeXInfo (a language). This software contains {\tt makeinfo} which can transcribe GNU TeXInfo ({\tt .texi}) to GNU Info ({\tt .info}), Roff MAN ({\tt .1}, {\tt .2}, etc.), PDF and HTML. Available from \url{https://www.gnu.org/software/texinfo/}.}, GNU M4 \footnote{A dependence for GNU Autotools. Available from \url{https://www.gnu.org/software/m4/}.}, GNU Autotools \footnote{Introduced before. Availble from \url{https://www.gnu.org/software/autoconf/}, \url{https://www.gnu.org/software/autogen/} and \url{https://www.gnu.org/software/automake/}.}, GNU CoreUtils \footnote{CoreUtils like {\tt ls}, {\tt mkdir} or {\tt rm}. Available from \url{https://www.gnu.org/software/coreutils/}.}, GNU Bash\footnote{Some programs requires newer versions of Bash, like YuZJLab LinuxMiniPrograms. Available from \url{https://www.gnu.org/software/bash/}.} can (and should) be installed in a similar way.
+
+\section{Special C Programs}
+
+\subsection{Ncurses}
+\verb|./configure --prefix=$HOME/usr/local LDFLAGS='-liconv' --enable-widec --with-shared|
+
+After installation:
+
+\begin{verbatim}
+cd $HOME/usr/local/lib
+ln -s libncurses.so libncursesw.so
+ln -s libncursesw.so libncurses.so
+ln -s libncurses.so.6 libncursesw.so.6
+ln -s libncursesw.so.6 libncurses.so.6
+ln -s libncursesw.so.6.2 libncurses.so.6.2
+ln -s libncurses.so libncursesw.so
+ln -s libncursesw.so libncurses.so
+ln -s libncurses.so.6 libncursesw.so.6
+ln -s libncursesw.so.6 libncurses.so.6
+ln -s libncursesw.so.6.2 libncurses.so.6.2
+\end{verbatim}
+
+\subsection{R}
+\begin{verbatim}
+./configure --prefix=$HOME/usr/local --with-blas\
+--with-lapack --with-tcltk --enable-R-shlib --with-x=no
+\end{verbatim}
+
+\section{Java Programs}
+
+We just download JAR executables to \verb|$HOME/bin/bio.d/JAR| and add a wrapper like this:
+
+\begin{verbatim}
+#!/usr/bin/env bash
+${HOME}/bin/jdk1.7.0_80/bin/java -Xmx31g -jar $(dirname ${0})/mutect-1.1.7.jar ${@}
+\end{verbatim}
+
+\part{Fantastic Configurations}
+In this part, you'll see some fantastic configurations we used to accelerate our performance. All mirror sites have been pointed to Chinese mirrors.
+
+\section{.bashrc}
+(This title should not be visible.)
+\begin{verbatim}
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+. /etc/bashrc
+fi
+
+# Git helper, can be found at git's source code.
+. ~/.git-prompt.sh
+
+# Fantastic $PS1 with additional linebreak.
+function __prevp (){
+local r=${?}
+if [ ${r} -eq 0 ];then
+echo -e "\e[42m\e[30m${r}\e[32m\e[46m \e[0m"
+else
+echo -e "\e[41m\e[30m${r}\e[31m\e[46m \e[0m"
+fi
+}
+PS1='$(__prevp)\e[30m\e[46m$(date +%Y-%m-%d_%H-%M-%S)\e[43m\e[36m \e[30m${PWD}
+\e[42m\e[33m \e[30m$(__git_ps1 " (%s)")\e[32m\e[40m \e[0m\n\$ '
+
+
+# Conda setup scripts omitted.
+
+export CMAKE_PREFIX_PATH="$HOME/usr/local/CMAKE_PREFIX:$CMAKE_PREFIX_PATH"
+
+export PERL5LIB="$HOME/usr/local/lib/perl5/site_perl/5.30.1/x86_64-linux/:
+$HOME/usr/local/lib/perl5/site_perl/5.30.1/:$HOME/bin/cpan.d/lib/perl5/"
+
+export PKG_CONFIG_PATH="$HOME/usr/local/lib/pkgconfig/:
+$HOME/usr/local/lib64/pkgconfig/:$PKG_CONFIG_PATH"
+
+export PKG_CONFIG_LIBFIR="$HOME/usr/local/lib64/pkgconfig/:
+$HOME/usr/local/lib/pkgconfig/:$PKG_CONFIG_LIBFIR"
+
+export MANPATH="$HOME/bin/cpan.d/man/man3:$HOME/usr/local/share/man:$MANPATH"
+export INFOPATH="$HOME/usr/local/share/info:$INFOPATH"
+export LD_LIBRARY_PATH="$HOME/usr/local/lib/:$HOME/usr/local/lib64/:$LD_LIBRARY_PATH"
+export LIBRARY_PATH="$HOME/usr/local/lib/:$HOME/usr/local/lib64/:$LIBRARY_PATH"
+export LD_RUN_PATH="$HOME/usr/local/lib:$HOME/usr/local/lib64/:$LD_RUN_PATH"
+export CPLUS_INCLUDE_PATH="$HOME/usr/local/include:$CPLUS_INCLUDE_PATH"
+export C_INCLUDE_PATH="$HOME/usr/local/include:$C_INCLUDE_PATH"
+alias du="du -h" # More readable `du`.
+alias df="df -h" # More readable `df`.
+alias diff="diff -u" # Make the output of `diff` similiar to `git diff`.
+alias ls="ls -lhF --color=auto" # More readable ls.
+alias shutdown="echo What the hell you\'re thinking?\!" # [Palmface]
+alias reboot="echo What the hell you\'re thinking?\!"
+alias sudo="echo What the hell you\'re thinking?\!"
+alias rm="rm -i" # Safer `rm`.
+alias git-log="git log --pretty=oneline --abbrev-commit --graph --branches"
+# More readable `git log`.
+alias top="htop" # htop is a task manager better than top.
+alias emacs="emacs -nw"
+#OLDPATH
+export PATH="$HOME/bin/apache-ant-1.9.15/bin:$HOME/bin/go.git/bin:$BIOD:$PATH"
+#BIO.D
+export BIOD="$HOME/bin/bio.d" # Good alias!
+export PATH="$PATH:$BIOD/blat:$BIOD/CAP3:$BIOD/JAR:$BIOD/circos-0.69-9/bin:$BIOD/speedseq.git/bin"
+#LOCAL
+export PATH="$HOME/usr/local/bin:$PATH"
+# I splitted the $PATH variables to make it more readable.
+\end{verbatim}
+
+\section{.condarc}
+\begin{verbatim}
+channels:
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+report_errors: false
+\end{verbatim}
+
+\section{.emacs}
+\begin{verbatim}
+(package-initialize)
+(custom-set-variables)
+(global-linum-mode 1) ;
+(setq linum-format "%d ");
+(setq backup-directory-alist (quote (("." . "~/.emacs-backups"))))
+\end{verbatim}
 
 \end{document}
