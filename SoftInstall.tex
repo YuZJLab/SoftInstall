@@ -2,11 +2,14 @@
 \usepackage[backref,bookmarks=true,bookmarksopen=true,pdftitle=SoftInstall,pdfauthor=YU Zhejian]{hyperref}
 \renewcommand{\sfdefault}{phv}
 \renewcommand{\rmdefault}{phv}
+\newcommand{\cbb}[1]{}
+\newcommand{\cb}[3]{\par Cited by: {\color{blue}\Huge #1} times in Scopus, {\color{blue}\Huge #2} times in Bing Academic, {\color{blue}\Huge #3} times in Baidu Xueshu}
 \usepackage{indentfirst}
 \renewcommand\familydefault{\sfdefault}
 \usepackage[inner=0.5in,outer=0.5in]{geometry}
 \usepackage{titletoc}
 \usepackage{xcolor}
+\usepackage{graphicx}
 \titlecontents{part}[2em]{\addvspace{4pt}\large}{\contentslabel[\thecontentslabel]{4em}}{}{\ \titlerule*[.5pc]{.}\ \thecontentspage}[]
 \titlecontents{section}[1em]{\addvspace{2pt}}{\bfseries\contentslabel[\thecontentslabel]{4em}}{}{\ \titlerule*[.5pc]{.}\ \thecontentspage}[]
 
@@ -15,6 +18,9 @@
 \author{YU Zhejian}
 \maketitle
 \setcounter{section}{-1}
+\begin{center}
+\includegraphics[width=0.5\linewidth]{YuZJLab_BG.png}
+\end{center}
 \section{Introduction}
 
 This book involves the software used in the common bioinformatics pipelines and the way to install them.
@@ -22,6 +28,8 @@ This book involves the software used in the common bioinformatics pipelines and 
 The term ``\textbf{deprecated}'' means that the entire software was deprecated by its developer, while ``\textbf{branch deprecated}'' means that although this branch was deprecated, the software is still being developed somewhere else. Unless there is \textbf{EXPLICIT} information, all branches \& software are considered not deprecated.
 
 The term ``pre-build binary'' means 1. Compiled binary for C, C++ or D, etc. or 2. Compiled documentations for \LaTeX or asciidoc, etc. or 3. Scripts for scripting languages like Perl, Shell or Python, etc. Those which is not ``pre-build binary'' are compiled locally by ourselves. ``N/A'' means we have not, or failed to install it.
+
+As for tag ``Cited by'', ``0'' means this article is cited 0 times in Scopus (\url{https://www.scopus.com/}) and ``N/A'' means this article do not present in Scopus. Same for \url{https://xueshu.baidu.com/} and \url{https://academic.microsoft.com/home}.
 
 \tableofcontents
 
@@ -39,9 +47,9 @@ License: MIT
 
 C++ 96.4\% Python 1.8\% CMake 1.3\% Other 0.5\%
 
-Barnett, D. W., Garrison, E. K., Quinlan, A. R., Strömberg, M. P., \& Marth, G. T. (2011). BamTools: a C++ API and toolkit for analyzing and managing BAM files. Bioinformatics, 27(12), 1691–1692. \url{https://doi.org/10.1093/bioinformatics/btr174}
+Barnett, D. W., Garrison, E. K., Quinlan, A. R., Strömberg, M. P., \& Marth, G. T. (2011). BamTools: a C++ API and toolkit for analyzing and managing BAM files. Bioinformatics, 27(12), 1691–1692. \url{https://doi.org/10.1093/bioinformatics/btr1744}\cb{267}{426}{250}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{BLAT}
 
@@ -49,38 +57,39 @@ Official: \url{http://www.soe.ucsc.edu/~kent}, v36 in 2014-11-05
 
 Current: Official, self-built binary, v36
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \section{CAP3}
 
-Official: \url{http://seq.cs.iastate.edu/cap3.html}
+Official: \url{http://seq.cs.iastate.edu/cap3.html}, unknown
 
-Current: Official, ptr-built binary
+Current: Official, pre-built binary
 
 FORTRAN, perl
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \section{gfatools}
 
-GitHub: \url{https://github.com/lh3/gfatools}, v0.4 in 2019-12-24
+GitHub: \url{https://github.com/lh3/gfatools}, v0.4 (r165) in 2019-12-23
 
 C 96.8\% Objective-C 1.9\% Other 1.3\%
 
 Current: GitHub, self-built binary, 0.4-r179-dirty with gfa.h: 0.4-r186-dirty
 
+Updated: 2020-07-21
 
 \section{htsjdk}
 
-GitHub: \url{https://github.com/samtools/htsjdk}, v2.21.3 in 2020-03-10
+GitHub: \url{https://github.com/samtools/htsjdk}, v2.23.0 in 2020-07-08
 
 Official: \url{http://samtools.github.io/htsjdk/}
 
 Current: N/A
 
-Java 99.8\% Other 0.2\% 
+Java 99.8\% Other 0.2\%
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{htslib}
 
@@ -94,7 +103,7 @@ Current: GitHub, self-build,  1.10.2-23-g6b72368
 
 C 89.3\% C++ 3.7\% Perl 2.7\% Makefile 1.4\% Roff 1.2\% M4 1.0\% Other 0.7\%
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{SeqAn2}
 
@@ -108,9 +117,9 @@ License: The 3-Clause BSD License
 
 C++ 63.9\% PHP 22.6\% Python 3.4\% HTML 2.7\% JavaScript 2.3\% C 1.7\% Other 3.4\%
 
-Döring, A., Weese, D., Rausch, T., \& Reinert, K. (2008). SeqAn an efficient, generic C++ library for sequence analysis. BMC Bioinformatics, 9. \url{https://doi.org/10.1186/1471-2105-9-11}
+Döring, A., Weese, D., Rausch, T., \& Reinert, K. (2008). SeqAn an efficient, generic C++ library for sequence analysis. BMC Bioinformatics, 9. \url{https://doi.org/10.1186/1471-2105-9-11} \cb{173}{342}{281}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{SeqAn3}
 
@@ -124,23 +133,23 @@ License: The 3-Clause BSD License
 
 C++ 98.9\% CMake 1.1\%
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{SRA-Toolkit}
 
-Conda: \url{https://anaconda.org/bioconda/sra-tools}, v2.10.7 in 2020-06-03
+Conda: \url{https://anaconda.org/bioconda/sra-tools}, v2.10.8 in 2020-07-04
 
 Official: \url{https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software}
 
-GitHub: \url{https://github.com/ncbi/sra-tools/}, v2.10.7 in 2020-05-22
+GitHub: \url{https://github.com/ncbi/sra-tools/}, v2.10.8 in 2020-06-29
 
 Current: GitHub, pre-build binary, 2.10.4
 
 License: PUBLIC DOMAIN NOTICE
 
-C 70.2\% C++ 19.4\% Makefile 4.0\% Shell 2.3\% Perl 1.9\ Python 1.0\% Other 1.2\%
+C 70.3\% C++ 19.3\% Makefile 4.0 Shell 2.3\% Perl 1.9\% Python 1.0\% Other 1.2\%
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{Tabix (deprecated)}
 
@@ -156,13 +165,13 @@ License: BSD
 
 C 83.8\% Java 6.8\% Python 4.6\% TeX 2.8\% Perl 2.0\%
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \part{2nd Gen. Read Quality Controller}
 
 \section{CutAdapt}
 
-Conda: \url{https://anaconda.org/bioconda/cutadapt}, v2.10 in 2020-04-23
+Conda: \url{https://anaconda.org/bioconda/cutadapt}, v2.10 in 2020-07-13
 
 GitHub: \url{https://github.com/marcelm/cutadapt}, v2.10 in 2020-04-22
 
@@ -174,9 +183,9 @@ License: MIT
 
 Python 99.6\% Shell 0.4\%
 
-Martin, M. (2011). Cutadapt removes adapter sequences from high-throughput sequencing reads. EMBnet.Journal, 17(1), 10. \url{https://doi.org/10.14806/ej.17.1.200}
+Martin, M. (2011). Cutadapt removes adapter sequences from high-throughput sequencing reads. EMBnet.Journal, 17(1), 10. \url{https://doi.org/10.14806/ej.17.1.200} \cb{N/A}{11649}{2032}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{FastQC}
 
@@ -190,7 +199,7 @@ Current: GitHub, pre-build binary, 0.11.9
 
 Java 95.5\% HTML 3.1\% Perl 1.2\% Other 0.2\%
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{QualiMap}
 
@@ -204,17 +213,17 @@ License: GPL 2
 
 Java
 
-García-Alcalde, F., Okonechnikov, K., Carbonell, J., Cruz, L. M., Götz, S., Tarazona, S., Dopazo, J., Meyer, T. F. and Conesa, A. (2012) Qualimap: evaluating next-generation sequencing alignment data, Bioinformatics, 28(20), pp. 2678–2679. doi: 10.1093/bioinformatics/bts503.
+García-Alcalde, F., Okonechnikov, K., Carbonell, J., Cruz, L. M., Götz, S., Tarazona, S., Dopazo, J., Meyer, T. F. and Conesa, A. (2012) Qualimap: evaluating next-generation sequencing alignment data, Bioinformatics, 28(20), pp. 2678–2679. doi: 10.1093/bioinformatics/bts503.\cb{275}{431}{326}
 
-Okonechnikov, K., Conesa, A. and García-Alcalde, F. (2015) Qualimap 2: advanced multi-sample quality control for high-throughput sequencing data, Bioinformatics, 32(2), pp. 292–294. doi: 10.1093/bioinformatics/btv566.
+Okonechnikov, K., Conesa, A. and García-Alcalde, F. (2015) Qualimap 2: advanced multi-sample quality control for high-throughput sequencing data, Bioinformatics, 32(2), pp. 292–294. doi: 10.1093/bioinformatics/btv566.\cb{271}{427}{145}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{Trimmomatic}
 
 Official: \url{http://www.usadellab.org/cms/index.php?page=trimmomatic}
 
-GitHub: \url{https://github.com/timflutre/trimmomatic}
+GitHub: \url{https://github.com/timflutre/trimmomatic}, unknown
 
 Conda: \url{https://anaconda.org/bioconda/trimmomatic}, v0.39 in 2019-11-21
 
@@ -224,23 +233,23 @@ License: GPL 3
 
 Java 99.2\% Makefile 0.8\%
 
-Bolger, A. M., Lohse, M., \& Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120.\url{https://doi.org/10.1093/bioinformatics/btu170}
+Bolger, A. M., Lohse, M., \& Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120.\url{https://doi.org/10.1093/bioinformatics/btu170} \cb{12021}{16246}{7227}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \part{3rd Gen. Read Quality Controller}
 
 \section{REQUEST}
 
-GitHub: \url{https://github.com/bioinfomaticsCSU/REQUEST}
+GitHub: \url{https://github.com/bioinfomaticsCSU/REQUEST}, unknown
 
 Current: GitHub, master
 
 License: Unknown
 
-Zhang, W., Huang, N., Zheng, J., Liao, X., Wang, J., \& Li, H. D. (2019). A Sequence-Based Novel Approach for Quality Evaluation of Third-Generation Sequencing Reads. Genes, 10(1), 44. \url{https://doi.org/10.3390/genes10010044}
+Zhang, W., Huang, N., Zheng, J., Liao, X., Wang, J., \& Li, H. D. (2019). A Sequence-Based Novel Approach for Quality Evaluation of Third-Generation Sequencing Reads. Genes, 10(1), 44. \url{https://doi.org/10.3390/genes10010044}\cb{0}{0}{0}
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \part{2nd Gen. Aligner}
 \section{Bowtie}
@@ -257,7 +266,9 @@ License: Artistic License 2.0
 
 C++ 91.1\% Perl 6.2\% Shell 0.9\% C 0.7\% Python 0.6\% Makefile 0.4\% Objective-C 0.1\%
 
-Langmead, B., Trapnell, C., Pop, M., \& Salzberg, S. L. (2009). Ultrafast and memory-efficient alignment of short DNA sequences to the human genome. Genome Biology, 10(3), R25. \url{https://doi.org/10.1186/gb-2009-10-3-r25}Langmead, B., \& Salzberg, S. L. (2012).
+Langmead, B., Trapnell, C., Pop, M., \& Salzberg, S. L. (2009). Ultrafast and memory-efficient alignment of short DNA sequences to the human genome. Genome Biology, 10(3), R25. \url{https://doi.org/10.1186/gb-2009-10-3-r25} \cb{11653}{16910}{13100}
+
+Updated: 2020-07-21
 
 \section{Bowtie2}
 
@@ -273,14 +284,13 @@ License: GPL 3
 
 C++ 80.7\% Perl 14.5\% Python 1.5\% C 1.3\% Shell 1.1\% Makefile 0.6\% CMake 0.3\%
 
-Fast gapped-read alignment with Bowtie 2. Nature Methods, 9(4), 357–359. \url{https://doi.org/10.1038/nmeth.1923}
+Langmead, B., Salzberg, S. (2012) Fast gapped-read alignment with Bowtie 2. Nature Methods, 9(4), 357–359. \url{https://doi.org/10.1038/nmeth.1923}\cb{14114}{20775}{9304}
 
-Updated: 2020-06-10
-
+Updated: 2020-07-21
 
 \section{BWA}
 
-Conda: \url{https://anaconda.org/bioconda/bwa}, v0.7.17 in 2019-12-26
+Conda: \url{https://anaconda.org/bioconda/bwa}, v0.7.17 in 2020-07-10
 
 GitHub: \url{https://github.com/lh3/bwa}, v0.7.17-r1188 in 2017-10-24
 
@@ -296,17 +306,34 @@ C 85.7\% JavaScript 5.8\% Roff 4.3\% C++ 1.8\% Perl 1.3\% Shell 0.6\% Makefile 0
 
 \textbf{BWA-backtrack}
 
-Li, H., \& Durbin, R. (2009). Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics, 25(14), 1754–1760. \url{https://doi.org/10.1093/bioinformatics/btp324}
+Li, H., \& Durbin, R. (2009). Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics, 25(14), 1754–1760. \url{https://doi.org/10.1093/bioinformatics/btp324}\cb{16923}{24572}{18429}
 
 \textbf{BWA-SW}
 
-Li, H., \& Durbin, R. (2010). Fast and accurate long-read alignment with Burrows-Wheeler transform. Bioinformatics, 26(5), 589–595. \url{https://doi.org/10.1093/bioinformatics/btp698}
+Li, H., \& Durbin, R. (2010). Fast and accurate long-read alignment with Burrows-Wheeler transform. Bioinformatics, 26(5), 589–595. \url{https://doi.org/10.1093/bioinformatics/btp698}\cb{4464}{N/A}{0}
 
 \textbf{BWA-MEM}
 
-Li, H. (2013) Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. Available at: \url{http://arxiv.org/abs/1303.3997} (Accessed: 10 April 2020).
+Li, H. (2013) Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. Available at: \url{http://arxiv.org/abs/1303.3997} (Accessed: 2020-07-21).\cb{N/A}{4118}{1490}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
+
+\section{HISAT (deprecated)}
+
+Official: \url{https://ccb.jhu.edu/software/hisat/index.shtml}, v0.1.6-beta in 2015-04-17
+
+GitHub: \url{https://github.com/infphilo/hisat}
+
+Current: N/A
+
+License: GPL v3
+
+C++ 67.1\% C 22.9\% Perl 8.9\% Other 1.1\%
+
+Kim, D., Langmead, B. \& Salzberg, S. HISAT: a fast spliced aligner with low memory requirements. Nat Methods 12, 357–360 (2015). \url{https://doi.org/10.1038/nmeth.3317}\cb{3191}{4568}{1088}
+
+Updated: 2020-07-21
+
 \section{HiSat2}
 
 Conda: \url{https://anaconda.org/bioconda/hisat2}, v2.2.0 in 2020-03-02
@@ -321,10 +348,7 @@ License: GPL 3
 
 C++ 57.8\% C 16.9\% Python 15.9\% Perl 6.2\% Shell 1.3\% HTML 1.3\% Other 0.6\%
 
-Langmead, B., \& Salzberg, S. L. (2012). Fast gapped-read alignment with Bowtie 2. Nature Methods, 9(4), 357–359. \url{https://doi.org/10.1038/nmeth.1923}
-
-Updated: 2020-06-10
-
+Updated: 2020-07-21
 
 \section{SubRead}
 
@@ -338,13 +362,13 @@ Current: Official, pre-build binary, v2.0.0
 
 License: GPL 3
 
-Liao, Y., Smyth, G. K., \& Shi, W. (2013). The Subread aligner: Fast, accurate and scalable read mapping by seed-and-vote. Nucleic Acids Research, 41(10). \url{https://doi.org/10.1093/nar/gkt214}
+Liao, Y., Smyth, G. K., \& Shi, W. (2013). The Subread aligner: Fast, accurate and scalable read mapping by seed-and-vote. Nucleic Acids Research, 41(10). \url{https://doi.org/10.1093/nar/gkt214}\cb{867}{1321}{450}
 
-Liao, Y., Smyth, G. K. and Shi, W. (2019) The R package Rsubread is easier, faster, cheaper and better for alignment and quantification of RNA sequencing reads, Nucleic acids research. NLM (Medline), 47(8), p. e47. doi: 10.1093/nar/gkz114.
+Liao, Y., Smyth, G. K. and Shi, W. (2019) The R package Rsubread is easier, faster, cheaper and better for alignment and quantification of RNA sequencing reads, Nucleic acids research. NLM (Medline), 47(8), p. e47. doi: 10.1093/nar/gkz114.\cb{73}{142}{0}
 
-Liao, Y., Smyth, G. K. and Shi, W. (2014) FeatureCounts: An efficient general purpose program for assigning sequence reads to genomic features, Bioinformatics. Oxford University Press, 30(7), pp. 923–930. doi: 10.1093/bioinformatics/btt656.
+Liao, Y., Smyth, G. K. and Shi, W. (2014) FeatureCounts: An efficient general purpose program for assigning sequence reads to genomic features, Bioinformatics. Oxford University Press, 30(7), pp. 923–930. doi: 10.1093/bioinformatics/btt656.\cb{3136}{4900}{1709}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{TopHat2 (deprecated)}
 
@@ -360,21 +384,21 @@ License: BSL 1.0
 
 C++ 84.8\% C 10.0\% Python 3.8\% Perl 0.6\% Makefile 0.3\% M4 0.2\% Other 0.3\%
 
-Trapnell, C., Pachter, L. and Salzberg, S. L. (2009) TopHat: discovering splice junctions with RNA-Seq., Bioinformatics (Oxford, England), 25(9), pp. 1105–1111. doi: 10.1093/bioinformatics/btp120.
+Trapnell, C., Pachter, L. and Salzberg, S. L. (2009) TopHat: discovering splice junctions with RNA-Seq., Bioinformatics (Oxford, England), 25(9), pp. 1105–1111. doi: 10.1093/bioinformatics/btp120.\cb{7361}{10513}{8098}
 
-Langmead, B., Trapnell, C., Pop, M. and Salzberg, S. L. (2009) Ultrafast and memory-efficient alignment of short DNA sequences to the human genome, Genome Biology. BioMed Central, 10(3), p. R25. doi: 10.1186/gb-2009-10-3-r25.
+Langmead, B., Trapnell, C., Pop, M. and Salzberg, S. L. (2009) Ultrafast and memory-efficient alignment of short DNA sequences to the human genome, Genome Biology. BioMed Central, 10(3), p. R25. doi: 10.1186/gb-2009-10-3-r25.\cb{11653}{16910}{13094}
 
-Kim, D., Pertea, G., Trapnell, C., Pimentel, H., Kelley, R. and Salzberg, S. L. (2013) TopHat2: Accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions, Genome Biology. BioMed Central, 14(4), p. R36. doi: 10.1186/gb-2013-14-4-r36.
+Kim, D., Pertea, G., Trapnell, C., Pimentel, H., Kelley, R. and Salzberg, S. L. (2013) TopHat2: Accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions, Genome Biology. BioMed Central, 14(4), p. R36. doi: 10.1186/gb-2013-14-4-r36.\cb{6250}{8936}{5655}
 
-Kim, D. and Salzberg, S. L. (2011) TopHat-Fusion: An algorithm for discovery of novel fusion transcripts, Genome Biology. BioMed Central, 12(8), p. R72. doi: 10.1186/gb-2011-12-8-r72.
+Kim, D. and Salzberg, S. L. (2011) TopHat-Fusion: An algorithm for discovery of novel fusion transcripts, Genome Biology. BioMed Central, 12(8), p. R72. doi: 10.1186/gb-2011-12-8-r72.\cb{432}{625}{444}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \part{3rd Gen. Aligner}
 
 \section{ngmlr}
 
-GitHub: \url{https://github.com/philres/ngmlr}, v0.2.7 in 2018-01-25
+GitHub: \url{https://github.com/philres/ngmlr}, v0.2.7 in 2018-07-25
 
 Conda: \url{https://anaconda.org/bioconda/ngmlr}, v0.2.7 in 2019-03
 
@@ -384,9 +408,9 @@ License: MIT
 
 C++ 82.8\% C 10.9\% Python 3.4\% Makefile 1.7\% Shell 0.7\% CMake 0.4\% Dockerfile 0.1\% 
 
-Sedlazeck, F.J., Rescheneder, P., Smolka, M. et al. Accurate detection of complex structural variations using single-molecule sequencing. Nat Methods 15, 461–468 (2018). \url{https://doi.org/10.1038}
+Sedlazeck, F.J., Rescheneder, P., Smolka, M. et al. Accurate detection of complex structural variations using single-molecule sequencing. Nat Methods 15, 461–468 (2018). \url{https://doi.org/10.1038/s41592-018-0001-7}\cb{155}{302}{50}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{minimap2}
 
@@ -404,9 +428,9 @@ License: MIT
 
 C 50.7\% TeX 17.0\% JavaScript 12.9\% C++ 12.0\% Roff 2.9\% Python 2.4\% Other 2.1\%
 
-Heng Li, Minimap2: pairwise alignment for nucleotide sequences, Bioinformatics, Volume 34, Issue 18, 15 September 2018, Pages 3094–3100, \url{https://doi.org/10.1093/bioinformatics/bty191}
+Heng Li, Minimap2: pairwise alignment for nucleotide sequences, Bioinformatics, Volume 34, Issue 18, 15 September 2018, Pages 3094–3100, \url{https://doi.org/10.1093/bioinformatics/bty191}\cb{421}{1040}{75}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{pbmm2}
 
@@ -420,7 +444,7 @@ License: BSD-3-Clause-Clear License
 
 C++ 39.9\% Perl 29.8\% Raku 23.2\% Python 4.0\% Meson 1.7\% Shell 1.4\%
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \part{2nd Gen. SAM/BAM/CRAM File Processor}
 
@@ -436,7 +460,7 @@ License: BSD-3-Clause License
 
 C 97.4\% M4 2.0\% Makefile 0.6\%
 
-Updated: 2020-07-07
+Updated: 2020-07-21
 
 \section{BamDSt}
 
@@ -448,7 +472,7 @@ License: MIT
 
 C 95.5\% C++ 3.9\% Makefile 0.6\%
 
-Updated: 2020-07-06
+Updated: 2020-07-21
 
 \section{BamStats (by biopet)}
 
@@ -462,7 +486,7 @@ License: MIT License
 
 Scala 100.0\%
 
-Updated: 2020-07-08
+Updated: 2020-07-21
 
 \section{BAMStats (by nestornotabilis)}
 
@@ -470,8 +494,7 @@ Official: \url{http://bamstats.sourceforge.net/}, v1.25 in 2011-08-18
 
 Current: Official, Pre-built binary, v1.25
 
-Updated: 2020-07-06
-
+Updated: 2020-07-21
 
 \section{BamUtil}
 
@@ -486,6 +509,10 @@ Current: GitHub, self-built binary, v1.0.14
 License: GPL v3
 
 C++ 79.8\% Shell 19.5\% Other 0.7\%
+
+Jun, G., Wing, M. K., Abecasis, G. R., \& Kang, H. M. (2015). An efficient and scalable analysis framework for variant extraction and refinement from population-scale DNA sequence data. Genome Research, 25(6), 918–925. \url{https://doi.org/10.1101/gr.176552.114}\cb{54}{99}{36}
+
+Updated: 2020-07-21
 
 \section{BedTools}
 
@@ -503,13 +530,13 @@ C 49.6\% C++ 35.5\% Shell 10.0\% Makefile 1.7\% HTML 1.5\% Roff 0.8\% Other 0.9\
 
 \textbf{Please cite the following article if you use BEDTools in your research:}
 
-Quinlan AR and Hall IM, 2010. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics. 26, 6, pp. 841–842.
+Quinlan AR and Hall IM, 2010. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics. 26, 6, pp. 841–842.  doi: 10.1093/bioinformatics/btq033 \cb{6630}{10339}{6779}
 
 \textbf{Also, if you use pybedtools, please cite the following.}
 
-Dale RK, Pedersen BS, and Quinlan AR. Pybedtools: a flexible Python library for manipulating genomic datasets and annotations. Bioinformatics (2011). doi:10.1093/bioinformatics/btr539
+Dale RK, Pedersen BS, and Quinlan AR. Pybedtools: a flexible Python library for manipulating genomic datasets and annotations. Bioinformatics (2011). doi:10.1093/bioinformatics/btr539\cb{117}{200}{146}
 
-Updated: 2020-07-06
+Updated: 2020-07-21
 
 \section{Picard}
 
@@ -517,7 +544,7 @@ Official: \url{http://broadinstitute.github.io/picard/}
 
 Conda: \url{https://anaconda.org/bioconda/picard}, v2.22.9 in 2020-06-03
 
-GitHub: \url{https://github.com/broadinstitute/picard}, v2.23.0 in 2020-06-10
+GitHub: \url{https://github.com/broadinstitute/picard}, v2.23.3 in 2020-07-21
 
 Current: GitHub, pre-build binary, v2.21.6-SNAPSHOT
 
@@ -525,9 +552,7 @@ License: MIT
 
 Java 98.7\% R 0.4\% XSLT 0.4\% Shell 0.2\% HTML 0.2\% CSS 0.1\% 
 
-``Picard Toolkit.'' 2019. Broad Institute, GitHub Repository. http://broadinstitute.github.io/picard/; Broad Institute
-
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{Sambamba}
 
@@ -550,13 +575,13 @@ License: GPL 2
 
 D 82.0\% Shell 7.7\% Roff 6.0\% Python 1.6\% Ruby 1.1\% Meson 0.8\% Makefile 0.8\%
 
-Tarasov, A., Vilella, A. J., Cuppen, E., Nijman, I. J., \& Prins, P. (2015). Sambamba: fast processing of NGS alignment formats. Bioinformatics, 31(12), 2032–2034. \url{https://doi.org/10.1093/bioinformatics/btv098}
+Tarasov, A., Vilella, A. J., Cuppen, E., Nijman, I. J., \& Prins, P. (2015). Sambamba: fast processing of NGS alignment formats. Bioinformatics, 31(12), 2032–2034. \url{https://doi.org/10.1093/bioinformatics/btv098}\cb{229}{381}{82}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{SAMBLASTER}
 
-GitHub: \url{https://github.com/GregoryFaust/samblaster}, v0.1.26 in 2020-06-16
+GitHub: \url{https://github.com/GregoryFaust/samblaster}, v0.1.26 in 2020-07-05
 
 Conda: \url{https://anaconda.org/bioconda/samblaster}, v0.1.26 in 2020-06-16
 
@@ -566,9 +591,9 @@ License: MIT
 
 C++ 99.4\% Makefile 0.6\%
 
-Faust, G. G., \& Hall, I. M. (2014). SAMBLASTER: fast duplicate marking and structural variant read extraction. Bioinformatics, 30(17), 2503–2505. \url{https://doi.org/10.1093/bioinformatics/btu314}
+Faust, G. G., \& Hall, I. M. (2014). SAMBLASTER: fast duplicate marking and structural variant read extraction. Bioinformatics, 30(17), 2503–2505. \url{https://doi.org/10.1093/bioinformatics/btu314} \cb{161}{253}{111}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{Samtools}
 
@@ -588,51 +613,49 @@ C 73.3\% Perl 18.8\% M4 2.7\% Lua 1.8\% Shell 1.4\% Makefile 1.0\% Other 1.0\%
 
 \textbf{VCF Format:}
 
-Danecek, P., Auton, A., Abecasis, G., Albers, C. A., Banks, E., DePristo, M. A., … Durbin, R. (2011). The variant call format and VCFtools. Bioinformatics, 27(15), 2156–2158. \url{https://doi.org/10.1093/bioinformatics/btr330}
+Danecek, P., Auton, A., Abecasis, G., Albers, C. A., Banks, E., DePristo, M. A., … Durbin, R. (2011). The variant call format and VCFtools. Bioinformatics, 27(15), 2156–2158. \url{https://doi.org/10.1093/bioinformatics/btr330} \cb{3238}{5425}{2901}
 
 \textbf{SAM \& BAM Format:}
 
-Cock, P. J. A., Bonfield, J. K., Chevreux, B., \& Li, H. (2015). SAM/BAM format v1.5 extensions for de novo assemblies. BioRxiv, 020024. \url{https://doi.org/10.1101/020024}
+Cock, P. J. A., Bonfield, J. K., Chevreux, B., \& Li, H. (2015). SAM/BAM format v1.5 extensions for de novo assemblies. BioRxiv, 020024. \url{https://doi.org/10.1101/020024} \cb{N/A}{4}{0}
 
-Li, H., Handsaker, B., Wysoker, A., Fennell, T., Ruan, J., Homer, N., … Durbin, R. (2009). The Sequence Alignment/Map format and SAMtools. Bioinformatics, 25(16), 2078–2079. \url{https://doi.org/10.1093/bioinformatics/btp352}
+Li, H., Handsaker, B., Wysoker, A., Fennell, T., Ruan, J., Homer, N., … Durbin, R. (2009). The Sequence Alignment/Map format and SAMtools. Bioinformatics, 25(16), 2078–2079. \url{https://doi.org/10.1093/bioinformatics/btp352} \cb{18682}{27828}{16119}
 
 \textbf{CRAM Format:}
 
-Fritz, M. H. Y., Leinonen, R., Cochrane, G., \& Birney, E. (2011). Efficient storage of high throughput DNA sequencing data using reference-based compression. Genome Research, 21(5), 734–740. \url{https://doi.org/10.1101/gr.114819.110}
+Fritz, M. H. Y., Leinonen, R., Cochrane, G., \& Birney, E. (2011). Efficient storage of high throughput DNA sequencing data using reference-based compression. Genome Research, 21(5), 734–740. \url{https://doi.org/10.1101/gr.114819.110}\cb{202}{331}{331}
 
 \textbf{The original mpileup calling algorithm plus mathematical notes (mpileup/bcftools call -c)}
 
-Li, H. (2011). A statistical framework for SNP calling, mutation discovery, association mapping and population genetical parameter estimation from sequencing data. Bioinformatics, 27(21), 2987–2993. \url{https://doi.org/10.1093/bioinformatics/btr509}
+Li, H. (2011). A statistical framework for SNP calling, mutation discovery, association mapping and population genetical parameter estimation from sequencing data. Bioinformatics, 27(21), 2987–2993. \url{https://doi.org/10.1093/bioinformatics/btr509}\cb{1525}{2418}{0}
 
 LI, H. (2010). Mathematical Notes on SAMtools Algorithms.
 
 \textbf{Mathematical notes for the updated multiallelic calling model (mpileup/bcftools call -m)}
 
-Petr Danecek, Stephan Schiffels, R. D. (2016). Multiallelic calling model in bcftools (-m). Retrieved January 30, 2020, from \url{http://samtools.github.io/bcftools/call-m.pdf}
+Petr Danecek, Stephan Schiffels, R. D. (2016). Multiallelic calling model in bcftools (-m). Retrieved January 30, 2020, from \url{http://samtools.github.io/bcftools/call-m.pdf}\cb{N/A}{N/A}{N/A}
 
 \textbf{Hidden Markov model for detecting runs of homozygosity (bcftools roh)}
 
-Narasimhan, V., Danecek, P., Scally, A., Xue, Y., Tyler-Smith, C., \& Durbin, R. (2016). BCFtools/RoH: A hidden Markov model approach for detecting autozygosity from next-generation sequencing data. Bioinformatics, 32(11), 1749–1751. \url{https://doi.org/10.1093/bioinformatics/btw044}
+Narasimhan, V., Danecek, P., Scally, A., Xue, Y., Tyler-Smith, C., \& Durbin, R. (2016). BCFtools/RoH: A hidden Markov model approach for detecting autozygosity from next-generation sequencing data. Bioinformatics, 32(11), 1749–1751. \url{https://doi.org/10.1093/bioinformatics/btw044} \cb{98}{162}{16}
 
 \textbf{Copy number variation/aneuploidy calling from microarray data (bcftools cnv/bcftools polysomy)}
 
-
-Danecek, P., McCarthy, S. A., Consortium, H. S., \& Durbin, R. (2016). A method for checking genomic integrity in cultured cell lines from snp genotyping data. PLoS ONE, 11(5). \url{https://doi.org/10.1371/journal.pone.0155014}
+Danecek, P., McCarthy, S. A., Consortium, H. S., \& Durbin, R. (2016). A method for checking genomic integrity in cultured cell lines from snp genotyping data. PLoS ONE, 11(5). \url{https://doi.org/10.1371/journal.pone.0155014}\cb{9}{10}{8}
 
 \textbf{Haplotype-aware calling of variant consequences (bcftools csq)}
 
-Danecek, P., \& McCarthy, S. A. (2017). BCFtools/csq: Haplotype-aware variant consequences. Bioinformatics, 33(13), 2037–2039. \url{https://doi.org/10.1093/bioinformatics/btx100}
+Danecek, P., \& McCarthy, S. A. (2017). BCFtools/csq: Haplotype-aware variant consequences. Bioinformatics, 33(13), 2037–2039. \url{https://doi.org/10.1093/bioinformatics/btx100}\cb{31}{71}{3}
 
 \textbf{Base alignment quality (BAQ) method improve SNP calling around INDELs}
 
-
-Li, H. (2011). Improving SNP discovery by base alignment quality. Bioinformatics, 27(8), 1157–1158. \url{https://doi.org/10.1093/bioinformatics/btr076}
+Li, H. (2011). Improving SNP discovery by base alignment quality. Bioinformatics, 27(8), 1157–1158. \url{https://doi.org/10.1093/bioinformatics/btr076}\cb{129}{200}{217}
 
 \textbf{Segregation based QC metric originally implemented in SGA}
 
-Durbin, R. (2014). Segregation based metric for variant call QC. Retrieved from \url{http://samtools.github.io/bcftools/rd-SegBias.pdf}
+Durbin, R. (2014). Segregation based metric for variant call QC. Retrieved from \url{http://samtools.github.io/bcftools/rd-SegBias.pdf}\cb{N/A}{N/A}{N/A}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \part{2nd Gen. Variant Caller: SNP and Indel}
 \section{FreeBayes}
@@ -647,10 +670,9 @@ License: MIT
 
 C++ 95.7\% TeX 2.1\% Python 0.9\% Shell 0.5\% C 0.4\% Assembly 0.3\% Other 0.1\%
 
-Garrison, E., \& Marth, G. (2012). Haplotype-based variant detection from short-read sequencing. Retrieved from \url{http://arxiv.org/abs/1207.3907}
+Garrison, E., \& Marth, G. (2012). Haplotype-based variant detection from short-read sequencing. Retrieved from \url{http://arxiv.org/abs/1207.3907}\cb{N/A}{1979}{1038}
 
-Updated: 2020-06-10
-
+Updated: 2020-07-21
 
 \section{GATK3 (deprecated)}
 
@@ -662,13 +684,13 @@ GoogleCloud: \url{https://console.cloud.google.com/storage/browser/gatk-software
 
 Current: GoogleCloud, pre-build binary, 3.8-1-0-gf15c1c3ef
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{GATK4}
 
 Official: \url{https://software.broadinstitute.org/gatk/}
 
-GitHub: \url{https://github.com/broadinstitute/gatk}, v4.1.7.0 in 2020-04-24
+GitHub: \url{https://github.com/broadinstitute/gatk}, v4.1.8.1 in 2020-07-21
 
 Conda: \url{https://anaconda.org/bioconda/gatk4}, v4.1.7.0 in 2020-05-23
 
@@ -693,24 +715,23 @@ License: BSD-3-Clause
 
 Java 93.8\% Python 2.8\% wdl 1.9\% Shell 1.1\% R 0.3\% HTML 0.1\%
 
-\textbf{The fourth paper, technically just a manuscript deposited in bioRxiv -- but it counts! This is a good citation to include in a Materials and Methods section or in a Discussion if you're talking about the joint calling process.}
-
-Poplin, R., Ruano-Rubio, V., DePristo, M. A., Fennell, T. J., Carneiro, M. O., Auwera, G. A. Van der, … Banks, E. (2017). Scaling accurate genetic variant discovery to tens of thousands of samples. BioRxiv, 201178. \url{https://doi.org/10.1101/201178}
-
 \textbf{The first GATK paper covers the computational philosophy underlying the GATK and is a good citation for the GATK in general.}
 
-McKenna, A., Hanna, M., Banks, E., Sivachenko, A., Cibulskis, K., Kernytsky, A., … DePristo, M. A. (2010). The genome analysis toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research, 20(9), 1297–1303. \url{https://doi.org/10.1101/gr.107524.110}
+McKenna, A., Hanna, M., Banks, E., Sivachenko, A., Cibulskis, K., Kernytsky, A., … DePristo, M. A. (2010). The genome analysis toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data. Genome Research, 20(9), 1297–1303. \url{https://doi.org/10.1101/gr.107524.110}\cb{9332}{13558}{8060}
 
 \textbf{The second GATK paper describes in more detail some of the key tools commonly used in the GATK for high-throughput sequencing data processing and variant discovery. The paper covers base quality score recalibration, indel realignment, SNP calling with UnifiedGenotyper, variant quality score recalibration and their application to deep whole genome, whole exome, and low-pass multi-sample calling. This is a good citation if you use the GATK for variant discovery.}
 
-Depristo, M. A., Banks, E., Poplin, R., Garimella, K. V., Maguire, J. R., Hartl, C., … Daly, M. J. (2011). A framework for variation discovery and genotyping using next-generation DNA sequencing data. Nature Genetics, 43(5), 491–501. \url{https://doi.org/10.1038/ng.806}
+Depristo, M. A., Banks, E., Poplin, R., Garimella, K. V., Maguire, J. R., Hartl, C., … Daly, M. J. (2011). A framework for variation discovery and genotyping using next-generation DNA sequencing data. Nature Genetics, 43(5), 491–501. \url{https://doi.org/10.1038/ng.806}\cb{5158}{7709}{7561}
 
 \textbf{The third GATK paper describes the Best Practices for Variant Discovery (version 2.x). It is intended mainly as a learning resource for first-time users and as a protocol reference. This is a good citation to include in a Materials and Methods section.}
 
-Van der Auwera, G. A., Carneiro, M. O., Hartl, C., Poplin, R., del Angel, G., Levy-Moonshine, A., … DePristo, M. A. (2013). From fastQ data to high-confidence variant calls: The genome analysis toolkit best practices pipeline. Current Protocols in Bioinformatics, (SUPL.43). \url{https://doi.org/10.1002/0471250953.bi1110s43}
+Van der Auwera, G. A., Carneiro, M. O., Hartl, C., Poplin, R., del Angel, G., Levy-Moonshine, A., … DePristo, M. A. (2013). From fastQ data to high-confidence variant calls: The genome analysis toolkit best practices pipeline. Current Protocols in Bioinformatics, (SUPL.43). \url{https://doi.org/10.1002/0471250953.bi1110s43}\cb{1851}{2965}{1380}
 
-Updated: 2020-06-10
+\textbf{The fourth paper, technically just a manuscript deposited in bioRxiv -- but it counts! This is a good citation to include in a Materials and Methods section or in a Discussion if you're talking about the joint calling process.}
 
+Poplin, R., Ruano-Rubio, V., DePristo, M. A., Fennell, T. J., Carneiro, M. O., Auwera, G. A. Van der, … Banks, E. (2017). Scaling accurate genetic variant discovery to tens of thousands of samples. BioRxiv, 201178. \url{https://doi.org/10.1101/201178}\cb{N/A}{178}{25}
+
+Updated: 2020-07-21
 
 \section{LoFreq}
 
@@ -734,9 +755,9 @@ License: MIT License
 
 C 74.2\% Python 17.8\% Shell 5.3\% M4 2.3\% Other 0.4\%
 
-Wilm, A., Aw, P. P. K., Bertrand, D., Yeo, G. H. T., Ong, S. H., Wong, C. H., … Nagarajan, N. (2012). LoFreq: A sequence-quality aware, ultra-sensitive variant caller for uncovering cell-population heterogeneity from high-throughput sequencing datasets. Nucleic Acids Research, 40(22), 11189–11201. \url{https://doi.org/10.1093/nar/gks918}
+Wilm, A., Aw, P. P. K., Bertrand, D., Yeo, G. H. T., Ong, S. H., Wong, C. H., … Nagarajan, N. (2012). LoFreq: A sequence-quality aware, ultra-sensitive variant caller for uncovering cell-population heterogeneity from high-throughput sequencing datasets. Nucleic Acids Research, 40(22), 11189–11201. \url{https://doi.org/10.1093/nar/gks918}\cb{324}{486}{163}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 \section{Manta}
 
 Conda: \url{https://anaconda.org/bioconda/manta}, v1.6.0 in 2019-10-06
@@ -749,10 +770,9 @@ License: GPL 3
 
 C++ 87.3\% Python 7.2\% CMake 4.3\% Shell 0.8\% Dockerfile 0.3\% C 0.1\%
 
-Chen, X., Schulz-Trieglaff, O., Shaw, R., Barnes, B., Schlesinger, F., Källberg, M., … Saunders, C. T. (2016). Manta: Rapid detection of structural variants and indels for germline and cancer sequencing applications. Bioinformatics, 32(8), 1220–1222. \url{https://doi.org/10.1093/bioinformatics/btv710}
+Chen, X., Schulz-Trieglaff, O., Shaw, R., Barnes, B., Schlesinger, F., Källberg, M., … Saunders, C. T. (2016). Manta: Rapid detection of structural variants and indels for germline and cancer sequencing applications. Bioinformatics, 32(8), 1220–1222. \url{https://doi.org/10.1093/bioinformatics/btv710}\cb{250}{396}{46}
 
-Updated: 2020-06-10
-
+Updated: 2020-07-21
 
 \section{MuSE}
 
@@ -768,9 +788,9 @@ License: GPL 2
 
 C++ 63.0\% C 36.8\% Makefile 0.2\%
 
-Fan, Y., Xi, L., Hughes, D. S. T., Zhang, J., Zhang, J., Futreal, P. A., … Wang, W. (2016). MuSE: accounting for tumor heterogeneity using a sample-specific error model improves sensitivity and specificity in mutation calling from sequencing data. Genome Biology, 17(1), 178. \url{https://doi.org/10.1186/s13059-016-1029-6}
+Fan, Y., Xi, L., Hughes, D. S. T., Zhang, J., Zhang, J., Futreal, P. A., … Wang, W. (2016). MuSE: accounting for tumor heterogeneity using a sample-specific error model improves sensitivity and specificity in mutation calling from sequencing data. Genome Biology, 17(1), 178. \url{https://doi.org/10.1186/s13059-016-1029-6}\cb{56}{100}{19}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{MuTect1 (deprecated)}
 
@@ -786,9 +806,9 @@ Java 96.3\% Perl 2.3\% Scala 1.4\%
 
 Comment: Java 1.7.
 
-Cibulskis, K., Lawrence, M. S., Carter, S. L., Sivachenko, A., Jaffe, D., Sougnez, C., … Getz, G. (2013). Sensitive detection of somatic point mutations in impure and heterogeneous cancer samples. Nature Biotechnology, 31(3), 213–219. \url{https://doi.org/10.1038/nbt.2514}
+Cibulskis, K., Lawrence, M. S., Carter, S. L., Sivachenko, A., Jaffe, D., Sougnez, C., … Getz, G. (2013). Sensitive detection of somatic point mutations in impure and heterogeneous cancer samples. Nature Biotechnology, 31(3), 213–219. \url{https://doi.org/10.1038/nbt.2514}\cb{1863}{2641}{2003}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{Shimmer}
 
@@ -800,9 +820,9 @@ License: Public Domain -- United States Government Work
 
 Perl 68.1\% C 11.4\% Python 11.0\% R 7.9\% Other 1.0\% Makefile 0.5\% Shell 0.1\%
 
-Hansen, N. F., Gartner, J. J., Mei, L., Samuels, Y., \& Mullikin, J. C. (2013). Shimmer: Detection of genetic alterations in tumors using next-generation sequence data. Bioinformatics, 29(12), 1498–1503. \url{https://doi.org/10.1093/bioinformatics/btt183}
+Hansen, N. F., Gartner, J. J., Mei, L., Samuels, Y., \& Mullikin, J. C. (2013). Shimmer: Detection of genetic alterations in tumors using next-generation sequence data. Bioinformatics, 29(12), 1498–1503. \url{https://doi.org/10.1093/bioinformatics/btt183}\cb{32}{61}{22}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{Strelka2}
 
@@ -816,9 +836,9 @@ License: GPL 3
 
 C++ 81.3\% Python 12.8\% CMake 4.2\% Shell 1.1\% Dockerfile 0.3\% Jupyter Notebook 0.2\% C 0.1\%
 
-Kim, S., Scheffler, K., Halpern, A. L., Bekritsky, M. A., Noh, E., Källberg, M., … Saunders, C. T. (2018). Strelka2: fast and accurate calling of germline and somatic variants. Nature Methods, 15(8), 591–594. \url{https://doi.org/10.1038/s41592-018-0051-x}
+Kim, S., Scheffler, K., Halpern, A. L., Bekritsky, M. A., Noh, E., Källberg, M., … Saunders, C. T. (2018). Strelka2: fast and accurate calling of germline and somatic variants. Nature Methods, 15(8), 591–594. \url{https://doi.org/10.1038/s41592-018-0051-x}\cb{32}{146}{3}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 \section{VarScan1 (deprecated)}
 
 Official: \url{http://varscan.sourceforge.net/}, v2.3.9 in 2015-06-03, deprecated
@@ -827,9 +847,9 @@ Current: N/A
 
 Java
 
-Koboldt, D. C., Chen, K., Wylie, T., Larson, D. E., McLellan, M. D., Mardis, E. R., Weinstock, G. M., Wilson, R. K. and Ding, L. (2009) VarScan: variant detection in massively parallel sequencing of individual and pooled samples., Bioinformatics (Oxford, England), 25(17), pp. 2283–5. doi: 10.1093/bioinformatics/btp373.
+Koboldt, D. C., Chen, K., Wylie, T., Larson, D. E., McLellan, M. D., Mardis, E. R., Weinstock, G. M., Wilson, R. K. and Ding, L. (2009) VarScan: variant detection in massively parallel sequencing of individual and pooled samples., Bioinformatics (Oxford, England), 25(17), pp. 2283–5. doi: 10.1093/bioinformatics/btp373.\cb{687}{1026}{1030}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{VarScan2}
 
@@ -845,9 +865,10 @@ License: The Non-Profit Open Software License version 3.0 (NPOSL-3.0)
 
 Java
 
-Koboldt, D. C., Zhang, Q., Larson, D. E., Shen, D., McLellan, M. D., Lin, L., Miller, C. A., Mardis, E. R., Ding, L. and Wilson, R. K. (2012) VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing, Genome Research. Cold Spring Harbor Laboratory Press, 22(3), pp. 568–576. doi: 10.1101/gr.129684.111.
+Koboldt, D. C., Zhang, Q., Larson, D. E., Shen, D., McLellan, M. D., Lin, L., Miller, C. A., Mardis, E. R., Ding, L. and Wilson, R. K. (2012) VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing, Genome Research. Cold Spring Harbor Laboratory Press, 22(3), pp. 568–576. doi: 10.1101/gr.129684.111.\cb{1930}{2823}{2006}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
+
 \part{2nd Gen. Variant Caller: CNV, Translocation and other types of SV}
 \section{BreakDancer}
 
@@ -867,9 +888,9 @@ Current: N/A
 
 Perl, C++
 
-Chen, K., Wallis, J. W., McLellan, M. D., Larson, D. E., Kalicki, J. M., Pohl, C. S., McGrath, S. D., Wendl, M. C., Zhang, Q., Locke, D. P., Shi, X., Fulton, R. S., Ley, T. J., Wilson, R. K., Ding, L., \& Mardis, E. R. (2009). BreakDancer: An algorithm for high-resolution mapping of genomic structural variation. Nature Methods, 6(9), 677–681. \url{https://doi.org/10.1038/nmeth.1363}
+Chen, K., Wallis, J. W., McLellan, M. D., Larson, D. E., Kalicki, J. M., Pohl, C. S., McGrath, S. D., Wendl, M. C., Zhang, Q., Locke, D. P., Shi, X., Fulton, R. S., Ley, T. J., Wilson, R. K., Ding, L., \& Mardis, E. R. (2009). BreakDancer: An algorithm for high-resolution mapping of genomic structural variation. Nature Methods, 6(9), 677–681. \url{https://doi.org/10.1038/nmeth.1363}\cb{860}{1285}{1582}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{BreaKmer}
 
@@ -879,7 +900,7 @@ Current: N/A
 
 Python 100.0\%
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{Breakway}
 
@@ -887,7 +908,7 @@ SourceForge: \url{https://sourceforge.net/projects/breakway/}, deprecated, v0.7.
 
 Perl
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{ClipCrop}
 
@@ -897,9 +918,9 @@ Current: N/A
 
 JavaScript 100.0\%
 
-Suzuki, S., Yasuda, T., Shiraishi, Y., Miyano, S., \& Nagasaki, M. (2011). ClipCrop: a tool for detecting structural variations with single-base resolution using soft-clipping information. BMC bioinformatics, 12 Suppl 14(Suppl 14), S7. \url{https://doi.org/10.1186/1471-2105-12-S14-S7}
+Suzuki, S., Yasuda, T., Shiraishi, Y., Miyano, S., \& Nagasaki, M. (2011). ClipCrop: a tool for detecting structural variations with single-base resolution using soft-clipping information. BMC bioinformatics, 12 Suppl 14(Suppl 14), S7. \url{https://doi.org/10.1186/1471-2105-12-S14-S7}\cb{29}{56}{29}
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{CREST}
 
@@ -911,7 +932,7 @@ Current: Github, pre-built binary, master
 
 Perl 67.3\% HTML 32.7\%
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \section{Delly}
 
@@ -925,9 +946,9 @@ License:  BSD-3-Clause License
 
 C++ 99.1\% Other 0.9\%
 
-Tobias Rausch, Thomas Zichner, Andreas Schlattl, Adrian M. Stuetz, Vladimir Benes, Jan O. Korbel. DELLY: structural variant discovery by integrated paired-end and split-read analysis. Bioinformatics. 2012 Sep 15;28(18):i333-i339. \url{https://doi.org/10.1093/bioinformatics/bts378}
+Tobias Rausch, Thomas Zichner, Andreas Schlattl, Adrian M. Stuetz, Vladimir Benes, Jan O. Korbel. DELLY: structural variant discovery by integrated paired-end and split-read analysis. Bioinformatics. 2012 Sep 15;28(18):i333-i339. \url{https://doi.org/10.1093/bioinformatics/bts378}\cb{651}{956}{542}
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \section{digit}
 
@@ -939,9 +960,9 @@ License: GPL v3
 
 Java 100\%
 
-Meier, R., Graw, S., Beyerlein, P., Koestler, D., Molina, J. R., \& Chien, J. (2017). digit-a tool for detection and identification of genomic interchromosomal  translocations. Nucleic Acids Research, 45(9), e72. \url{https://doi.org/10.1093/nar/gkx010}
+Meier, R., Graw, S., Beyerlein, P., Koestler, D., Molina, J. R., \& Chien, J. (2017). digit-a tool for detection and identification of genomic interchromosomal translocations. Nucleic Acids Research, 45(9), e72. \url{https://doi.org/10.1093/nar/gkx010}\cb{0}{0}{0}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{GASV}
 
@@ -951,11 +972,11 @@ Google: \url{http://code.google.com/p/gasv/downloads/list}
 
 Current: N/A
 
-Sindi, S.S., Önal, S., Peng, L.C. et al. An integrative probabilistic model for identification of structural variation in sequencing data. Genome Biol 13, R22 (2012). \url{https://doi.org/10.1186/gb-2012-13-3-r22}
+Sindi, S.S., Önal, S., Peng, L.C. et al. An integrative probabilistic model for identification of structural variation in sequencing data. Genome Biol 13, R22 (2012). \url{https://doi.org/10.1186/gb-2012-13-3-r22}\cb{92}{150}{124}
 
-Suzanne Sindi, Elena Helman, Ali Bashir, Benjamin J. Raphael, A geometric approach for classification and comparison of structural variants, Bioinformatics, Volume 25, Issue 12, 15 June 2009, Pages i222–i230, \url{https://doi.org/10.1093/bioinformatics/btp208}
+Suzanne Sindi, Elena Helman, Ali Bashir, Benjamin J. Raphael, A geometric approach for classification and comparison of structural variants, Bioinformatics, Volume 25, Issue 12, 15 June 2009, Pages i222–i230, \url{https://doi.org/10.1093/bioinformatics/btp208}\cb{117}{189}{0}
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{Gustaf}
 
@@ -965,11 +986,11 @@ GitHub: \url{https://github.com/seqan/seqan/tree/master/apps/gustaf}
 
 Current: GitHub, self-built binary, v1.0.0 with SeqAn version: 2.4.0
 
-Kathrin Trappe, Anne-Katrin Emde, Hans-Christian Ehrlich, Knut Reinert, Gustaf: Detecting and correctly classifying SVs in the NGS twilight zone, Bioinformatics, Volume 30, Issue 24, 15 December 2014, Pages 3484–3490, \url{https://doi.org/10.1093/bioinformatics/btu431}
+Kathrin Trappe, Anne-Katrin Emde, Hans-Christian Ehrlich, Knut Reinert, Gustaf: Detecting and correctly classifying SVs in the NGS twilight zone, Bioinformatics, Volume 30, Issue 24, 15 December 2014, Pages 3484–3490, \url{https://doi.org/10.1093/bioinformatics/btu431}\cb{28}{53}{20}
 
-Trappe, K. (2012). Multi-Split Mapping of NGS Reads for Variant Detection. Master’s thesis, Freie Universitaet Berlin.
+Trappe, K. (2012). Multi-Split Mapping of NGS Reads for Variant Detection. Master’s thesis, Freie Universitaet Berlin.\cb{N/A}{N/A}{0}
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{Hydra-Multi}
 
@@ -979,7 +1000,7 @@ C++ 50.3\% Python 45.8\% Shell 3.1\% Perl 0.8\%
 
 Current: N/A
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{inGAP-SV}
 
@@ -993,7 +1014,7 @@ Current: N/A
 
 Java
 
-Qi, J., \& Zhao, F. (2011). inGAP-sv: a novel scheme to identify and visualize structural variation from paired end mapping data. Nucleic acids research, 39(Web Server issue), W567–W575. \url{https://doi.org/10.1093/nar/gkr506}
+Qi, J., \& Zhao, F. (2011). inGAP-sv: a novel scheme to identify and visualize structural variation from paired end mapping data. Nucleic acids research, 39(Web Server issue), W567–W575. \url{https://doi.org/10.1093/nar/gkr506}\cb{58}{87}{84}
 
 \section{LUMPY}
 
@@ -1009,9 +1030,9 @@ Comment: Use Python 2.7
 
 C 76.8\% C++ 20.9\% Python 1.1\% Shell 0.7\% Makefile 0.3\% CMake 0.2\%
 
-Layer, R. M., Chiang, C., Quinlan, A. R., \& Hall, I. M. (2014). LUMPY: A probabilistic framework for structural variant discovery. Genome Biology, 15(6), R84. \url{https://doi.org/10.1186/gb-2014-15-6-r84}
+Layer, R. M., Chiang, C., Quinlan, A. R., \& Hall, I. M. (2014). LUMPY: A probabilistic framework for structural variant discovery. Genome Biology, 15(6), R84. \url{https://doi.org/10.1186/gb-2014-15-6-r84} \cb{388}{618}{278}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{Meerkat}
 
@@ -1019,9 +1040,9 @@ Official: \url{http://compbio.med.harvard.edu/Meerkat/}, v0.189
 
 Current: N/A
 
-Yang, L., Luquette, L. J., Gehlenborg, N., Xi, R., Haseley, P. S., Hsieh, C. H., Zhang, C., Ren, X., Protopopov, A., Chin, L., Kucherlapati, R., Lee, C., \& Park, P. J. (2013). Diverse mechanisms of somatic structural variations in human cancer genomes. Cell, 153(4), 919–929. \url{https://doi.org/10.1016/j.cell.2013.04.010}
+Yang, L., Luquette, L. J., Gehlenborg, N., Xi, R., Haseley, P. S., Hsieh, C. H., Zhang, C., Ren, X., Protopopov, A., Chin, L., Kucherlapati, R., Lee, C., \& Park, P. J. (2013). Diverse mechanisms of somatic structural variations in human cancer genomes. Cell, 153(4), 919–929. \url{https://doi.org/10.1016/j.cell.2013.04.010}\cb{168}{258}{14}
 
-Updated: 2020-05-26
+Updated: 2020-07-21
 
 \section{MetaSV}
 
@@ -1039,9 +1060,9 @@ License: BSD-2-Clause License
 
 Python 94.8\% HTML 5.1\% Shell 0.1\%
 
-Mohiyuddin, M., Mu, J. C., Li, J., Bani Asadi, N., Gerstein, M. B., Abyzov, A., Wong, W. H., \& Lam, H. Y. K. (2015). MetaSV: an accurate and integrative structural-variant caller for next generation sequencing. Bioinformatics, 31(16), 2741–2744. \url{https://doi.org/10.1093/bioinformatics/btv204}
+Mohiyuddin, M., Mu, J. C., Li, J., Bani Asadi, N., Gerstein, M. B., Abyzov, A., Wong, W. H., \& Lam, H. Y. K. (2015). MetaSV: an accurate and integrative structural-variant caller for next generation sequencing. Bioinformatics, 31(16), 2741–2744. \url{https://doi.org/10.1093/bioinformatics/btv204}\cb{47}{83}{40}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \section{PEMer}
 
@@ -1051,9 +1072,9 @@ Current: N/A
 
 Comment: Require Python 2
 
-Korbel, J. O., Abyzov, A., Mu, X. J., Carriero, N., Cayting, P., Zhang, Z., Snyder, M., \& Gerstein, M. B. (2009). PEMer: a computational framework with simulation-based error models for inferring genomic structural variants from massive paired-end sequencing data. Genome biology, 10(2), R23. \url{https://doi.org/10.1186/gb-2009-10-2-r23}
+Korbel, J. O., Abyzov, A., Mu, X. J., Carriero, N., Cayting, P., Zhang, Z., Snyder, M., \& Gerstein, M. B. (2009). PEMer: a computational framework with simulation-based error models for inferring genomic structural variants from massive paired-end sequencing data. Genome biology, 10(2), R23. \url{https://doi.org/10.1186/gb-2009-10-2-r23}\cb{180}{276}{358}
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{PriSM}
 
@@ -1065,9 +1086,9 @@ Current: N/A
 
 Perl
 
-Yu, Q., Ryan, E. M., Allen, T. M., Birren, B. W., Henn, M. R., \& Lennon, N. J. (2011). PriSM: a primer selection and matching tool for amplification and sequencing of viral genomes. Bioinformatics (Oxford, England), 27(2), 266–267. \url{https://doi.org/10.1093/bioinformatics/btq624}
+Yu, Q., Ryan, E. M., Allen, T. M., Birren, B. W., Henn, M. R., \& Lennon, N. J. (2011). PriSM: a primer selection and matching tool for amplification and sequencing of viral genomes. Bioinformatics (Oxford, England), 27(2), 266–267. \url{https://doi.org/10.1093/bioinformatics/btq624}\cb{9}{13}{8}
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \section{Socrates}
 
@@ -1081,9 +1102,9 @@ License: GPL v3
 
 Java 100.0\%
 
-Schroder, J., Hsu, A., Boyle, S. E., Macintyre, G., Cmero, M., Tothill, R. W., Johnstone, R. W., Shackleton, M., \& Papenfuss, A. T. (2014). Socrates: identification of genomic rearrangements in tumour genomes by re-aligning soft clipped reads. Bioinformatics (Oxford, England), 30(8), 1064–1072. \url{https://doi.org/10.1093/bioinformatics/btt767}
+Schroder, J., Hsu, A., Boyle, S. E., Macintyre, G., Cmero, M., Tothill, R. W., Johnstone, R. W., Shackleton, M., \& Papenfuss, A. T. (2014). Socrates: identification of genomic rearrangements in tumour genomes by re-aligning soft clipped reads. Bioinformatics (Oxford, England), 30(8), 1064–1072. \url{https://doi.org/10.1093/bioinformatics/btt767}\cb{44}{70}{35}
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \section{SoftSV}
 
@@ -1095,9 +1116,9 @@ License: GPL V3
 
 C++
 
-C. Bartenhagen, M. Dugas, Robust and exact structural variation detection with paired-end and soft-clipped alignments: SoftSV compared with eight algorithms, Brief Bioinform. (2015), \url{http://dx.doi.org/10.1093/bib/bbv028}
+C. Bartenhagen, M. Dugas, Robust and exact structural variation detection with paired-end and soft-clipped alignments: SoftSV compared with eight algorithms, Brief Bioinform. (2015), \url{http://dx.doi.org/10.1093/bib/bbv028}\cb{17}{22}{13}
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \section{SVDetect}
 
@@ -1109,9 +1130,9 @@ Current: SourceForge, pre-built binary, r0.7m
 
 License: GPL v3
 
-Zeitouni, B., Boeva, V., Janoueix-Lerosey, I., Loeillet, S., Legoix-né, P., Nicolas, A., Delattre, O., \& Barillot, E. (2010). SVDetect: a tool to identify genomic structural variations from paired-end and mate-pair sequencing data. Bioinformatics (Oxford, England), 26(15), 1895–1896. \url{https://doi.org/10.1093/bioinformatics/btq293}
+Zeitouni, B., Boeva, V., Janoueix-Lerosey, I., Loeillet, S., Legoix-né, P., Nicolas, A., Delattre, O., \& Barillot, E. (2010). SVDetect: a tool to identify genomic structural variations from paired-end and mate-pair sequencing data. Bioinformatics (Oxford, England), 26(15), 1895–1896. \url{https://doi.org/10.1093/bioinformatics/btq293}\cb{134}{256}{8}
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \section{SVMerge}
 
@@ -1127,9 +1148,9 @@ License: GPL v3
 
 Perl
 
-Wong, K., Keane, T. M., Stalker, J., \& Adams, D. J. (2010). Enhanced structural variant and breakpoint detection using SVMerge by integration of multiple detection methods and local assembly. Genome Biology, 11(12), R128. \url{https://doi.org/10.1186/gb-2010-11-12-r128}
+Wong, K., Keane, T. M., Stalker, J., \& Adams, D. J. (2010). Enhanced structural variant and breakpoint detection using SVMerge by integration of multiple detection methods and local assembly. Genome Biology, 11(12), R128. \url{https://doi.org/10.1186/gb-2010-11-12-r128}\cb{79}{103}{N/A}
 
-Updated: 2020-05-26
+Updated: 2020-07-21
 
 \section{SVTools}
 
@@ -1145,9 +1166,9 @@ License: MIT
 
 Python 98.5\% Other 1.5\%
 
-Dave Larson, abelhj, Colby Chiang, Allison Penner Regier, AbhijitBadve, Jim Eldred, … Danny Antaki. (2019, September 12). hall-lab/svtools: svtools v0.5.1 (Version v0.5.1). Zenodo. \url{http://doi.org/10.5281/zenodo.3406745}
+Dave Larson, abelhj, Colby Chiang, Allison Penner Regier, AbhijitBadve, Jim Eldred, … Danny Antaki. (2019, September 12). hall-lab/svtools: svtools v0.5.1 (Version v0.5.1). Zenodo. \url{http://doi.org/10.5281/zenodo.3406745}\cb{N/A}{N/A}{N/A}
 
-Updated: 2020-07-09
+Updated: 2020-07-21
 
 \section{SVTyper}
 
@@ -1161,7 +1182,7 @@ License: MIT
 
 Python 98.8\% Other 1.2\%
 
-Updated: 2020-07-09
+Updated: 2020-07-21
 
 \section{ULYSSES}
 
@@ -1177,9 +1198,9 @@ License: GPL v3
 
 Python 84.0\% R 15.1\% C 0.9\%
 
-Alexandre Gillet-Markowska, Hugues Richard, Gilles Fischer, Ingrid Lafontaine, Ulysses: accurate detection of low-frequency structural variations in large insert-size sequencing libraries, Bioinformatics, Volume 31, Issue 6, 15 March 2015, Pages 801–808, \url{https://doi.org/10.1093/bioinformatics/btu730}
+Alexandre Gillet-Markowska, Hugues Richard, Gilles Fischer, Ingrid Lafontaine, Ulysses: accurate detection of low-frequency structural variations in large insert-size sequencing libraries, Bioinformatics, Volume 31, Issue 6, 15 March 2015, Pages 801–808, \url{https://doi.org/10.1093/bioinformatics/btu730}\cb{6}{12}{8}
 
-Updated: 2020-07-12
+Updated: 2020-07-21
 
 \part{3rd Gen. Variant Caller: CNV, Translocation and other types of SV}
 
@@ -1195,9 +1216,9 @@ C++ 43.7\% C 30.7\% Makefile 7.9\% Assembly 4.0\% Ada 2.6\% HTML 2.5\% Other 8.6
 
 Current: GitHub, self-built binary, v1.0.11
 
-Sedlazeck, F.J., Rescheneder, P., Smolka, M. et al. Accurate detection of complex structural variations using single-molecule sequencing. Nat Methods 15, 461–468 (2018). \url{https://doi.org/10.1038/s41592-018-0001-7}
+Sedlazeck, F.J., Rescheneder, P., Smolka, M. et al. Accurate detection of complex structural variations using single-molecule sequencing. Nat Methods 15, 461–468 (2018). \url{https://doi.org/10.1038/s41592-018-0001-7}\cb{155}{302}{62}
 
-Updated: 2020-06-26
+Updated: 2020-07-21
 
 \part{2nd Gen. VCF/BCF Processor}
 
@@ -1219,7 +1240,7 @@ C 87.6\% Perl 9.5\% M4 0.9\% Python 0.7\% Makefile 0.6\% Shell 0.6\% Other 0.1\%
 
 Citation same as Samtools.
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{CrossMap}
 
@@ -1233,9 +1254,9 @@ Current: Conda, v0.33
 
 License: GPL v2
 
-Zhao, H., Sun, Z., Wang, J., Huang, H., Kocher, J.-P., \& Wang, L. (2014). CrossMap: a versatile tool for coordinate conversion between genome assemblies. Bioinformatics (Oxford, England), 30(7), 1006–1007. \url{https://doi.org/10.1093/bioinformatics/btt730}
+Zhao, H., Sun, Z., Wang, J., Huang, H., Kocher, J.-P., \& Wang, L. (2014). CrossMap: a versatile tool for coordinate conversion between genome assemblies. Bioinformatics (Oxford, England), 30(7), 1006–1007. \url{https://doi.org/10.1093/bioinformatics/btt730}\cb{63}{302}{68}
 
-Updated: 2020-06-15
+Updated: 2020-07-21
 
 \section{PLINK}
 
@@ -1249,27 +1270,27 @@ License: GPL v3
 
 C 50.6\% C++ 47.5\% Python 1.1\% TeX 0.3\% Makefile 0.2\% Shell 0.1\% Other 0.2\% 
 
-Chang, C. C., Chow, C. C., Tellier, L. C. A. M., Vattikuti, S., Purcell, S. M., \& Lee, J. J. (2015). Second-generation PLINK: rising to the challenge of larger and richer datasets. GigaScience, 4(1). \url{https://doi.org/10.1186/s13742-015-0047-8}
+Chang, C. C., Chow, C. C., Tellier, L. C. A. M., Vattikuti, S., Purcell, S. M., \& Lee, J. J. (2015). Second-generation PLINK: rising to the challenge of larger and richer datasets. GigaScience, 4(1). \url{https://doi.org/10.1186/s13742-015-0047-8}\cb{1775}{2870}{1065}
 
-Hill, A., Loh, P.-R., Bharadwaj, R. B., Pons, P., Shang, J., Guinan, E., Lakhani, K., Kilty, I., \& Jelinsky, S. A. (2017). Stepwise Distributed Open Innovation Contests for Software Development: Acceleration of Genome-Wide Association Analysis. GigaScience, 6(5). \url{https://doi.org/10.1093/gigascience/gix009}
+Hill, A., Loh, P.-R., Bharadwaj, R. B., Pons, P., Shang, J., Guinan, E., Lakhani, K., Kilty, I., \& Jelinsky, S. A. (2017). Stepwise Distributed Open Innovation Contests for Software Development: Acceleration of Genome-Wide Association Analysis. GigaScience, 6(5). \url{https://doi.org/10.1093/gigascience/gix009}\cb{9}{12}{4}
 
-Manichaikul, A., Mychaleckyj, J. C., Rich, S. S., Daly, K., Sale, M., \& Chen, W.-M. (2010). Robust relationship inference in genome-wide association studies. Bioinformatics, 26(22), 2867–2873. \url{https://doi.org/10.1093/bioinformatics/btq559}
+Manichaikul, A., Mychaleckyj, J. C., Rich, S. S., Daly, K., Sale, M., \& Chen, W.-M. (2010). Robust relationship inference in genome-wide association studies. Bioinformatics, 26(22), 2867–2873. \url{https://doi.org/10.1093/bioinformatics/btq559}\cb{89}{925}{651}
 
-Galinsky, K. J., Bhatia, G., Loh, P. R., Georgiev, S., Mukherjee, S., Patterson, N. J., \& Price, A. L. (2016). Fast Principal-Component Analysis Reveals Convergent Evolution of ADH1B in Europe and East Asia. American Journal of Human Genetics, 98(3), 456–472. \url{https://doi.org/10.1016/j.ajhg.2015.12.022}
+Galinsky, K. J., Bhatia, G., Loh, P. R., Georgiev, S., Mukherjee, S., Patterson, N. J., \& Price, A. L. (2016). Fast Principal-Component Analysis Reveals Convergent Evolution of ADH1B in Europe and East Asia. American Journal of Human Genetics, 98(3), 456–472. \url{https://doi.org/10.1016/j.ajhg.2015.12.022}\cb{}{169}{}
 
-Yang, J., Lee, S. H., Goddard, M. E., \& Visscher, P. M. (2011). GCTA: A tool for genome-wide complex trait analysis. American Journal of Human Genetics, 88(1), 76–82. {https://doi.org/10.1016/j.ajhg.2010.11.011}
+Yang, J., Lee, S. H., Goddard, M. E., \& Visscher, P. M. (2011). GCTA: A tool for genome-wide complex trait analysis. American Journal of Human Genetics, 88(1), 76–82. {https://doi.org/10.1016/j.ajhg.2010.11.011}\cb{2327}{3549}{3021}
 
-Gaunt, T. R., Rodríguez, S., \& Day, I. N. M. (2007). Cubic exact solutions for the estimation of pairwise haplotype frequencies: Implications for linkage disequilibrium analyses and a web tool “CubeX.” BMC Bioinformatics, 8(1), 428. \url{https://doi.org/10.1186/1471-2105-8-428}
+Gaunt, T. R., Rodríguez, S., \& Day, I. N. M. (2007). Cubic exact solutions for the estimation of pairwise haplotype frequencies: Implications for linkage disequilibrium analyses and a web tool ``CubeX.'' BMC Bioinformatics, 8(1), 428. \url{https://doi.org/10.1186/1471-2105-8-428}\cb{200}{247}{7}
 
-Graffelman, J., \& Moreno, V. (2013). The mid p-value in exact tests for Hardy-Weinberg equilibrium. Statistical Applications in Genetics and Molecular Biology, 12(4), 433–448. \url{https://doi.org/10.1515/sagmb-2012-0039}
+Graffelman, J., \& Moreno, V. (2013). The mid p-value in exact tests for Hardy-Weinberg equilibrium. Statistical Applications in Genetics and Molecular Biology, 12(4), 433–448. \url{https://doi.org/10.1515/sagmb-2012-0039}\cb{27}{53}{30}
 
-Graffelman, J., \& Weir, B. S. (2016). Testing for Hardy-Weinberg equilibrium at biallelic genetic markers on the X chromosome. Heredity, 116(6), 558–568. \url{https://doi.org/10.1038/hdy.2016.20}
+Graffelman, J., \& Weir, B. S. (2016). Testing for Hardy-Weinberg equilibrium at biallelic genetic markers on the X chromosome. Heredity, 116(6), 558–568. \url{https://doi.org/10.1038/hdy.2016.20}\cb{19}{18}{17}
 
-Wigginton, J. E., Cutler, D. J., \& Abecasis, G. R. (2005). A note on exact tests of Hardy-Weinberg equilibrium. American Journal of Human Genetics, 76(5), 887–893. \url{https://doi.org/10.1086/429864}
+Wigginton, J. E., Cutler, D. J., \& Abecasis, G. R. (2005). A note on exact tests of Hardy-Weinberg equilibrium. American Journal of Human Genetics, 76(5), 887–893. \url{https://doi.org/10.1086/429864}\cb{942}{1385}{2387}
 
-Purcell, S., Neale, B., Todd-Brown, K., Thomas, L., Ferreira, M. A. R., Bender, D., Maller, J., Sklar, P., De Bakker, P. I. W., Daly, M. J., \& Sham, P. C. (2007). PLINK: A tool set for whole-genome association and population-based linkage analyses. American Journal of Human Genetics, 81(3), 559–575. \url{https://doi.org/10.1086/519795}
+Purcell, S., Neale, B., Todd-Brown, K., Thomas, L., Ferreira, M. A. R., Bender, D., Maller, J., Sklar, P., De Bakker, P. I. W., Daly, M. J., \& Sham, P. C. (2007). PLINK: A tool set for whole-genome association and population-based linkage analyses. American Journal of Human Genetics, 81(3), 559–575. \url{https://doi.org/10.1086/519795}\cb{14485}{20572}{19934}
 
-Updated:2020-06-16
+Updated: 2020-07-21
 
 \section{VCFTools}
 
@@ -1289,9 +1310,9 @@ License: LGPL 3
 
 C++ 44.8\% Perl 44.5\% C 6.6\% Roff 3.0\% Shell 0.8\% M4 0.2\% Makefile 0.1\%
 
-Danecek, P., Auton, A., Abecasis, G., Albers, C. A., Banks, E., DePristo, M. A., … Durbin, R. (2011). The variant call format and VCFtools. Bioinformatics, 27(15), 2156–2158. \url{https://doi.org/10.1093/bioinformatics/btr330}
+See Samtools: \textbf{VCF Format:}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \part{2nd Gen. VCF Annotation \& Visualization}
 \section{ANNOVar}
@@ -1302,10 +1323,9 @@ Official: \url{https://doc-openbio.readthedocs.io/projects/annovar/en/latest/use
 
 Current: Official, pre-build binary, \$Date: 2019-10-24 00:05:27 -0400 (Thu, 24 Oct 2019) \$
 
-Wang, K., Li, M., \& Hakonarson, H. (2010). ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data. Nucleic Acids Research, 38(16), e164–e164. \url{https://doi.org/10.1093/nar/gkq603}
+Wang, K., Li, M., \& Hakonarson, H. (2010). ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data. Nucleic Acids Research, 38(16), e164–e164. \url{https://doi.org/10.1093/nar/gkq603}\cb{4862}{6780}{5260}
 
-
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{myVCF}
 
@@ -1321,9 +1341,9 @@ License: CC-BY-NC 4.0 International
 
 Python 93.7\% HTML 6.2\% Other 0.1\%
 
-Pietrelli, A. and Valenti, L. (2017) myVCF: a desktop application for high-throughput mutations data management, Bioinformatics, 33(22), pp. 3676–3678. doi: 10.1093/bioinformatics/btx475.
+Pietrelli, A. and Valenti, L. (2017) myVCF: a desktop application for high-throughput mutations data management, Bioinformatics, 33(22), pp. 3676–3678. doi: 10.1093/bioinformatics/btx475.\cb{3}{3}{0}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 \section{snpEff}
 
 Official: \url{http://snpeff.sourceforge.net/}, v4.3t in 2017-11-24
@@ -1340,9 +1360,9 @@ License: LGPL 3
 
 Java 62.0\% HTML 31.5\% Perl 2.2\% Shell 1.7\% CSS 0.8\% Python 0.6\% Other 1.2\%
 
-Cingolani, P., Platts, A., Wang, L. L., Coon, M., Nguyen, T., Wang, L., Land, S. J., Lu, X. and Ruden, D. M. (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3, Fly. Taylor and Francis Inc., 6(2), pp. 80–92. doi: 10.4161/fly.19695.
+Cingolani, P., Platts, A., Wang, L. L., Coon, M., Nguyen, T., Wang, L., Land, S. J., Lu, X. and Ruden, D. M. (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3, Fly. Taylor and Francis Inc., 6(2), pp. 80–92. doi: 10.4161/fly.19695.\cb{3023}{4303}{2797}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{snpSift}
 
@@ -1360,10 +1380,9 @@ Comment: Requires Java 1.8 (Java8)
 
 Java 97.3\% G-code 2.3\% Shell 0.4\%
 
-Cingolani, P., Patel, V. M., Coon, M., Nguyen, T., Land, S. J., Ruden, D. M. and Lu, X. (2012) Using Drosophila melanogaster as a model for genotoxic chemical mutational studies with a new program, SnpSift, Frontiers in Genetics, 3(MAR). doi: 10.3389/fgene.2012.00035.
+Cingolani, P., Patel, V. M., Coon, M., Nguyen, T., Land, S. J., Ruden, D. M. and Lu, X. (2012) Using Drosophila melanogaster as a model for genotoxic chemical mutational studies with a new program, SnpSift, Frontiers in Genetics, 3(MAR). doi: 10.3389/fgene.2012.00035.\cb{295}{428}{246}
 
-Updated: 2020-06-10
-
+Updated: 2020-07-21
 
 \section{Variant Effect Predicator}
 
@@ -1381,9 +1400,9 @@ License: Apache 2.0
 
 Perl 97.6\% Other 2.4\%
 
-McLaren, W., Gil, L., Hunt, S. E., Riat, H. S., Ritchie, G. R. S., Thormann, A., Flicek, P. and Cunningham, F. (2016) The Ensembl Variant Effect Predictor, Genome Biology. BioMed Central Ltd., 17(1), p. 122. doi: 10.1186/s13059-016-0974-4.
+McLaren, W., Gil, L., Hunt, S. E., Riat, H. S., Ritchie, G. R. S., Thormann, A., Flicek, P. and Cunningham, F. (2016) The Ensembl Variant Effect Predictor, Genome Biology. BioMed Central Ltd., 17(1), p. 122. doi: 10.1186/s13059-016-0974-4.\cb{1063}{1674}{445}
 
-Updated: 2020-07-06
+Updated: 2020-07-21
 
 \section{VarSifter}
 
@@ -1399,9 +1418,9 @@ License: THE JUNG LICENSE (Another kind of BSD)
 
 Java 91.1\% HTML 8.4\% Makefile 0.5\%
 
-Teer, J. K., Green, E. D., Mullikin, J. C., \& Biesecker, L. G. (2012). VarSifter: Visualizing and analyzing exome-scale sequence variation data on a desktop computer. Bioinformatics, 28(4), 599–600. \url{https://doi.org/10.1093/bioinformatics/btr711}
+Teer, J. K., Green, E. D., Mullikin, J. C., \& Biesecker, L. G. (2012). VarSifter: Visualizing and analyzing exome-scale sequence variation data on a desktop computer. Bioinformatics, 28(4), 599–600. \url{https://doi.org/10.1093/bioinformatics/btr711}\cb{102}{174}{N/A}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \part{2nd Gen. SV Annotation \& Visualization}
 
@@ -1415,9 +1434,9 @@ License: GPL V3
 
 Perl
 
-Krzywinski, M., Schein, J., Birol, I., Connors, J., Gascoyne, R., Horsman, D., Jones, S. J., \& Marra, M. A. (2009). Circos: An information aesthetic for comparative genomics. Genome Research, 19(9), 1639–1645. \url{https://doi.org/10.1101/gr.092759.109 }
+Krzywinski, M., Schein, J., Birol, I., Connors, J., Gascoyne, R., Horsman, D., Jones, S. J., \& Marra, M. A. (2009). Circos: An information aesthetic for comparative genomics. Genome Research, 19(9), 1639–1645. \url{https://doi.org/10.1101/gr.092759.109 }\cb{4131}{5568}{5767}
 
-Updated: 2020-06-25
+Updated: 2020-07-21
 
 \part{2nd Gen. Pipelines}
 \section{SpeedSeq}
@@ -1430,9 +1449,9 @@ License: The MIT License (MIT)
 
 C 75.5\% Roff 8.4\% Perl 8.0\% Shell 3.1\% Makefile 1.5\% C++ 1.0\% Other 2.5\%
 
-Chiang, C., Layer, R. M., Faust, G. G., Lindberg, M. R., Rose, D. B., Garrison, E. P., Marth, G. T., Quinlan, A. R. and Hall, I. M. (2015) SpeedSeq: Ultra-fast personal genome analysis and interpretation, Nature Methods. Nature Publishing Group, 12(10), pp. 966–968. doi: 10.1038/nmeth.3505.
+Chiang, C., Layer, R. M., Faust, G. G., Lindberg, M. R., Rose, D. B., Garrison, E. P., Marth, G. T., Quinlan, A. R. and Hall, I. M. (2015) SpeedSeq: Ultra-fast personal genome analysis and interpretation, Nature Methods. Nature Publishing Group, 12(10), pp. 966–968. doi: 10.1038/nmeth.3505.\cb{133}{216}{29}
 
-Updated: 2020-07-07
+Updated: 2020-07-21
 
 \part{R, IDE and R Packages}
 
@@ -1450,7 +1469,7 @@ License: GPL V2, V3
 
 R 36.6\% C 30.6\% Fortran 23.3\% HTML 2.9\% Shell 1.2\% M4 1.1\% Other 4.3\%
 
-Updated: 2020-07-06
+Updated: 2020-07-21
 
 \section{R}
 
@@ -1466,7 +1485,7 @@ License: GPL 2
 
 R Core Team (2020) R: A Language and Environment for Statistical Computing. Vienna, Austria. Available at: \url{https://www.r-project.org}.
 
-Updated: 2020-07-06
+Updated: 2020-07-21
 
 \section{RStudio}
 
@@ -1484,7 +1503,7 @@ Java 36.1\% C++ 31/3\% JavaScript 20.4\% R 3.3\% C 3.2\% TypeScript 2.6\% Other 
 
 RStudio Team (2015). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL http://www.rstudio.com/.
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 
 
@@ -1516,7 +1535,7 @@ The very first article about Python was written in 1991 and is now quite outdate
 
 Rossum, G. van and Boer, J. de (1991) Interactively Testing Remote Servers Using the Python Programming Language, CWI Quarterly, pp. 283–303.
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \section{pyBedTools}
 
@@ -1532,16 +1551,14 @@ License: GPL v2
 
 Python 90.5\% C++ 7.5\% Shell 1.5\% Other 0.5\%
 
-Updated: 2020-07-08
-
-\part{Docker and Docker Packages}
+Updated: 2020-07-21
 
 \part{File Specifications}
 \section{FASTQ}
 
-Rhizobium, G. E. (2013) Complete Genome Sequence of the Sesbania Symbiont and Rice, Nucleic acids research. Oxford Academic, 1(1256879), pp. 13–14. doi: 10.1093/nar.
+Rhizobium, G. E. (2013) Complete Genome Sequence of the Sesbania Symbiont and Rice, Nucleic acids research. Oxford Academic, 1(1256879), pp. 13–14. doi: 10.1093/nar.\cb{22}{25}{13}
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 
 \section{SAM, BAM, CRAM, BCF, VCF, CSI, BAI}
@@ -1578,7 +1595,7 @@ Htsget retrieval API spec v1.2.0 in 2020-02-20
 
 Refget API Specification v1.0.0 in 2020-05-09
 
-Updated: 2020-06-10
+Updated: 2020-07-21
 
 \part{How We Install Software}
 \section{Preface}
@@ -1983,11 +2000,12 @@ ln -s libncursesw.so.6.2 libncurses.so.6.2
 \subsection{R}
 \begin{verbatim}
 ./configure --prefix=$HOME/usr/local --with-blas\
---with-lapack --with-tcltk --enable-R-shlib --with-x=no
+ --with-lapack --with-tcltk --enable-R-shlib --with-x=no
 \end{verbatim}
 
 \section{Java Programs}
 
+\subsection{Binary}
 We just download JAR executables to \verb|$HOME/bin/bio.d/JAR| and add a wrapper like this:
 
 \begin{verbatim}
