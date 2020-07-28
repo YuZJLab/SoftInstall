@@ -970,7 +970,7 @@ Official: \url{http://compbio.cs.brown.edu/projects/gasv/}
 
 Google: \url{http://code.google.com/p/gasv/downloads/list}
 
-Current: N/A
+Current: Google, self-built binary, Oct1\_2013
 
 Sindi, S.S., Önal, S., Peng, L.C. et al. An integrative probabilistic model for identification of structural variation in sequencing data. Genome Biol 13, R22 (2012). \url{https://doi.org/10.1186/gb-2012-13-3-r22}\cb{92}{150}{124}
 
@@ -1167,20 +1167,6 @@ License: MIT
 Python 98.5\% Other 1.5\%
 
 Dave Larson, abelhj, Colby Chiang, Allison Penner Regier, AbhijitBadve, Jim Eldred, … Danny Antaki. (2019, September 12). hall-lab/svtools: svtools v0.5.1 (Version v0.5.1). Zenodo. \url{http://doi.org/10.5281/zenodo.3406745}\cb{N/A}{N/A}{N/A}
-
-Updated: 2020-07-21
-
-\section{SVTyper}
-
-GitHub: \url{https://github.com/hall-lab/svtyper}, v0.7.1.in 2019-09-05
-
-Conda: \url{https://anaconda.org/bioconda/svtyper}, v0.7.1 in 2019-10-04
-
-Current: Conda, v0.1.4
-
-License: MIT
-
-Python 98.8\% Other 1.2\%
 
 Updated: 2020-07-21
 
@@ -1437,6 +1423,22 @@ Perl
 Krzywinski, M., Schein, J., Birol, I., Connors, J., Gascoyne, R., Horsman, D., Jones, S. J., \& Marra, M. A. (2009). Circos: An information aesthetic for comparative genomics. Genome Research, 19(9), 1639–1645. \url{https://doi.org/10.1101/gr.092759.109 }\cb{4131}{5568}{5767}
 
 Updated: 2020-07-21
+
+\section{SVTyper}
+
+GitHub: \url{https://github.com/hall-lab/svtyper}, v0.7.1.in 2019-09-05
+
+Conda: \url{https://anaconda.org/bioconda/svtyper}, v0.7.1 in 2019-10-04
+
+Current: Conda, v0.1.4
+
+License: MIT
+
+Python 98.8\% Other 1.2\%
+
+Same as speedseq.
+
+Updated: 2020-07-23
 
 \part{2nd Gen. Pipelines}
 \section{SpeedSeq}
@@ -2099,6 +2101,11 @@ report_errors: false
 (global-linum-mode 1) ;
 (setq linum-format "%d ");
 (setq backup-directory-alist (quote (("." . "~/.emacs-backups"))))
+\end{verbatim}
+
+\section{.Rprofile}
+\begin{verbatim}
+options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
 \end{verbatim}
 
 \end{document}
