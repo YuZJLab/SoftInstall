@@ -2,7 +2,8 @@
 \usepackage[backref,bookmarks=true,bookmarksopen=true,pdftitle=SoftInstall,pdfauthor=YU Zhejian]{hyperref}
 \renewcommand{\sfdefault}{phv}
 \renewcommand{\rmdefault}{phv}
-\newcommand{\cbb}[1]{}
+\newcommand{\nm}{{\color{red}(Not Monitored)}}
+\newcommand{\de}{{\color{red}(Depracated)}}
 \newcommand{\cb}[3]{\par Cited by: {\color{blue}\Huge #1} times in Scopus, {\color{blue}\Huge #2} times in Bing Academic, {\color{blue}\Huge #3} times in Baidu Xueshu}
 \usepackage{indentfirst}
 \renewcommand\familydefault{\sfdefault}
@@ -25,19 +26,21 @@
 
 This book involves the software used in the common bioinformatics pipelines and the way to install them.
 
-The term ``\textbf{deprecated}'' means that the entire software was deprecated by its developer, while ``\textbf{branch deprecated}'' means that although this branch was deprecated, the software is still being developed somewhere else. Unless there is \textbf{EXPLICIT} information, all branches \& software are considered not deprecated.
+The term ``\de'' appearing at title means that the entire software was deprecated by its developer, while its appearance at a branch means that although this branch was deprecated, the software is still being developed somewhere else. Unless there is \textbf{EXPLICIT} information, all branches \& software are considered not deprecated.
 
 The term ``pre-build binary'' means 1. Compiled binary for C, C++ or D, etc. or 2. Compiled documentations for \LaTeX or asciidoc, etc. or 3. Scripts for scripting languages like Perl, Shell or Python, etc. Those which is not ``pre-build binary'' are compiled locally by ourselves. ``N/A'' means we have not, or failed to install it.
 
 As for tag ``Cited by'', ``0'' means this article is cited 0 times in Scopus (\url{https://www.scopus.com/}) and ``N/A'' means this article do not present in Scopus. Same for \url{https://xueshu.baidu.com/} and \url{https://academic.microsoft.com/home}.
 
+Those with ``\nm'' in title is not monitored.
+
 \tableofcontents
 
-\part{2nd Gen. Read Data Pre-Processing and 2nd Gen. Librries}
+\part{2nd Gen. Read Data Pre-Processing and 2nd Gen. Libraries}
 
 \section{BamTools}
 
-Sourceforge: \url{https://sourceforge.net/projects/bamtools/}, deprecated
+Sourceforge: \url{https://sourceforge.net/projects/bamtools/}\de
 
 GitHub: \url{https://github.com/pezmaster31/bamtools}, v2.5.1, 2019-12-24
 
@@ -51,7 +54,7 @@ Barnett, D. W., Garrison, E. K., Quinlan, A. R., Strömberg, M. P., \& Marth, G.
 
 Updated: 2020-07-21
 
-\section{BLAT}
+\section{BLAT\nm}
 
 Official: \url{http://www.soe.ucsc.edu/~kent}, v36 in 2014-11-05
 
@@ -59,7 +62,7 @@ Current: Official, self-built binary, v36
 
 Updated: 2020-07-21
 
-\section{CAP3}
+\section{CAP3\nm}
 
 Official: \url{http://seq.cs.iastate.edu/cap3.html}, unknown
 
@@ -135,6 +138,16 @@ C++ 98.9\% CMake 1.1\%
 
 Updated: 2020-07-21
 
+\section{SeqTK}
+
+GitHub: \url{https://github.com/lh3/seqtk}, v1.3 (r106) in 2018-07-18
+
+Current: GitHub, self-built binary, 1.3-r115-dirty
+
+License: MIT
+
+C 99.7\% Makefile 0.3\%
+
 \section{SRA-Toolkit}
 
 Conda: \url{https://anaconda.org/bioconda/sra-tools}, v2.10.8 in 2020-07-04
@@ -151,13 +164,13 @@ C 70.3\% C++ 19.3\% Makefile 4.0 Shell 2.3\% Perl 1.9\% Python 1.0\% Other 1.2\%
 
 Updated: 2020-07-21
 
-\section{Tabix (deprecated)}
+\section{Tabix\de\nm}
 
 Conda: \url{https://anaconda.org/bioconda/tabix}, v0.2.6 in 2018-10
 
 GitHub: \url{https://github.com/samtools/tabix}
 
-SourceForge: \url{https://sourceforge.net/projects/samtools}, branch deprecated
+SourceForge: \url{https://sourceforge.net/projects/samtools}\de
 
 Current: N/A
 
@@ -166,6 +179,20 @@ License: BSD
 C 83.8\% Java 6.8\% Python 4.6\% TeX 2.8\% Perl 2.0\%
 
 Updated: 2020-07-21
+
+\part{2nd Gen. Read Data Simulator}
+
+\section{DWGSIM}
+
+GitHub: \url{https://github.com/nh13/DWGSIM}, v0.1.12 in 2017-07-15
+
+License: GPL v2
+
+Current: GitHub, self-built binary, 0.1.13
+
+C 83.7\% Python 10.8\% Perl 4.1\% Makefile 1.4\%
+
+Updated: 2020-08-13
 
 \part{2nd Gen. Read Quality Controller}
 
@@ -201,7 +228,7 @@ Java 95.5\% HTML 3.1\% Perl 1.2\% Other 0.2\%
 
 Updated: 2020-07-21
 
-\section{QualiMap}
+\section{QualiMap\nm}
 
 Official: \url{http://qualimap.bioinfo.cipf.es/}
 
@@ -219,7 +246,7 @@ Okonechnikov, K., Conesa, A. and García-Alcalde, F. (2015) Qualimap 2: advanced
 
 Updated: 2020-07-21
 
-\section{Trimmomatic}
+\section{Trimmomatic\nm}
 
 Official: \url{http://www.usadellab.org/cms/index.php?page=trimmomatic}
 
@@ -239,7 +266,7 @@ Updated: 2020-07-21
 
 \part{3rd Gen. Read Quality Controller}
 
-\section{REQUEST}
+\section{REQUEST\nm}
 
 GitHub: \url{https://github.com/bioinfomaticsCSU/REQUEST}, unknown
 
@@ -252,7 +279,7 @@ Zhang, W., Huang, N., Zheng, J., Liao, X., Wang, J., \& Li, H. D. (2019). A Sequ
 Updated: 2020-07-21
 
 \part{2nd Gen. Aligner}
-\section{Bowtie}
+\section{Bowtie\nm}
 
 Official: \url{http://bowtie-bio.sourceforge.net/index.shtml}, v1.2.3, 2019-07-05
 
@@ -270,7 +297,7 @@ Langmead, B., Trapnell, C., Pop, M., \& Salzberg, S. L. (2009). Ultrafast and me
 
 Updated: 2020-07-21
 
-\section{Bowtie2}
+\section{Bowtie2\nm}
 
 Conda: \url{https://anaconda.org/bioconda/bowtie2}, v2.4.1 in 2020-06-07
 
@@ -318,7 +345,21 @@ Li, H. (2013) Aligning sequence reads, clone sequences and assembly contigs with
 
 Updated: 2020-07-21
 
-\section{HISAT (deprecated)}
+\section{BWA-MEM2}
+
+GitHub: \url{https://github.com/bwa-mem2/bwa-mem2}, v2.0 in 2020-07-09
+
+Current: GitHub, pre-built binary, v2.0
+
+Comment: Use ICPC instead of GCC.
+
+License: MIT
+
+C++ 87.4\% C 11.4\% Makefile 1.2\%
+
+M. Vasimuddin, S. Misra, H. Li and S. Aluru, "Efficient Architecture-Aware Acceleration of BWA-MEM for Multicore Systems," 2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS), Rio de Janeiro, Brazil, 2019, pp. 314-324, doi: 10.1109/IPDPS.2019.00041.\cb{N/A}{6}{N/A}
+
+\section{HISAT\de\nm}
 
 Official: \url{https://ccb.jhu.edu/software/hisat/index.shtml}, v0.1.6-beta in 2015-04-17
 
@@ -350,7 +391,7 @@ C++ 57.8\% C 16.9\% Python 15.9\% Perl 6.2\% Shell 1.3\% HTML 1.3\% Other 0.6\%
 
 Updated: 2020-07-21
 
-\section{SubRead}
+\section{SubRead\nm}
 
 Conda: \url{https://anaconda.org/bioconda/subread}, v2.0.1 in 2020-06-05
 
@@ -370,7 +411,7 @@ Liao, Y., Smyth, G. K. and Shi, W. (2014) FeatureCounts: An efficient general pu
 
 Updated: 2020-07-21
 
-\section{TopHat2 (deprecated)}
+\section{TopHat2\de\nm}
 
 Official: \url{http://ccb.jhu.edu/software/tophat/index.shtml}, v2.1.1 in 2020-02-23
 
@@ -396,7 +437,7 @@ Updated: 2020-07-21
 
 \part{3rd Gen. Aligner}
 
-\section{ngmlr}
+\section{ngmlr\nm}
 
 GitHub: \url{https://github.com/philres/ngmlr}, v0.2.7 in 2018-07-25
 
@@ -412,7 +453,7 @@ Sedlazeck, F.J., Rescheneder, P., Smolka, M. et al. Accurate detection of comple
 
 Updated: 2020-07-21
 
-\section{minimap2}
+\section{minimap2\nm}
 
 Official: \url{https://lh3.github.io/minimap2/}
 
@@ -432,7 +473,7 @@ Heng Li, Minimap2: pairwise alignment for nucleotide sequences, Bioinformatics, 
 
 Updated: 2020-07-21
 
-\section{pbmm2}
+\section{pbmm2\nm}
 
 GitHUb: \url{https://github.com/PacificBiosciences/pbmm2}, v1.2.1 in 2020-02-18
 
@@ -448,7 +489,7 @@ Updated: 2020-07-21
 
 \part{2nd Gen. SAM/BAM/CRAM File Processor}
 
-\section{AlignStats}
+\section{AlignStats\nm}
 
 GitHub: \url{https://github.com/jfarek/alignstats}, v0.9.1 in 2020-02-08
 
@@ -462,7 +503,7 @@ C 97.4\% M4 2.0\% Makefile 0.6\%
 
 Updated: 2020-07-21
 
-\section{BamDSt}
+\section{BamDSt\nm}
 
 GitHub: \url{https://github.com/shiquan/bamdst}
 
@@ -474,7 +515,7 @@ C 95.5\% C++ 3.9\% Makefile 0.6\%
 
 Updated: 2020-07-21
 
-\section{BamStats (by biopet)}
+\section{BamStats(by biopet)\nm}
 
 GitHub: \url{https://github.com/biopet/bamstats}, v1.0.1 in 2018-10-25
 
@@ -488,7 +529,7 @@ Scala 100.0\%
 
 Updated: 2020-07-21
 
-\section{BAMStats (by nestornotabilis)}
+\section{BAMStats (by nestornotabilis)\nm}
 
 Official: \url{http://bamstats.sourceforge.net/}, v1.25 in 2011-08-18
 
@@ -513,6 +554,16 @@ C++ 79.8\% Shell 19.5\% Other 0.7\%
 Jun, G., Wing, M. K., Abecasis, G. R., \& Kang, H. M. (2015). An efficient and scalable analysis framework for variant extraction and refinement from population-scale DNA sequence data. Genome Research, 25(6), 918–925. \url{https://doi.org/10.1101/gr.176552.114}\cb{54}{99}{36}
 
 Updated: 2020-07-21
+
+\section{BedTK}
+
+GitHub: \url{https://github.com/lh3/bedtk}, unknown
+
+Current: GitHub, self-built binary, 0.0-r24-dirty
+
+License: MIT
+
+C 99.0\% Makefile 1.0\%
 
 \section{BedTools}
 
@@ -599,7 +650,7 @@ Updated: 2020-07-21
 
 Official: \url{http://www.htslib.org/}
 
-SourceForge: \url{http://samtools.sourceforge.net/}, deprecated
+SourceForge: \url{http://samtools.sourceforge.net/}\de
 
 Conda: \url{https://anaconda.org/bioconda/samtools}, v1.10 in 2020-04-16
 
@@ -658,7 +709,7 @@ Durbin, R. (2014). Segregation based metric for variant call QC. Retrieved from 
 Updated: 2020-07-21
 
 \part{2nd Gen. Variant Caller: SNP and Indel}
-\section{FreeBayes}
+\section{FreeBayes \nm}
 
 GitHub: \url{https://github.com/ekg/freebayes}, v1.3.2 in 2019-12-17
 
@@ -674,7 +725,7 @@ Garrison, E., \& Marth, G. (2012). Haplotype-based variant detection from short-
 
 Updated: 2020-07-21
 
-\section{GATK3 (deprecated)}
+\section{GATK3\de\nm}
 
 Conda: \url{https://anaconda.org/bioconda/gatk}, v3.8 in 2019-10-17
 
@@ -774,7 +825,7 @@ Chen, X., Schulz-Trieglaff, O., Shaw, R., Barnes, B., Schlesinger, F., Källberg
 
 Updated: 2020-07-21
 
-\section{MuSE}
+\section{MuSE\nm}
 
 Official: \url{https://bioinformatics.mdanderson.org/public-software/muse/}
 
@@ -792,7 +843,7 @@ Fan, Y., Xi, L., Hughes, D. S. T., Zhang, J., Zhang, J., Futreal, P. A., … Wan
 
 Updated: 2020-07-21
 
-\section{MuTect1 (deprecated)}
+\section{MuTect1\de\nm}
 
 Official: \url{https://software.broadinstitute.org/cancer/cga/mutect}
 
@@ -839,9 +890,9 @@ C++ 81.3\% Python 12.8\% CMake 4.2\% Shell 1.1\% Dockerfile 0.3\% Jupyter Notebo
 Kim, S., Scheffler, K., Halpern, A. L., Bekritsky, M. A., Noh, E., Källberg, M., … Saunders, C. T. (2018). Strelka2: fast and accurate calling of germline and somatic variants. Nature Methods, 15(8), 591–594. \url{https://doi.org/10.1038/s41592-018-0051-x}\cb{32}{146}{3}
 
 Updated: 2020-07-21
-\section{VarScan1 (deprecated)}
+\section{VarScan1\de\nm}
 
-Official: \url{http://varscan.sourceforge.net/}, v2.3.9 in 2015-06-03, deprecated
+Official: \url{http://varscan.sourceforge.net/}, v2.3.9 in 2015-06-03\de
 
 Current: N/A
 
@@ -870,7 +921,7 @@ Koboldt, D. C., Zhang, Q., Larson, D. E., Shen, D., McLellan, M. D., Lin, L., Mi
 Updated: 2020-07-21
 
 \part{2nd Gen. Variant Caller: CNV, Translocation and other types of SV}
-\section{BreakDancer}
+\section{BreakDancer\nm}
 
 Official: \url{http://breakdancer.sourceforge.net/}, v1.1.2\_2013\_03\_08 in 2013-03-06
 
@@ -892,7 +943,7 @@ Chen, K., Wallis, J. W., McLellan, M. D., Larson, D. E., Kalicki, J. M., Pohl, C
 
 Updated: 2020-07-21
 
-\section{BreaKmer}
+\section{BreaKmer\nm}
 
 GitHub: \url{https://github.com/ccgd-profile/BreaKmer}, v0.0.6 in 2020-07-09
 
@@ -902,15 +953,15 @@ Python 100.0\%
 
 Updated: 2020-07-21
 
-\section{Breakway}
+\section{Breakway\nm}
 
-SourceForge: \url{https://sourceforge.net/projects/breakway/}, deprecated, v0.7.1 in 2011-04-01
+SourceForge: \url{https://sourceforge.net/projects/breakway/}\de, v0.7.1 in 2011-04-01
 
 Perl
 
 Updated: 2020-07-21
 
-\section{ClipCrop}
+\section{ClipCrop\nm}
 
 GitHub: \url{https://github.com/shinout/clipcrop}, ? in 2012-01-27
 
@@ -922,7 +973,7 @@ Suzuki, S., Yasuda, T., Shiraishi, Y., Miyano, S., \& Nagasaki, M. (2011). ClipC
 
 Updated: 2020-07-21
 
-\section{CREST}
+\section{CREST\nm}
 
 GitHub: \url{https://github.com/youngmook/CREST}
 
@@ -964,7 +1015,7 @@ Meier, R., Graw, S., Beyerlein, P., Koestler, D., Molina, J. R., \& Chien, J. (2
 
 Updated: 2020-07-21
 
-\section{GASV}
+\section{GASV\nm}
 
 Official: \url{http://compbio.cs.brown.edu/projects/gasv/}
 
@@ -978,7 +1029,23 @@ Suzanne Sindi, Elena Helman, Ali Bashir, Benjamin J. Raphael, A geometric approa
 
 Updated: 2020-07-21
 
-\section{Gustaf}
+\section{GRIDSS}
+
+GitHub: \url{https://github.com/PapenfussLab/gridss}, v2.9.4 in 2020-07-14
+
+Current: GitHub, pre-compiled binary, v2.9.4
+
+License: GPL v3
+
+C++ 87.3\% Python 7.2\% CMake 4.3\% Shell 0.8\% Dockerfile 0.3\% C 0.1\%
+
+Cameron, D. L., Baber, J., Shale, C., Valle-Inclan, J. E., Besselink, N., Cuppen, E., Priestley, P., \& Papenfuss, A. T. (2020). GRIDSS2: harnessing the power of phasing and single breakends in somatic st, \url{https://doi.org/10.1101/2020.07.09.196527}\cb{N/A}{0}{0}
+
+Cameron, D. L., Baber, J., Shale, C., Valle-Inclan, J. E., Besselink, N., Cuppen, E., Priestley, P., \& Papenfuss, A. T. (2020). GRIDSS2: harnessing the power of phasing and single breakends in somatic structural variant detection. BioRxiv, 2020.07.09.196527. \url{https://doi.org/10.1101/2020.07.09.196527} \cb{42}{62}{19}
+
+Updated: 2020-08-13
+
+\section{Gustaf\nm}
 
 Official: \url{http://www.seqan.de/apps/gustaf/}
 
@@ -992,7 +1059,7 @@ Trappe, K. (2012). Multi-Split Mapping of NGS Reads for Variant Detection. Maste
 
 Updated: 2020-07-21
 
-\section{Hydra-Multi}
+\section{Hydra-Multi\nm}
 
 GitHub: \url{https://github.com/arq5x/Hydra}, ? in 2014-10-06
 
@@ -1002,7 +1069,7 @@ Current: N/A
 
 Updated: 2020-07-21
 
-\section{inGAP-SV}
+\section{inGAP-SV\nm}
 
 Official: \url{http://ingap.sourceforge.net/}
 
@@ -1034,7 +1101,7 @@ Layer, R. M., Chiang, C., Quinlan, A. R., \& Hall, I. M. (2014). LUMPY: A probab
 
 Updated: 2020-07-21
 
-\section{Meerkat}
+\section{Meerkat\nm}
 
 Official: \url{http://compbio.med.harvard.edu/Meerkat/}, v0.189
 
@@ -1044,7 +1111,7 @@ Yang, L., Luquette, L. J., Gehlenborg, N., Xi, R., Haseley, P. S., Hsieh, C. H.,
 
 Updated: 2020-07-21
 
-\section{MetaSV}
+\section{MetaSV\nm}
 
 GitHub: \url{https://github.com/bioinform/metasv}, v0.5.4 in 2017-01-18
 
@@ -1064,7 +1131,7 @@ Mohiyuddin, M., Mu, J. C., Li, J., Bani Asadi, N., Gerstein, M. B., Abyzov, A., 
 
 Updated: 2020-07-21
 
-\section{PEMer}
+\section{PEMer\nm}
 
 Official: \url{http://sv.gersteinlab.org/pemer/}
 
@@ -1076,7 +1143,7 @@ Korbel, J. O., Abyzov, A., Mu, X. J., Carriero, N., Cayting, P., Zhang, Z., Snyd
 
 Updated: 2020-07-21
 
-\section{PriSM}
+\section{PriSM\nm}
 
 Official: \url{https://www.broadinstitute.org/viral-genomics/prism}
 
@@ -1090,7 +1157,7 @@ Yu, Q., Ryan, E. M., Allen, T. M., Birren, B. W., Henn, M. R., \& Lennon, N. J. 
 
 Updated: 2020-07-21
 
-\section{Socrates}
+\section{Socrates\nm}
 
 Official: \url{http://bioinf.wehi.edu.au/socrates/}
 
@@ -1106,7 +1173,7 @@ Schroder, J., Hsu, A., Boyle, S. E., Macintyre, G., Cmero, M., Tothill, R. W., J
 
 Updated: 2020-07-21
 
-\section{SoftSV}
+\section{SoftSV\nm}
 
 SourceForge: \url{https://sourceforge.net/projects/softsv/}, v1.4.2 in 2015-09-09
 
@@ -1120,7 +1187,7 @@ C. Bartenhagen, M. Dugas, Robust and exact structural variation detection with p
 
 Updated: 2020-07-21
 
-\section{SVDetect}
+\section{SVDetect\nm}
 
 Official: \url{http://svdetect.sourceforge.net/Site/Home.html}
 
@@ -1134,7 +1201,7 @@ Zeitouni, B., Boeva, V., Janoueix-Lerosey, I., Loeillet, S., Legoix-né, P., Nic
 
 Updated: 2020-07-21
 
-\section{SVMerge}
+\section{SVMerge\nm}
 
 Official: \url{http://svmerge.sourceforge.net/}
 
@@ -1170,7 +1237,7 @@ Dave Larson, abelhj, Colby Chiang, Allison Penner Regier, AbhijitBadve, Jim Eldr
 
 Updated: 2020-07-21
 
-\section{ULYSSES}
+\section{ULYSSES\nm}
 
 Official: \url{http://www.lcqb.upmc.fr/ulysses/}
 
@@ -1190,7 +1257,7 @@ Updated: 2020-07-21
 
 \part{3rd Gen. Variant Caller: CNV, Translocation and other types of SV}
 
-\section{Sniffles}
+\section{Sniffles\nm}
 
 GitHub: \url{https://github.com/fritzsedlazeck/Sniffles}, v1.0.11 in 2019-01-30
 
@@ -1280,7 +1347,7 @@ Updated: 2020-07-21
 
 \section{VCFTools}
 
-SourceForge: \url{http://vcftools.sourceforge.net/}, v0.1.13 in 2015-08-03, branch deprecated
+SourceForge: \url{http://vcftools.sourceforge.net/}, v0.1.13 in 2015-08-03\de
 
 SVN: \url{http://svn.code.sf.net/p/vcftools/code/trunk/}
 
@@ -1313,7 +1380,7 @@ Wang, K., Li, M., \& Hakonarson, H. (2010). ANNOVAR: functional annotation of ge
 
 Updated: 2020-07-21
 
-\section{myVCF}
+\section{myVCF\nm}
 
 Official: \url{https://apietrelli.github.io/myVCF/}
 
@@ -1330,7 +1397,7 @@ Python 93.7\% HTML 6.2\% Other 0.1\%
 Pietrelli, A. and Valenti, L. (2017) myVCF: a desktop application for high-throughput mutations data management, Bioinformatics, 33(22), pp. 3676–3678. doi: 10.1093/bioinformatics/btx475.\cb{3}{3}{0}
 
 Updated: 2020-07-21
-\section{snpEff}
+\section{snpEff\nm}
 
 Official: \url{http://snpeff.sourceforge.net/}, v4.3t in 2017-11-24
 
@@ -1350,7 +1417,7 @@ Cingolani, P., Platts, A., Wang, L. L., Coon, M., Nguyen, T., Wang, L., Land, S.
 
 Updated: 2020-07-21
 
-\section{snpSift}
+\section{snpSift\nm}
 
 Official: \url{http://snpeff.sourceforge.net/}, v4.3t in 2017-11-24
 
@@ -1370,7 +1437,7 @@ Cingolani, P., Patel, V. M., Coon, M., Nguyen, T., Land, S. J., Ruden, D. M. and
 
 Updated: 2020-07-21
 
-\section{Variant Effect Predicator}
+\section{Variant Effect Predicator\nm}
 
 GitHub \url{https://github.com/Ensembl/ensembl-vep}
 
@@ -1390,11 +1457,11 @@ McLaren, W., Gil, L., Hunt, S. E., Riat, H. S., Ritchie, G. R. S., Thormann, A.,
 
 Updated: 2020-07-21
 
-\section{VarSifter}
+\section{VarSifter\nm}
 
 GitHub: \url{https://github.com/teerjk/VarSifter}, v1.9 in 2018-08-01
 
-Official: \url{https://research.nhgri.nih.gov/software/VarSifter/}, branch deprecated
+Official: \url{https://research.nhgri.nih.gov/software/VarSifter/}\de
 
 FTP: \url{ftp://ftp.nhgri.nih.gov/pub/software/VarSifter/}, v1.7 in 2015-01-08
 
@@ -1457,7 +1524,7 @@ Updated: 2020-07-21
 
 \part{R, IDE and R Packages}
 
-\section{Microsoft Open-R}
+\section{Microsoft Open-R\nm}
 
 Official: \url{https://mran.microsoft.com/}, v3.5.3 in 2019-05-17
 
@@ -1577,7 +1644,7 @@ CRAM format v2.1 in 2019-01-22, Apache license 2.0
 
 CRAM format v3 in 2020-01-20, Apache license 2.0
 
-BCF v1 in 2019-11-20, deprecated
+BCF v1 in 2019-11-20\de
 
 BCF v2.1 in 2019-07-24
 
